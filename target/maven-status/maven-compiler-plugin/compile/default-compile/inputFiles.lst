@@ -1,0 +1,12 @@
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\algorithms\Algorithm.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\algorithms\J48Classifier.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\algorithms\NaiveBayesClassifier.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\algorithms\RandomForestClassifier.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\controllers\MiningController.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\data\DataAnalyzer.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\data\DataCleaner.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\data\DataLoader.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\data\FeatureEngineer.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\evaluation\ModelEvaluator.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\gui\MainFrame.java
+D:\StudyFY\UniLab\Uni-Lab\DataMining\Project\J48-and-Random-Forest-Comparision-Application\src\main\java\com\example\utils\Helpers.java
