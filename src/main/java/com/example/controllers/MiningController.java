@@ -1,5 +1,6 @@
 package com.example.controllers;
 
+import com.example.algorithms.J48Classifier;
 import com.example.data.DataAnalyzer;
 import com.example.data.DataCleaner;
 import com.example.data.DataLoader;
@@ -52,18 +53,17 @@ public class MiningController {
         analyzer.featureImportance(data);
         //Save Preprocessed Data
         System.out.println("\nSaving preprocessed data...");
-        String cleanedPath = "src/resources/data_cleaned.arff";
+        String cleanedPath = "output/heart_data_cleaned.arff";
         loader.saveARFF(data, cleanedPath);
 
         System.out.println("\nSTEP 1 COMPLETED: Data preprocessing finished!");
         System.out.println("   Preprocessed data saved to: " + cleanedPath);
         printSectionHeader("STEP 2: J48 DECISION TREE - BASELINE MODEL");
-        weka.classifiers.trees.J48 j48 = new weka.classifiers.trees.J48();
-        j48.setConfidenceFactor(0.25f);
-        j48.setMinNumObj(2);
-        j48.setUnpruned(false);
-        evaluator.evaluateModel(j48, data, reportPath);
-        System.out.println("\nSTEP 2 COMPLETED: J48 baseline model evaluated!");
+        J48Classifier customJ48 = new J48Classifier();
+        customJ48.train(data);
+        Instances j48ReadyData = customJ48.getTrainingData();
+        evaluator.evaluateModel(customJ48.getClassifier(), j48ReadyData, reportPath);
+        System.out.println("\nSTEP 2 COMPLETED: Custom J48 pipeline evaluated!");
         printSectionHeader("STEP 3: RANDOM FOREST - IMPROVED MODEL");
         System.out.println("\nApplying SMOTE for class balancing...");
         Instances balancedData = cleaner.applySMOTE(data);
@@ -71,7 +71,7 @@ public class MiningController {
         System.out.println("\nPerforming feature selection...");
         Instances selectedData = cleaner.selectFeatures(balancedData);
         //Save improved dataset
-        String improvedPath = "src/resources/data_improved.arff";
+        String improvedPath = "output/heart_data_improved.arff";
         loader.saveARFF(selectedData, improvedPath);
         System.out.println("   Improved data saved to: " + improvedPath);
         
@@ -143,8 +143,8 @@ public class MiningController {
         System.out.println("=".repeat(60));
         System.out.println("\n📄 Reports generated:");
         System.out.println("   • Evaluation report: " + reportPath);
-        System.out.println("   • Preprocessed data: src/resources/data_cleaned.arff");
-        System.out.println("   • Improved data: src/resources/data_improved.arff");
+        System.out.println("   • Preprocessed data: output/heart_data_cleaned.arff");
+        System.out.println("   • Improved data: output/heart_data_improved.arff");
         System.out.println("\n📊 Models trained:");
         System.out.println("   • J48 Decision Tree (Baseline)");
         System.out.println("   • Random Forest + SMOTE + Feature Selection (Improved)");
@@ -163,8 +163,8 @@ public class MiningController {
             MiningController controller = new MiningController();
             
             // Đường dẫn files
-            String rawDataPath = "src/resources/heart_disease.csv";
-            String reportPath = "src/resources/evaluation_report.txt";
+            String rawDataPath = "src/main/resources/heart_disease.csv";
+            String reportPath = "output/evaluation_report.txt";
             
             // Chạy pipeline
             controller.runPipeline(rawDataPath, reportPath);

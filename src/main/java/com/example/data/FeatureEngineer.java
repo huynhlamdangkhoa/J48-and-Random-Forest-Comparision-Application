@@ -1,5 +1,7 @@
 package com.example.data;
 
+import java.util.Locale;
+
 import weka.core.Attribute;
 import weka.core.Instances;
 import weka.filters.Filter;
@@ -45,7 +47,7 @@ public class FeatureEngineer {
     private Instances createAgeRiskGroup(Instances data) throws Exception {
         System.out.println("\n[1/4] Creating age_risk_group...");
         //Tìm index của age attribute
-        Attribute ageAttr = data.attribute("age");
+        Attribute ageAttr = findAttribute(data, "age", "Age");
         if (ageAttr == null) {
             System.err.println("⚠️  Warning: 'age' attribute not found, skipping...");
             return data;
@@ -78,13 +80,10 @@ public class FeatureEngineer {
     private Instances createCholesterolCategory(Instances data) throws Exception {
         System.out.println("\nCreating chol_category...");
         //Tìm cholesterol attribute
-        Attribute cholAttr = data.attribute("chol");
+        Attribute cholAttr = findAttribute(data, 
+            "chol", "cholesterol", "cholesterol_level", "Cholesterol Level", "cholesterol level");
         if (cholAttr == null) {
-            //Try alternative names
-            cholAttr = data.attribute("cholesterol");
-        }
-        if (cholAttr == null) {
-            System.err.println("Warning: 'chol' attribute not found, skipping...");
+            System.err.println("Warning: 'cholesterol' attribute not found, skipping...");
             return data;
         }
         int cholIdx = cholAttr.index();
@@ -115,13 +114,8 @@ public class FeatureEngineer {
         System.out.println("\n[3/4] Creating bp_category...");
 
         //Tìm blood pressure attribute
-        Attribute bpAttr = data.attribute("trestbps");
-        if (bpAttr == null) {
-            bpAttr = data.attribute("bp");
-            if (bpAttr == null) {
-                bpAttr = data.attribute("blood_pressure");
-            }
-        }
+        Attribute bpAttr = findAttribute(data, 
+            "trestbps", "bp", "blood_pressure", "Blood Pressure", "blood pressure");
         if (bpAttr == null) {
             System.err.println("Warning: blood pressure attribute not found, skipping...");
             return data;
@@ -236,5 +230,37 @@ public class FeatureEngineer {
             System.err.println("Test failed: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+    
+    private Attribute findAttribute(Instances data, String... candidates) {
+        if (candidates == null) {
+            return null;
+        }
+        for (String candidate : candidates) {
+            if (candidate == null) {
+                continue;
+            }
+            Attribute direct = data.attribute(candidate);
+            if (direct != null) {
+                return direct;
+            }
+        }
+        for (int i = 0; i < data.numAttributes(); i++) {
+            Attribute attr = data.attribute(i);
+            if (attr == null) {
+                continue;
+            }
+            String normalized = normalize(attr.name());
+            for (String candidate : candidates) {
+                if (candidate != null && normalized.equals(normalize(candidate))) {
+                    return attr;
+                }
+            }
+        }
+        return null;
+    }
+
+    private String normalize(String name) {
+        return name.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]", "");
     }
 }
