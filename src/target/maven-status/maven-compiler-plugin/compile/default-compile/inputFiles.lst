@@ -1,0 +1,12 @@
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/algorithms/Algorithm.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/algorithms/J48Classifier.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/algorithms/LogisticRegressionClassifier.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/algorithms/NaiveBayesClassifier.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/algorithms/RandomForestClassifier.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/controllers/MiningController.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/data/DataAnalyzer.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/data/DataCleaner.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/data/DataLoader.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/evaluation/ModelEvaluator.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/gui/MainFrame.java
+/Users/Chanh/Data-Mining-Proj/data_mining/src/main/java/com/example/utils/Helpers.java
