@@ -1,6 +1,7 @@
 package com.example.gui;
 
 import javax.swing.JFrame;
+
 import com.example.controllers.MiningController;
 
 /**
