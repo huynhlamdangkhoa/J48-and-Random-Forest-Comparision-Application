@@ -24,6 +24,15 @@ public class RandomForestClassifier implements Algorithm {
     @Override
     public void train(Instances data) throws Exception {
         randomForest = new RandomForest();
+        if (data.classIndex() < 0)
+            data.setClassIndex(data.numAttributes() - 1);
+
+        if (!data.classAttribute().isNominal()) {
+            weka.filters.unsupervised.attribute.NumericToNominal numToNom = new weka.filters.unsupervised.attribute.NumericToNominal();
+            numToNom.setAttributeIndices(String.valueOf(data.classIndex() + 1));
+            numToNom.setInputFormat(data);
+            data = Filter.useFilter(data, numToNom);
+}
 
         Instances processedData = applyTextProcessing(data);
 
@@ -81,7 +90,7 @@ public class RandomForestClassifier implements Algorithm {
         return Filter.useFilter(data, filter);
     }
 
-     private Instances applySMOTE(Instances data) throws Exception {
+    private Instances applySMOTE(Instances data) throws Exception {
         if (data.classIndex() < 0) {
             int classIndex = data.attribute("uses_ad_boosts") != null ? data.attribute("uses_ad_boosts").index() : 5;
             data.setClassIndex(classIndex);
