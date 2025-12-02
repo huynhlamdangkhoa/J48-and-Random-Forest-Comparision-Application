@@ -1,13 +1,17 @@
 package com.example.data;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import weka.attributeSelection.AttributeSelection;
 import weka.attributeSelection.CfsSubsetEval;
 import weka.attributeSelection.GreedyStepwise;
+import weka.core.Attribute;
 import weka.core.Instances;
 import weka.filters.Filter;
 import weka.filters.supervised.instance.SMOTE;
 import weka.filters.unsupervised.attribute.Normalize;
-import weka.filters.unsupervised.attribute.ReplaceMissingValues;
 import weka.filters.unsupervised.instance.RemoveDuplicates;
 
 
@@ -29,21 +33,89 @@ public class DataCleaner {
         return rawData;
     }
 
-
     private Instances handleMissingValues(Instances data) throws Exception {
         System.out.println("\n[1/2] Handling missing values...");
-        //Count missing values trước khi xử lý
+        // Count missing values trước khi xử lý
         int totalMissing = countMissingValues(data);
+        
         if (totalMissing > 0) {
             System.out.println("  Found " + totalMissing + " missing values");
-            ReplaceMissingValues filter = new ReplaceMissingValues();
-            filter.setInputFormat(data);
-            data = Filter.useFilter(data, filter);
-            System.out.println(" Replaced with median (numeric) / mode (nominal)");
+            
+            // Xử lý từng attribute
+            for (int i = 0; i < data.numAttributes(); i++) {
+                Attribute attr = data.attribute(i);
+                
+                if (attr.isNumeric()) {
+                    // Tính median cho numeric attributes
+                    double[] values = data.attributeToDoubleArray(i);
+                    double median = calculateMedian(values);
+                    
+                    // Replace missing với median
+                    for (int j = 0; j < data.numInstances(); j++) {
+                        if (data.instance(j).isMissing(i)) {
+                            data.instance(j).setValue(i, median);
+                        }
+                    }
+                    System.out.println("  " + attr.name() + ": replaced with median = " + median);
+                    
+                } else if (attr.isNominal()) {
+                    // Tính mode cho nominal attributes
+                    int[] counts = new int[attr.numValues()];
+                    
+                    for (int j = 0; j < data.numInstances(); j++) {
+                        if (!data.instance(j).isMissing(i)) {
+                            counts[(int) data.instance(j).value(i)]++;
+                        }
+                    }
+                    
+                    // Tìm mode (giá trị xuất hiện nhiều nhất)
+                    int modeIndex = 0;
+                    for (int k = 1; k < counts.length; k++) {
+                        if (counts[k] > counts[modeIndex]) {
+                            modeIndex = k;
+                        }
+                    }
+                    
+                    // Replace missing với mode
+                    for (int j = 0; j < data.numInstances(); j++) {
+                        if (data.instance(j).isMissing(i)) {
+                            data.instance(j).setValue(i, modeIndex);
+                        }
+                    }
+                    System.out.println("  " + attr.name() + ": replaced with mode = " + attr.value(modeIndex));
+                }
+            }
+            
+            System.out.println("  Completed: Replaced with median (numeric) / mode (nominal)");
         } else {
-            System.out.println(" No missing values found");
+            System.out.println("  No missing values found");
         }
+        
         return data;
+    }
+
+    // Hàm tính median
+    private double calculateMedian(double[] values) {
+        // Lọc bỏ missing values (NaN)
+        List<Double> validValues = new ArrayList<>();
+        for (double v : values) {
+            if (!Double.isNaN(v)) {
+                validValues.add(v);
+            }
+        }
+        
+        if (validValues.isEmpty()) {
+            return 0.0;
+        }
+        
+        Collections.sort(validValues);
+        int size = validValues.size();
+        
+        if (size % 2 == 0) {
+            return (validValues.get(size/2 - 1) + validValues.get(size/2)) / 2.0;
+        } else {
+            return validValues.get(size/2);
+        }
     }
     
     private Instances removeDuplicates(Instances data) throws Exception {

@@ -1,4 +1,4 @@
-@relation 'heart_disease-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.AddExpression-Eifelse(a1<40, 1, ifelse(a1<56, 2, ifelse(a1<71, 3, 4)))-Nage_risk_group-weka.filters.unsupervised.attribute.AddExpression-Eifelse(a4<200, 1, ifelse(a4<240, 2, 3))-Nchol_category-weka.filters.unsupervised.attribute.AddExpression-Eifelse(a3<120, 1, ifelse(a3<130, 2, ifelse(a3<140, 3, 4)))-Nbp_category-weka.filters.unsupervised.attribute.AddExpression-E(a22*0.3 + a23*0.3 + a24*0.4)-Nrisk_score-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R1,3-8,10-14,18,20-21'
+@relation 'heart_disease-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.AddExpression-Eifelse(a1<40, 1, ifelse(a1<56, 2, ifelse(a1<71, 3, 4)))-Nage_risk_group-weka.filters.unsupervised.attribute.AddExpression-Eifelse(a4<200, 1, ifelse(a4<240, 2, 3))-Nchol_category-weka.filters.unsupervised.attribute.AddExpression-Eifelse(a3<120, 1, ifelse(a3<130, 2, ifelse(a3<140, 3, 4)))-Nbp_category-weka.filters.unsupervised.attribute.AddExpression-E(a22*0.3 + a23*0.3 + a24*0.4)-Nrisk_score-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R1,3-8,10-14,18,20-21'
 
 @attribute Age numeric
 @attribute 'Blood Pressure' numeric
@@ -17,7 +17,7 @@
 @attribute 'Heart Disease Status' {No,Yes}
 
 @data
-0.612903,0.55,0.033333,High,Yes,Yes,No,Yes,Yes,No,High,Medium,0.501778,0.492507,No
+0.612903,0.55,0.033333,High,Yes,Yes,No,Yes,Yes,No,High,Medium,0.5,0.492507,No
 0.822581,0.433333,0.906667,High,No,Yes,Yes,No,Yes,No,Medium,High,0.9625,0.953319,No
 0.451613,0.1,0.44,Low,No,No,No,No,Yes,Yes,Low,Low,0.15,0.415412,No
 0.225806,0.033333,0.953333,High,Yes,Yes,No,Yes,No,Yes,Low,High,0.175,0.06412,No
@@ -27,7 +27,7 @@
 0.322581,0.683333,0.246667,Low,Yes,Yes,Yes,No,No,No,Low,Medium,0.3875,0.809822,No
 0.612903,0.25,0.94,Low,No,Yes,Yes,Yes,Yes,Yes,High,Low,0.2875,0.070065,No
 0.919355,0.4,0.68,Low,Yes,Yes,No,No,No,Yes,Low,Medium,0.2,0.173622,No
-0.290323,0.983333,0.273333,High,No,Yes,No,No,Yes,No,Medium,High,0.501778,0.585613,No
+0.290323,0.983333,0.273333,High,No,Yes,No,No,Yes,No,Medium,High,0.5,0.585613,No
 0.354839,0.233333,0.973333,High,No,Yes,Yes,No,No,No,None,Medium,0.7375,0.962771,No
 0.16129,0.383333,0.433333,High,Yes,No,Yes,No,No,Yes,Medium,Low,0.775,0.409778,No
 0.16129,0.233333,0.273333,High,Yes,No,No,Yes,Yes,No,Low,Low,0.275,0.831927,No
@@ -49,7 +49,7 @@
 0.322581,0.516667,0.233333,High,Yes,Yes,No,No,Yes,Yes,Low,Low,0.1875,0.876698,No
 0.516129,0.983333,0.373333,Medium,No,Yes,Yes,Yes,No,Yes,Low,Medium,0.8875,0.881928,No
 0.177419,0.716667,0.853333,Low,Yes,Yes,Yes,Yes,No,Yes,None,Medium,0.125,0.726765,No
-0.919355,0.133333,0.013333,High,Yes,No,Yes,Yes,Yes,No,Low,Low,0.3,0.497109,No
+0.919355,0.133333,0.013333,High,Yes,No,Yes,Yes,Yes,No,Low,Low,0.3,0.493983,No
 0.33871,0.433333,0.086667,High,No,Yes,Yes,Yes,No,Yes,Low,High,0.2,0.345899,No
 0.967742,0.75,0.22,High,Yes,No,Yes,Yes,Yes,No,High,Low,0.6125,0.030654,No
 0.693548,0.85,0.46,Medium,No,Yes,No,Yes,No,Yes,High,Low,0.175,0.721752,No
@@ -103,7 +103,7 @@
 0.209677,0.016667,0.853333,Medium,Yes,No,No,Yes,Yes,No,None,Medium,0.4875,0.471955,No
 0.258065,0.533333,0.133333,Medium,No,No,No,No,Yes,Yes,None,Low,0.8375,0.380788,No
 0.564516,0.25,0.52,High,No,No,No,Yes,No,No,High,Medium,0.7375,0.111512,No
-0.790323,0.495962,0.62,Medium,No,No,Yes,Yes,No,Yes,Low,Medium,0.25,0.344546,No
+0.790323,0.5,0.62,Medium,No,No,Yes,Yes,No,Yes,Low,Medium,0.25,0.344546,No
 0.629032,0.35,0.046667,High,No,Yes,Yes,No,Yes,Yes,None,High,0.825,0.24332,No
 0.048387,0.916667,0.546667,Low,No,No,Yes,Yes,Yes,Yes,None,Low,0.425,0.941773,No
 0.016129,0.7,0.013333,High,No,Yes,No,Yes,No,No,Medium,Medium,0,0.663432,No
@@ -225,7 +225,7 @@
 0.467742,0.05,0.066667,Low,Yes,Yes,No,No,No,Yes,None,High,0.4875,0.239975,No
 0.580645,0.566667,0.48,Medium,No,No,No,No,No,No,Low,Low,0.5625,0.144975,No
 0.354839,0.833333,0.78,Medium,Yes,Yes,No,Yes,No,Yes,Medium,High,0.6875,0.208004,No
-0.612903,0.766667,0.502837,High,Yes,Yes,Yes,Yes,No,No,Low,Medium,0.85,0.738518,No
+0.612903,0.766667,0.506667,High,Yes,Yes,Yes,Yes,No,No,Low,Medium,0.85,0.738518,No
 0.709677,0.583333,0.586667,Low,Yes,No,No,Yes,Yes,Yes,None,Medium,0.5,0.626771,No
 0.225806,0.5,0.36,High,No,No,No,No,Yes,Yes,Medium,Low,0.875,0.853443,No
 0.677419,0.4,0.053333,Medium,No,Yes,Yes,Yes,No,No,High,Medium,0.3375,0.567875,No
@@ -240,7 +240,7 @@
 0.435484,0.116667,0.053333,Low,No,Yes,Yes,No,Yes,No,Medium,Low,0.1125,0.470236,No
 0.016129,0.85,0.44,Low,No,No,Yes,No,Yes,No,High,Low,0.0625,0.06197,No
 0.66129,0.783333,0.346667,High,Yes,Yes,Yes,Yes,No,No,High,Low,0.4625,0.355988,No
-0.709677,0.495962,0.54,Medium,Yes,Yes,No,Yes,Yes,Yes,None,High,0.2125,0.485916,No
+0.709677,0.5,0.54,Medium,Yes,Yes,No,Yes,Yes,Yes,None,High,0.2125,0.485916,No
 0.983871,0.7,0.726667,Medium,No,No,Yes,Yes,No,Yes,Low,Low,0.2375,0.551572,No
 0.903226,0.85,0.96,High,Yes,No,Yes,Yes,Yes,No,None,High,0.0625,0.241758,No
 0.83871,0.866667,0.346667,High,No,Yes,No,Yes,Yes,Yes,Medium,Medium,1,0.047786,No
@@ -276,9 +276,9 @@
 0.129032,0.616667,0.933333,High,Yes,No,Yes,Yes,Yes,No,Medium,Medium,0.4625,0.226196,No
 0.983871,0.766667,0.973333,Medium,Yes,No,No,No,No,No,High,Medium,0.8625,0.709446,No
 0.580645,0.116667,0.426667,High,Yes,No,No,No,No,Yes,Medium,Medium,0.1,0.970465,No
-0.516129,0.1,0.502837,Low,Yes,Yes,No,Yes,No,Yes,None,Medium,0.55,0.283083,No
+0.516129,0.1,0.506667,Low,Yes,Yes,No,Yes,No,Yes,None,Medium,0.55,0.283083,No
 0.806452,0.016667,0.28,Medium,Yes,Yes,Yes,Yes,Yes,Yes,High,High,0.3125,0.261587,No
-0.66129,0.483333,0.502837,High,Yes,No,No,No,Yes,Yes,None,Medium,0.6375,0.947008,No
+0.66129,0.483333,0.506667,High,Yes,No,No,No,Yes,Yes,None,Medium,0.6375,0.947008,No
 0.693548,0.2,0.446667,Low,No,No,Yes,Yes,Yes,Yes,High,High,0.0625,0.616847,No
 0.370968,0.366667,0.186667,Medium,No,Yes,No,No,Yes,Yes,High,Medium,0.25,0.547509,No
 0.225806,0.466667,0.893333,High,No,Yes,No,Yes,Yes,Yes,High,Low,0.7375,0.281659,No
@@ -304,7 +304,7 @@
 0.774194,0.016667,0.053333,Medium,No,No,No,No,No,Yes,High,Medium,1,0.497279,No
 0.887097,0.666667,0.513333,Medium,Yes,Yes,No,No,Yes,Yes,None,Medium,0.4875,0.411515,No
 0.258065,0.8,0.82,High,No,Yes,No,No,Yes,No,None,Low,0.7625,0.693979,No
-0.935484,0.966667,0.502837,Low,No,No,No,Yes,No,No,Low,High,0.725,0.460562,No
+0.935484,0.966667,0.506667,Low,No,No,No,Yes,No,No,Low,High,0.725,0.460562,No
 0.774194,0.816667,0.273333,Medium,No,No,No,No,No,No,None,Low,0.6125,0.998849,No
 0.016129,0.733333,0.266667,Low,Yes,Yes,No,Yes,Yes,No,Medium,High,0.125,0.426703,No
 0.016129,0,0.586667,High,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Low,0.175,0.372268,No
@@ -319,14 +319,14 @@
 0.983871,0.966667,0.286667,High,No,No,Yes,No,No,No,None,High,0.1375,0.714964,No
 0.016129,0.566667,0.86,Low,No,No,Yes,Yes,Yes,No,High,Low,0.5625,0.341859,No
 0.83871,0.083333,0.94,Medium,Yes,Yes,Yes,Yes,Yes,No,High,High,0.075,0.901251,No
-0.693548,0.495962,0.86,Low,Yes,Yes,No,Yes,Yes,Yes,Medium,Low,0.7875,0.09507,No
+0.693548,0.5,0.86,Low,Yes,Yes,No,Yes,Yes,Yes,Medium,Low,0.7875,0.09507,No
 0.403226,0.733333,0.12,Medium,No,No,Yes,Yes,No,No,High,Low,0.2125,0.805982,No
 0.5,0.716667,0.526667,High,No,Yes,Yes,No,No,Yes,Low,Medium,0.3375,0.079218,No
 0.080645,0.3,0.586667,Medium,No,No,Yes,No,Yes,Yes,High,Medium,0.125,0.991015,No
 0.5,1,0,Low,No,Yes,Yes,Yes,Yes,Yes,High,High,0.425,0.19312,No
 0.870968,0.283333,0.86,Medium,No,No,No,No,No,Yes,Medium,Medium,0.9375,0.381455,No
 0.048387,0.916667,0.173333,Low,No,Yes,Yes,Yes,No,No,Medium,Low,0.9375,0.39709,No
-0.870968,0.495962,0.006667,Low,No,Yes,Yes,Yes,No,Yes,None,Medium,0.175,0.974773,No
+0.870968,0.5,0.006667,Low,No,Yes,Yes,Yes,No,Yes,None,Medium,0.175,0.974773,No
 0.16129,0.4,0.913333,Low,No,Yes,Yes,No,Yes,No,High,Low,0.6625,0.021292,No
 0.887097,0.433333,0.12,High,No,No,Yes,Yes,No,Yes,Medium,High,0.4875,0.262229,No
 0.935484,0.1,0.933333,High,No,No,Yes,No,Yes,Yes,None,Medium,0.225,0.579116,No
@@ -588,7 +588,7 @@
 0.822581,0.666667,0.953333,High,Yes,No,No,No,Yes,No,None,High,0.775,0.903452,No
 0.66129,0.233333,0.16,High,Yes,Yes,No,Yes,Yes,Yes,Medium,Low,0.475,0.912611,No
 0.080645,0.716667,0.993333,Low,Yes,Yes,No,No,Yes,No,None,Medium,0.2125,0.77871,No
-0.225806,0.033333,0.6,Low,No,Yes,Yes,No,No,Yes,High,High,0.2875,0.497109,No
+0.225806,0.033333,0.6,Low,No,Yes,Yes,No,No,Yes,High,High,0.2875,0.493983,No
 0.854839,0.7,0.58,Low,Yes,Yes,No,Yes,No,No,None,Medium,0.0125,0.371875,No
 0.677419,0.766667,0.5,Medium,Yes,Yes,Yes,Yes,Yes,Yes,None,Low,0.1875,0.573019,No
 0.951613,0.566667,0.113333,High,Yes,No,No,Yes,Yes,No,High,Low,0.975,0.855179,No
@@ -625,7 +625,7 @@
 0.290323,0.283333,0.286667,Medium,No,No,No,Yes,Yes,No,Medium,Low,0.8125,0.128908,No
 0.435484,0.333333,0.826667,Low,Yes,No,No,No,No,Yes,None,High,0.275,0.713731,No
 0.919355,0.116667,0.786667,High,Yes,No,Yes,Yes,No,No,Low,Medium,0.5875,0.142238,No
-0.870968,0.495962,0.866667,Medium,No,No,No,No,No,Yes,None,Low,0.4,0.652153,No
+0.870968,0.5,0.866667,Medium,No,No,No,No,No,Yes,None,Low,0.4,0.652153,No
 0.403226,0.85,0.833333,Medium,Yes,Yes,Yes,Yes,Yes,No,None,High,0.3375,0.61594,No
 0.580645,0.55,0.913333,Low,No,No,No,No,Yes,No,None,Low,0.775,0.584754,No
 0.403226,0.15,0.32,Low,No,No,No,No,No,Yes,None,Medium,0.0875,0.26596,No
@@ -733,7 +733,7 @@
 0.177419,0.4,0.72,Low,Yes,No,No,Yes,No,No,None,High,0.475,0.80259,No
 0.032258,0.916667,0.633333,High,Yes,No,No,No,Yes,Yes,Low,Low,0.45,0.228162,No
 0,0.75,0.06,High,No,No,Yes,No,No,Yes,High,High,0.4625,0.84298,No
-0.504778,0.666667,0.226667,Low,No,Yes,Yes,Yes,No,Yes,None,Low,0.875,0.646684,No
+0.5,0.666667,0.226667,Low,No,Yes,Yes,Yes,No,Yes,None,Low,0.875,0.646684,No
 0.629032,0.233333,0.36,High,No,No,No,No,Yes,No,Medium,Low,0.9,0.777267,No
 0.145161,0.4,0.633333,Low,Yes,Yes,Yes,Yes,Yes,Yes,Low,Medium,0.4125,0.514978,No
 0.677419,0.35,0.813333,High,Yes,Yes,No,No,Yes,Yes,None,Low,0.3375,0.066436,No
@@ -867,11 +867,11 @@
 0.258065,0.45,0.32,High,Yes,Yes,Yes,No,No,Yes,Low,Medium,0.9875,0.497339,No
 0.967742,0.733333,0.22,High,Yes,No,No,Yes,Yes,Yes,Medium,High,0.2,0.774429,No
 0.596774,0.416667,0.66,Low,No,No,No,No,No,Yes,Low,High,0.975,0.185571,No
-0.096774,0.45,0.893333,High,No,Yes,No,Yes,No,No,Low,Low,0.5125,0.497109,No
+0.096774,0.45,0.893333,High,No,Yes,No,Yes,No,No,Low,Low,0.5125,0.493983,No
 0.725806,0.65,0.113333,High,Yes,No,No,Yes,No,No,None,Medium,0.325,0.129614,No
 0.193548,0.233333,0.46,Low,No,No,Yes,No,No,Yes,Low,Medium,0.8,0.384886,No
 0.629032,0.083333,0.753333,Low,Yes,Yes,Yes,Yes,No,Yes,None,Low,0.3625,0.930817,No
-0.66129,0.433333,0.22,High,No,Yes,No,No,Yes,No,Low,High,0.501778,0.058467,No
+0.66129,0.433333,0.22,High,No,Yes,No,No,Yes,No,Low,High,0.5,0.058467,No
 0.129032,0.616667,0.333333,Medium,No,No,Yes,Yes,Yes,Yes,None,Medium,0.85,0.737109,No
 0.790323,0.05,0.693333,Medium,No,Yes,Yes,Yes,Yes,No,Medium,Low,0.8,0.846049,No
 0.419355,0.166667,0.613333,Low,Yes,No,No,Yes,Yes,No,Low,Medium,0.0375,0.524318,No
@@ -900,7 +900,7 @@
 0.483871,0.333333,0.913333,High,No,No,No,No,No,Yes,High,High,0.1375,0.612454,No
 0.290323,0.266667,0.326667,Medium,No,No,No,Yes,No,No,Low,Medium,0,0.31657,No
 0.967742,0.666667,0.926667,High,Yes,No,Yes,No,No,Yes,High,Low,0.2625,0.610386,No
-0.693548,0.833333,0.606667,Medium,Yes,Yes,Yes,Yes,Yes,Yes,None,Medium,0.501778,0.845907,No
+0.693548,0.833333,0.606667,Medium,Yes,Yes,Yes,Yes,Yes,Yes,None,Medium,0.5,0.845907,No
 0.854839,0.283333,0.206667,Low,No,No,Yes,Yes,Yes,No,None,High,0.3375,0.40252,No
 0.612903,0.933333,0.213333,Low,Yes,No,Yes,Yes,Yes,No,Low,Low,0.8875,0.185345,No
 0.419355,0.9,0.166667,Medium,Yes,No,No,No,No,No,None,High,0.7875,0.252741,No
@@ -917,7 +917,7 @@
 0.983871,0,0.313333,High,No,No,No,No,No,Yes,High,Medium,0.925,0.957214,No
 0.919355,0.95,0.006667,High,No,Yes,Yes,Yes,No,Yes,None,High,0.6125,0.829114,No
 0.306452,0.033333,0.92,Medium,No,Yes,No,No,No,No,Low,Medium,0.575,0.984631,No
-0.435484,0.333333,0.502837,Medium,No,No,Yes,No,Yes,Yes,Medium,Medium,0.95,0.637913,No
+0.435484,0.333333,0.506667,Medium,No,No,Yes,No,Yes,Yes,Medium,Medium,0.95,0.637913,No
 0.112903,0.366667,0.846667,Low,Yes,No,Yes,No,Yes,Yes,None,High,0.5375,0.765588,No
 0.967742,0.133333,0.386667,Medium,No,No,No,No,No,Yes,None,Medium,0.8375,0.119843,No
 1,0.883333,0.793333,Low,Yes,No,No,No,No,No,High,Low,0.4,0.358082,No
@@ -966,7 +966,7 @@
 0.483871,0.966667,0.233333,High,Yes,No,No,No,No,No,Medium,Medium,0.7,0.277344,No
 0,0.616667,0.366667,Medium,No,Yes,No,Yes,No,No,None,Low,0.95,0.834931,No
 0.83871,0.55,0.233333,High,No,Yes,No,No,No,No,High,High,0.975,0.069847,No
-0.854839,0.116667,0.586667,Low,No,No,No,Yes,Yes,Yes,Medium,High,0.55,0.497109,No
+0.854839,0.116667,0.586667,Low,No,No,No,Yes,Yes,Yes,Medium,High,0.55,0.493983,No
 0.854839,0.583333,0.406667,Medium,No,No,No,Yes,Yes,Yes,Medium,High,0.65,0.920585,No
 0.032258,0.333333,0.72,Medium,Yes,Yes,No,No,Yes,Yes,None,Medium,0.95,0.560412,No
 0.241935,0.916667,0.573333,High,Yes,No,Yes,Yes,Yes,Yes,High,Low,0.075,0.037715,No
@@ -1000,7 +1000,7 @@
 0.419355,0.766667,0.246667,Low,Yes,No,Yes,Yes,No,Yes,None,High,0.2125,0.884015,No
 0.854839,0.633333,0.42,High,No,No,No,Yes,Yes,Yes,Low,Medium,0.2125,0.291286,No
 1,0.483333,0.053333,Low,Yes,No,No,No,Yes,No,None,Medium,0.775,0.638022,No
-0.258065,0.083333,0.502837,High,Yes,No,No,No,No,Yes,None,High,0.375,0.239002,No
+0.258065,0.083333,0.506667,High,Yes,No,No,No,No,Yes,None,High,0.375,0.239002,No
 0.129032,0.05,0.206667,Medium,No,Yes,Yes,Yes,No,No,High,Low,0.35,0.306537,No
 0.516129,0.833333,0.066667,Low,Yes,No,Yes,No,Yes,No,Low,Medium,0.9875,0.389467,No
 0.83871,0.6,0.693333,Low,Yes,Yes,No,No,No,No,None,High,0.625,0.440696,No
@@ -1034,7 +1034,7 @@
 0,1,0.133333,Low,Yes,No,No,No,Yes,Yes,Low,Medium,0.2375,0.028562,No
 0.274194,0.5,0.473333,Medium,No,No,No,Yes,Yes,Yes,None,High,0.9125,0.474198,No
 0.5,0.216667,0.853333,Low,Yes,Yes,No,No,Yes,No,None,Low,0.6,0.619072,No
-0.504778,0.883333,0.673333,Medium,No,No,No,Yes,Yes,No,None,Medium,0.9875,0.180718,No
+0.5,0.883333,0.673333,Medium,No,No,No,Yes,Yes,No,None,Medium,0.9875,0.180718,No
 0.774194,0.766667,0.08,High,No,No,Yes,Yes,Yes,Yes,None,Low,0.9125,0.293494,No
 0.16129,0.216667,0.48,Low,No,No,No,Yes,No,Yes,None,Medium,0.4625,0.986893,No
 0.322581,0.783333,0.033333,Medium,Yes,No,Yes,No,No,No,Low,High,0.4,0.205584,No
@@ -1044,7 +1044,7 @@
 0.33871,0.3,0.073333,Medium,Yes,No,No,Yes,No,Yes,Low,Medium,0.0875,0.375548,No
 0.935484,0.433333,0.566667,Low,No,Yes,No,Yes,No,No,High,High,0.8625,0.807359,No
 0.419355,0.133333,0.806667,High,Yes,Yes,No,No,No,No,Low,Low,0.5875,0.501667,No
-0.774194,0.6,0.46,High,Yes,No,Yes,Yes,No,No,Medium,Low,0.825,0.497109,No
+0.774194,0.6,0.46,High,Yes,No,Yes,Yes,No,No,Medium,Low,0.825,0.493983,No
 0.193548,0.6,0.713333,Low,No,No,No,No,Yes,Yes,None,Low,0.4625,0.930183,No
 0.516129,0.7,0.34,Low,Yes,No,Yes,Yes,No,No,None,Medium,0.4125,0.053087,No
 0.532258,0.45,0.24,Low,No,No,Yes,Yes,Yes,No,Low,Medium,0.0375,0.361668,No
@@ -1056,7 +1056,7 @@
 0.758065,0.85,0.42,High,No,Yes,No,No,No,Yes,Medium,High,0.75,0.483982,No
 0.870968,0.283333,0.273333,High,Yes,Yes,No,Yes,Yes,Yes,None,Medium,0.6125,0.523246,No
 0.080645,0.4,0.28,High,Yes,No,No,Yes,Yes,No,Low,High,0.0875,0.6598,No
-0.504778,0.566667,0.826667,High,No,Yes,No,No,No,Yes,High,High,0.1875,0.640694,No
+0.5,0.566667,0.826667,High,No,Yes,No,No,No,Yes,High,High,0.1875,0.640694,No
 0.258065,0.05,0.906667,Low,No,No,No,No,Yes,No,High,Medium,0.5875,0.976558,No
 0.064516,0.216667,0.086667,Medium,No,Yes,Yes,Yes,No,Yes,High,Medium,0.7625,0.812804,No
 0.483871,0.633333,0.6,High,Yes,No,No,No,Yes,No,None,Medium,0.6875,0.639131,No
@@ -1427,7 +1427,7 @@
 0.064516,0.35,0.253333,High,Yes,Yes,No,No,Yes,No,Medium,High,0.225,0.8411,No
 0.983871,0.6,0.953333,High,Yes,No,No,No,No,Yes,Medium,Medium,0.05,0.770475,No
 0.951613,0.35,0.113333,High,Yes,No,Yes,No,Yes,No,Medium,Medium,0.85,0.414647,No
-0.693548,0.495962,0.493333,High,No,Yes,Yes,Yes,No,Yes,None,High,0.725,0.405956,No
+0.693548,0.5,0.493333,High,No,Yes,Yes,Yes,No,Yes,None,High,0.725,0.405956,No
 0.790323,0.166667,0.673333,Low,Yes,No,No,Yes,No,No,None,High,0.6625,0.468047,No
 0.209677,0.516667,0.126667,Medium,No,No,Yes,Yes,Yes,Yes,None,Medium,0.05,0.10563,No
 0.83871,0.566667,0.773333,High,No,Yes,No,Yes,No,No,Medium,Medium,0.6,0.721112,No
@@ -1485,7 +1485,7 @@
 0.741935,0.833333,0.273333,High,Yes,Yes,Yes,Yes,Yes,No,Low,Low,0.075,0.119868,No
 0.870968,0.066667,0.586667,Low,Yes,Yes,Yes,Yes,Yes,Yes,None,Low,0.2,0.447077,No
 0.016129,0.483333,0.573333,High,Yes,No,Yes,Yes,Yes,Yes,None,High,0.8375,0.64663,No
-0.504778,0.35,0.026667,Medium,Yes,Yes,No,No,No,Yes,Low,Low,0.7125,0.472651,No
+0.5,0.35,0.026667,Medium,Yes,Yes,No,No,No,Yes,Low,Low,0.7125,0.472651,No
 0.83871,0.316667,0.326667,Low,Yes,No,No,No,No,Yes,None,Medium,0.6125,0.119934,No
 0.629032,0.25,0.266667,High,Yes,Yes,Yes,No,No,No,Low,Low,0.8625,0.05436,No
 0.629032,0.1,0.62,Low,No,Yes,No,No,No,No,Medium,High,0.5625,0.352779,No
@@ -1551,7 +1551,7 @@
 0.483871,0.083333,0.286667,Medium,Yes,Yes,Yes,Yes,No,Yes,Low,Medium,0.8875,0.385443,No
 0.806452,0.216667,0.233333,Medium,No,Yes,No,Yes,Yes,Yes,None,High,0.3,0.504027,No
 0.806452,0.05,0.653333,Medium,Yes,No,No,No,Yes,Yes,None,Medium,0,0.961018,No
-0.564516,0.733333,0.46,High,No,No,No,No,No,Yes,Low,Medium,0,0.497109,No
+0.564516,0.733333,0.46,High,No,No,No,No,No,Yes,Low,Medium,0,0.493983,No
 0.564516,0.833333,0.806667,High,No,Yes,No,No,No,Yes,None,Medium,0.325,0.31787,No
 0.403226,0.283333,0.82,High,No,No,Yes,Yes,No,No,High,Medium,0.8375,0.244207,No
 0.677419,0.466667,0.526667,High,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.45,0.486942,No
@@ -1592,7 +1592,7 @@
 0.580645,0.3,0.5,Low,No,Yes,Yes,No,Yes,No,High,Medium,0.9875,0.584792,No
 0.112903,0.383333,0.953333,Medium,No,Yes,No,Yes,Yes,No,High,Medium,0.325,0.551717,No
 1,0.233333,0.666667,Low,No,Yes,No,No,Yes,Yes,None,Medium,0.4875,0.493857,No
-0.66129,0.666667,0.826667,Low,Yes,Yes,Yes,No,Yes,Yes,Low,Low,0.501778,0.999507,No
+0.66129,0.666667,0.826667,Low,Yes,Yes,Yes,No,Yes,Yes,Low,Low,0.5,0.999507,No
 0.774194,0.683333,0.1,High,Yes,Yes,No,Yes,No,Yes,High,Low,0.275,0.902792,No
 0.435484,0.366667,0.36,High,Yes,No,No,Yes,No,Yes,High,Medium,0.925,0.62305,No
 0.483871,0.85,0.626667,Low,Yes,No,No,Yes,Yes,No,None,High,0.0375,0.313242,No
@@ -1720,7 +1720,7 @@
 0.790323,0.816667,0.146667,Medium,Yes,Yes,Yes,Yes,Yes,Yes,Low,Low,0.225,0.438582,No
 0.467742,0.616667,0.666667,Medium,No,Yes,No,No,Yes,Yes,Low,Low,0.475,0.378501,No
 0.596774,0.9,0.953333,Low,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Medium,0.1,0.171079,No
-0.504778,0.45,0.72,High,Yes,Yes,No,Yes,Yes,No,Low,High,0.2,0.871238,No
+0.5,0.45,0.72,High,Yes,Yes,No,Yes,Yes,No,Low,High,0.2,0.871238,No
 1,0.15,0.733333,Medium,No,Yes,Yes,Yes,Yes,Yes,High,High,0.0875,0.554814,No
 0.048387,0.35,0.106667,Medium,No,Yes,Yes,No,Yes,Yes,Low,High,0.675,0.457613,No
 0,0.9,0.566667,High,No,No,No,Yes,No,Yes,None,Low,0.95,0.169827,No
@@ -1884,7 +1884,7 @@
 0.483871,0.15,0.466667,Low,No,No,Yes,No,Yes,Yes,Low,Medium,0.2,0.907156,No
 0.080645,0.583333,0.486667,High,Yes,No,No,No,No,Yes,Low,High,0.0625,0.466022,No
 0.419355,0.533333,0.306667,High,Yes,No,No,Yes,Yes,No,None,Medium,0.15,0.775602,No
-0.504778,0.366667,0.5,High,Yes,No,Yes,Yes,Yes,Yes,Low,Medium,0.0625,0.442186,No
+0.5,0.366667,0.5,High,Yes,No,Yes,Yes,Yes,Yes,Low,Medium,0.0625,0.442186,No
 0.532258,0.65,0.633333,Low,No,No,No,No,Yes,No,None,Medium,0.225,0.304625,No
 0.177419,0.066667,0.2,Low,No,Yes,Yes,Yes,Yes,No,High,High,0.75,0.433593,No
 0.709677,0.55,0.14,High,No,No,Yes,No,No,Yes,None,Medium,0.125,0.893141,No
@@ -2056,7 +2056,7 @@
 0.032258,0.516667,0.353333,Medium,Yes,Yes,Yes,No,Yes,No,Medium,Medium,0.4125,0.87796,No
 0.580645,0.8,0.113333,Low,Yes,No,Yes,Yes,Yes,Yes,Medium,High,0.5875,0.974291,No
 0.677419,0.55,0.173333,Medium,No,No,Yes,No,No,No,Low,High,0.9375,0.419026,No
-0.629032,0.666667,0.502837,Medium,No,No,Yes,Yes,Yes,No,Low,High,1,0.73972,No
+0.629032,0.666667,0.506667,Medium,No,No,Yes,Yes,Yes,No,Low,High,1,0.73972,No
 0.403226,0.716667,0.886667,Medium,No,Yes,Yes,No,Yes,No,Low,High,0.0375,0.740101,No
 0.870968,0.833333,0.806667,Medium,Yes,Yes,Yes,No,Yes,Yes,Medium,High,0.7,0.562153,No
 0.354839,0.35,0.693333,Low,No,Yes,No,Yes,No,No,None,Medium,0.775,0.462462,No
@@ -2292,7 +2292,7 @@
 0.83871,0.766667,0.233333,High,Yes,No,Yes,Yes,No,No,None,High,0.675,0.047516,No
 0.66129,0.2,0.28,Low,No,No,Yes,No,Yes,Yes,Low,Medium,0.525,0.997785,No
 0.564516,0.95,0.753333,High,No,Yes,Yes,No,No,No,Low,Low,0.5375,0.351047,No
-1,0.25,0.486667,Medium,No,No,Yes,Yes,No,Yes,High,High,0.501778,0.255081,No
+1,0.25,0.486667,Medium,No,No,Yes,Yes,No,Yes,High,High,0.5,0.255081,No
 0.419355,0.716667,0.533333,Medium,Yes,Yes,No,No,No,No,Low,Low,0.65,0.62893,No
 0.596774,0.1,0.62,High,Yes,No,No,No,No,No,High,Medium,0.575,0.93146,No
 0.951613,0.783333,0.933333,Low,Yes,No,No,Yes,Yes,Yes,Medium,Medium,0.3,0.43971,No
@@ -2361,7 +2361,7 @@
 0.048387,0.8,0.006667,Low,No,Yes,Yes,No,No,Yes,Medium,Medium,0.2625,0.04758,No
 0.419355,0.116667,0.94,High,Yes,No,Yes,No,Yes,Yes,High,High,0.1625,0.694967,No
 0.258065,0.45,0.913333,High,No,Yes,No,Yes,Yes,No,High,Low,0.3,0.728645,No
-0.177419,0.75,0.326667,Medium,No,Yes,Yes,No,No,No,None,Low,0.8,0.497109,No
+0.177419,0.75,0.326667,Medium,No,Yes,Yes,No,No,No,None,Low,0.8,0.493983,No
 0.33871,0.333333,0.966667,Low,No,No,No,Yes,No,Yes,High,Low,0.6,0.427505,No
 0.258065,0.366667,0.113333,Low,Yes,No,No,No,No,Yes,High,High,0.425,0.813819,No
 0.145161,0.516667,0.1,Medium,Yes,Yes,Yes,No,No,Yes,Low,Low,0.6375,0.2967,No
@@ -2381,7 +2381,7 @@
 0.935484,0.233333,0.14,Low,No,No,Yes,Yes,Yes,No,Low,High,0.15,0.601034,No
 0.548387,0.866667,0.846667,Low,Yes,Yes,No,Yes,Yes,No,Low,Low,0.5,0.61728,No
 0.822581,0.433333,0.246667,Medium,No,Yes,Yes,No,Yes,Yes,High,Medium,0.0125,0.952393,No
-0.967742,0.266667,0.502837,Low,No,Yes,No,No,Yes,Yes,High,Medium,0.05,0.971461,No
+0.967742,0.266667,0.506667,Low,No,Yes,No,No,Yes,Yes,High,Medium,0.05,0.971461,No
 0.177419,0.65,0.666667,Low,No,No,No,No,No,No,Low,High,0.4,0.939316,No
 0.096774,0.016667,0.04,Medium,No,No,No,No,No,No,None,Medium,0.8,0.519971,No
 0.451613,0.8,0.286667,Medium,Yes,Yes,Yes,Yes,Yes,Yes,Low,Low,0.45,0.717135,No
@@ -2450,7 +2450,7 @@
 0.774194,0.433333,0.533333,High,No,No,No,No,No,No,Low,High,0.3125,0.522698,No
 0.387097,0.116667,0.08,Low,Yes,No,No,No,Yes,Yes,Low,Medium,0.3375,0.339261,No
 0.370968,0.983333,0.886667,Medium,No,No,Yes,No,No,Yes,Medium,Medium,0.6,0.256656,No
-0.177419,0.983333,0.502837,High,No,Yes,Yes,No,No,No,High,High,0.3875,0.823581,No
+0.177419,0.983333,0.506667,High,No,Yes,Yes,No,No,No,High,High,0.3875,0.823581,No
 0.274194,0.366667,0.846667,Low,No,No,Yes,No,Yes,Yes,Medium,Low,0.2375,0.271646,No
 0.225806,0.233333,0.313333,High,No,No,Yes,Yes,No,Yes,Medium,Low,0.5625,0.695314,No
 0.693548,0.433333,0.066667,High,No,Yes,No,Yes,No,No,None,Medium,0.7125,0.349391,No
@@ -2768,7 +2768,7 @@
 0.177419,0.8,0.273333,Low,No,Yes,No,Yes,No,Yes,None,Low,0.4875,0.990537,No
 0.467742,0.95,0.126667,Medium,No,No,No,No,No,No,High,High,0.6,0.608366,No
 0.645161,0.583333,0.313333,High,No,No,Yes,No,No,No,Medium,Low,0.7625,0.610271,No
-0.504778,0.366667,0.113333,Medium,Yes,Yes,Yes,Yes,Yes,No,None,High,0.225,0.823861,No
+0.5,0.366667,0.113333,Medium,Yes,Yes,Yes,Yes,Yes,No,None,High,0.225,0.823861,No
 0.064516,0.733333,0.846667,Low,No,No,Yes,Yes,Yes,No,None,Medium,0.6,0.49079,No
 0.306452,0.25,0.506667,Medium,Yes,No,Yes,Yes,Yes,No,Medium,Medium,0.4625,0.251348,No
 0.112903,0.783333,0.033333,Low,No,Yes,No,Yes,Yes,Yes,Medium,Low,0.7625,0.149941,No
@@ -2886,7 +2886,7 @@
 0.419355,0.566667,0.293333,Low,No,Yes,Yes,No,No,Yes,Medium,Medium,0.0375,0.0011,No
 0.112903,0.45,0.853333,High,No,No,Yes,Yes,Yes,No,High,Medium,0.725,0.852341,No
 0.387097,0.95,0.346667,Low,No,Yes,No,No,No,No,Medium,Medium,0.8625,0.937887,No
-0.504778,0.483333,0.44,Low,Yes,No,No,No,No,No,None,Low,0.35,0.894765,No
+0.5,0.483333,0.44,Low,Yes,No,No,No,No,No,None,Low,0.35,0.894765,No
 0.048387,0.416667,0.946667,Medium,No,No,Yes,No,Yes,Yes,None,Medium,0.0875,0.159998,No
 0.516129,0.1,0.693333,High,No,Yes,Yes,Yes,Yes,Yes,High,High,0.5875,0.848766,No
 0,0.633333,0.086667,High,No,No,No,Yes,Yes,No,None,High,0.9125,0.649674,No
@@ -2970,7 +2970,7 @@
 0.725806,0.2,0.313333,Medium,No,Yes,No,Yes,Yes,Yes,Medium,Low,0.15,0.258768,No
 0.129032,0.15,0.6,High,No,No,No,Yes,No,Yes,Low,Medium,0.575,0.599577,No
 0.032258,0.366667,0.006667,High,Yes,No,Yes,No,No,No,Low,High,0.125,0.587697,No
-0.322581,0.283333,0.502837,Low,Yes,No,Yes,Yes,Yes,Yes,High,High,0.475,0.887472,No
+0.322581,0.283333,0.506667,Low,Yes,No,Yes,Yes,Yes,Yes,High,High,0.475,0.887472,No
 0.403226,0.516667,0.84,High,No,Yes,No,No,No,Yes,Medium,Medium,0.2875,0.741292,No
 0.112903,0.533333,0.3,Medium,Yes,Yes,Yes,Yes,No,No,None,Low,0.925,0.164796,No
 0.758065,0.583333,0.7,Medium,No,No,Yes,No,No,No,Medium,Medium,0.55,0.847196,No
@@ -3093,7 +3093,7 @@
 0.66129,0.133333,0.453333,Medium,Yes,Yes,Yes,Yes,No,Yes,None,Medium,0.7,0.364766,No
 0.112903,0.633333,0.566667,High,No,No,No,Yes,Yes,No,High,High,0.375,0.228994,No
 0.370968,0.716667,0.466667,High,Yes,No,No,No,Yes,Yes,Low,High,0.95,0.11365,No
-0.241935,0.495962,0.08,High,Yes,No,No,Yes,No,No,Medium,Medium,0.7375,0.81167,No
+0.241935,0.5,0.08,High,Yes,No,No,Yes,No,No,Medium,Medium,0.7375,0.81167,No
 0.774194,0.933333,0.146667,High,No,No,Yes,Yes,Yes,No,Medium,High,0.9875,0.66488,No
 0.403226,0.6,0.986667,Medium,Yes,Yes,No,No,Yes,Yes,High,Low,0.6125,0.271001,No
 0.419355,0.25,0.033333,Low,Yes,Yes,No,Yes,Yes,No,High,Medium,0.2625,0.066,No
@@ -3121,7 +3121,7 @@
 0.693548,0.35,0,Low,Yes,Yes,No,No,No,Yes,High,Low,0.8125,0.297676,No
 0.532258,0.15,0.826667,High,No,No,No,No,Yes,Yes,None,Low,0.8875,0.003616,No
 0.516129,0.366667,0.913333,Medium,Yes,Yes,No,No,No,Yes,Medium,Medium,0.875,0.488188,No
-0.870968,0.233333,0.9,Low,Yes,No,Yes,Yes,No,No,Low,Low,0.501778,0.790607,No
+0.870968,0.233333,0.9,Low,Yes,No,Yes,Yes,No,No,Low,Low,0.5,0.790607,No
 0.322581,0.483333,0.7,Low,Yes,No,No,No,Yes,Yes,Medium,High,0.0875,0.220704,No
 0.258065,0.55,0.826667,High,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Medium,0.65,0.155916,No
 0.33871,0.2,0.12,Medium,No,Yes,Yes,No,No,No,Low,Low,0.8375,0.398411,No
@@ -3151,7 +3151,7 @@
 0.854839,0.866667,0.773333,Medium,Yes,Yes,No,No,No,No,Medium,Low,0.7125,0.401976,No
 0.967742,0.466667,0.86,High,Yes,Yes,No,No,No,No,None,High,0.5,0.964558,No
 0.612903,0.6,0.573333,High,Yes,Yes,Yes,Yes,Yes,No,None,High,0.125,0.716425,No
-0.645161,0.05,0.502837,Low,Yes,No,Yes,No,No,No,Medium,High,0.0625,0.740941,No
+0.645161,0.05,0.506667,Low,Yes,No,Yes,No,No,No,Medium,High,0.0625,0.740941,No
 0.774194,0.183333,0.733333,Low,No,No,No,No,No,No,None,Low,0.2375,0.283075,No
 0.16129,0.416667,0.04,Medium,No,No,No,No,Yes,No,Low,High,0.35,0.642646,No
 0.612903,0.95,0.286667,Low,Yes,No,Yes,No,No,No,High,Medium,0.9,0.130039,No
@@ -3192,7 +3192,7 @@
 0.5,0.433333,0.613333,Medium,Yes,No,No,No,No,No,High,High,0.225,0.186338,No
 0.322581,0.983333,0.733333,Medium,No,No,Yes,No,No,Yes,High,High,0.8875,0.961056,No
 0.112903,0.3,0.633333,High,No,Yes,Yes,Yes,No,Yes,High,Medium,0.5375,0.277662,No
-0.596774,0.495962,0.073333,Medium,Yes,No,Yes,No,Yes,Yes,Medium,High,0.55,0.323167,No
+0.596774,0.5,0.073333,Medium,Yes,No,Yes,No,Yes,Yes,Medium,High,0.55,0.323167,No
 0.112903,0,0.133333,High,No,No,No,Yes,Yes,Yes,Medium,Low,0.825,0.542324,No
 0.790323,0.616667,0.84,High,Yes,Yes,No,No,No,No,Medium,Medium,0.975,0.577777,No
 0.032258,0.3,0.186667,Medium,Yes,Yes,Yes,No,No,Yes,High,Medium,0.8125,0.545896,No
@@ -3211,8 +3211,8 @@
 0.258065,0.8,0.613333,Medium,No,No,Yes,Yes,Yes,Yes,None,Low,0.3875,0.432773,No
 0.548387,0.05,0.346667,Low,No,No,No,Yes,No,Yes,Medium,High,0.9875,0.786042,No
 0.532258,0.716667,0.62,High,Yes,No,Yes,No,Yes,Yes,None,High,0.1,0.670471,No
-0.354839,0.495962,0.746667,Medium,Yes,No,Yes,No,No,No,Low,Low,0.45,0.478995,No
-0.504778,0.516667,0.893333,Medium,Yes,Yes,Yes,No,No,No,Medium,Medium,0.1,0.599556,No
+0.354839,0.5,0.746667,Medium,Yes,No,Yes,No,No,No,Low,Low,0.45,0.478995,No
+0.5,0.516667,0.893333,Medium,Yes,Yes,Yes,No,No,No,Medium,Medium,0.1,0.599556,No
 0.822581,0.05,0.066667,High,No,No,No,No,Yes,No,None,Low,0.25,0.565769,No
 0.112903,0.866667,0.16,Medium,Yes,Yes,No,Yes,Yes,Yes,Low,Low,0.6875,0.231624,No
 0.33871,0,0.546667,Medium,No,Yes,Yes,No,Yes,Yes,Medium,High,0.0875,0.200651,No
@@ -3262,7 +3262,7 @@
 0.33871,0.066667,0.493333,Medium,No,No,Yes,No,Yes,No,High,Medium,0.8,0.736641,No
 0.274194,0.85,0.26,Medium,Yes,No,No,No,Yes,Yes,Medium,Medium,0.425,0.415741,No
 0.112903,0.783333,0.926667,Low,No,No,Yes,Yes,Yes,No,High,Low,0.475,0.661018,No
-0.612903,0.866667,0.56,High,No,No,No,No,Yes,Yes,Low,High,0.501778,0.256109,No
+0.612903,0.866667,0.56,High,No,No,No,No,Yes,Yes,Low,High,0.5,0.256109,No
 0.5,0.416667,0.1,Medium,No,Yes,No,No,No,Yes,Medium,High,0.2,0.904081,No
 0.516129,0.35,0.513333,High,Yes,Yes,Yes,Yes,Yes,Yes,Low,Low,0.6125,0.972119,No
 0.83871,0.716667,0.313333,Low,No,No,No,Yes,No,No,None,Medium,0.3875,0.653854,No
@@ -3282,7 +3282,7 @@
 0.645161,0.983333,0.533333,Medium,Yes,No,Yes,Yes,Yes,Yes,Medium,High,0.2,0.955491,No
 0.322581,0.783333,0.746667,High,No,No,No,No,No,Yes,Medium,High,0.9,0.322432,No
 0.016129,0.483333,0.773333,High,Yes,No,No,No,Yes,No,None,Low,0.6625,0.839368,No
-0.504778,0.716667,0.82,Medium,Yes,Yes,No,Yes,Yes,Yes,Low,High,0.225,0.107013,No
+0.5,0.716667,0.82,Medium,Yes,Yes,No,Yes,Yes,Yes,Low,High,0.225,0.107013,No
 0.903226,0.133333,0.626667,Low,Yes,Yes,No,No,Yes,Yes,Medium,Low,0.375,0.949103,No
 0.129032,0.733333,0.413333,Medium,No,Yes,No,No,Yes,Yes,Medium,Medium,0.3,0.990111,No
 0,0.8,0.886667,High,Yes,Yes,No,No,No,Yes,High,Low,0.4625,0.018412,No
@@ -3353,7 +3353,7 @@
 0.725806,0.333333,0.846667,Low,No,No,Yes,No,No,Yes,High,Low,0.7875,0.588402,No
 0.967742,0.2,0.713333,Medium,No,Yes,No,No,No,No,High,High,0.6375,0.258241,No
 0.822581,0.6,0.686667,Medium,Yes,Yes,Yes,Yes,No,No,Low,High,0.525,0.514417,No
-0.032258,0.766667,0.502837,Low,Yes,No,Yes,No,Yes,No,High,Low,0.675,0.476261,No
+0.032258,0.766667,0.506667,Low,Yes,No,Yes,No,Yes,No,High,Low,0.675,0.476261,No
 0.548387,0.416667,0.226667,Low,No,Yes,No,No,No,Yes,High,High,0.5375,0.707404,No
 0.645161,0.65,0.9,Low,Yes,Yes,No,Yes,Yes,Yes,High,High,0.975,0.870384,No
 0.080645,0.1,0.673333,Low,No,Yes,No,No,No,No,High,High,0.725,0.872027,No
@@ -3372,7 +3372,7 @@
 0.951613,0.633333,0.933333,High,Yes,No,No,Yes,Yes,Yes,Medium,Low,0.6,0.709119,No
 0.177419,0.483333,0.453333,Low,Yes,No,Yes,No,Yes,No,High,Low,0.925,0.482433,No
 0.5,0.416667,0.146667,High,No,Yes,Yes,Yes,No,Yes,Medium,Medium,0.45,0.984482,No
-0.5,0.1,0.346667,High,Yes,No,No,No,No,No,None,Low,0.8625,0.497109,No
+0.5,0.1,0.346667,High,Yes,No,No,No,No,No,None,Low,0.8625,0.493983,No
 0.435484,0.1,0.793333,High,No,No,No,Yes,Yes,No,Medium,High,0.9375,0.545822,No
 0.193548,0.066667,0.96,High,No,Yes,No,No,No,Yes,Low,Medium,0.425,0.99348,No
 0.483871,0,0.846667,High,Yes,No,Yes,Yes,No,Yes,High,High,0.8875,0.551416,No
@@ -3732,7 +3732,7 @@
 0.580645,0.033333,0.22,High,Yes,Yes,No,No,Yes,No,Low,High,0.1625,0.861269,No
 0.741935,0.216667,0.46,High,No,No,No,No,No,Yes,None,High,0.0375,0.551562,No
 0.112903,0.983333,0.713333,Low,Yes,No,No,Yes,No,No,None,Low,0.7625,0.059532,No
-0.66129,0.016667,0.88,High,No,No,No,No,Yes,No,High,High,0.2,0.497109,No
+0.66129,0.016667,0.88,High,No,No,No,No,Yes,No,High,High,0.2,0.493983,No
 0.919355,0.516667,0.833333,High,Yes,No,Yes,No,No,Yes,High,High,0.1625,0.857259,No
 0.241935,0.5,0.133333,Low,No,Yes,No,Yes,No,No,Low,Low,0.0625,0.381024,No
 0.112903,0.166667,0.866667,High,Yes,Yes,No,Yes,No,Yes,Medium,High,0.125,0.133385,No
@@ -3861,7 +3861,7 @@
 0.516129,0.683333,0.646667,High,Yes,No,No,Yes,Yes,Yes,High,High,0.9,0.697482,No
 0.274194,0.9,0.373333,Medium,No,No,No,No,No,Yes,None,Medium,1,0.671643,No
 1,0.566667,0.626667,Low,No,No,No,Yes,No,No,None,High,0.15,0.946798,No
-0.822581,0.283333,0.502837,Medium,Yes,No,Yes,Yes,Yes,Yes,Medium,Medium,0.025,0.6053,No
+0.822581,0.283333,0.506667,Medium,Yes,No,Yes,Yes,Yes,Yes,Medium,Medium,0.025,0.6053,No
 0.774194,0.866667,0.58,High,Yes,No,Yes,No,No,No,Medium,Low,0.9,0.583971,No
 0.935484,0.3,0.933333,High,Yes,No,Yes,No,No,Yes,None,High,0.1625,0.176929,No
 0.435484,0.066667,0.953333,High,No,No,Yes,No,No,No,None,Low,0.825,0.151869,No
@@ -3920,7 +3920,7 @@
 0.451613,0.3,0.02,Medium,Yes,Yes,Yes,No,Yes,Yes,None,Low,0.7,0.578759,No
 0.580645,0.633333,0.96,Medium,Yes,Yes,No,Yes,Yes,No,High,Low,0.6,0.9855,No
 0.306452,0.383333,0.74,Low,No,Yes,Yes,Yes,Yes,No,Low,Medium,0.975,0.02835,No
-0.774194,0.283333,0.453333,Medium,Yes,No,Yes,No,Yes,No,Medium,Medium,0.0625,0.497109,No
+0.774194,0.283333,0.453333,Medium,Yes,No,Yes,No,Yes,No,Medium,Medium,0.0625,0.493983,No
 0.322581,0.566667,0.32,Low,Yes,No,No,Yes,Yes,No,Medium,Low,0.6625,0.989517,No
 0.145161,0.85,0.36,Medium,Yes,No,No,No,No,No,Low,Low,0.7875,0.304759,No
 0.064516,0.7,1,Medium,Yes,No,Yes,No,Yes,Yes,High,Medium,0.675,0.000694,No
@@ -3977,7 +3977,7 @@
 0.129032,0.883333,0.426667,Low,No,No,No,Yes,Yes,Yes,Medium,Low,0.2125,0.690164,No
 0.709677,0.433333,0.626667,Medium,Yes,No,No,No,No,No,None,Medium,0.025,0.644862,No
 0.564516,0.116667,0.42,Low,Yes,No,Yes,Yes,No,No,Low,Medium,0.2875,0.179798,No
-0.887097,0.133333,0.502837,Low,No,No,Yes,Yes,No,Yes,Medium,Low,0.5,0.968068,No
+0.887097,0.133333,0.506667,Low,No,No,Yes,Yes,No,Yes,Medium,Low,0.5,0.968068,No
 0.677419,0.45,0.013333,Medium,No,Yes,No,Yes,Yes,No,Low,High,0.3625,0.830023,No
 0.306452,0.233333,0.613333,High,No,Yes,No,Yes,No,No,None,Medium,0.6625,0.255473,No
 0.274194,0.016667,0.226667,High,Yes,Yes,Yes,No,Yes,Yes,Medium,Low,0.925,0.662767,No
@@ -4088,7 +4088,7 @@
 0.774194,0.916667,0.44,High,Yes,Yes,Yes,Yes,Yes,No,Low,Medium,0.5875,0.039754,No
 0.5,0.133333,0.013333,High,Yes,Yes,Yes,Yes,No,Yes,None,Low,0.825,0.729084,No
 0.096774,0.15,0.273333,Medium,Yes,Yes,Yes,No,No,Yes,High,Medium,0.6375,0.113197,No
-0.504778,1,0.153333,Medium,Yes,Yes,No,No,No,Yes,Low,High,0.55,0.778266,No
+0.5,1,0.153333,Medium,Yes,Yes,No,No,No,Yes,Low,High,0.55,0.778266,No
 0.306452,0.75,0.286667,Low,Yes,Yes,Yes,Yes,Yes,No,Low,Medium,0.35,0.546387,No
 0.403226,0.816667,0.853333,High,Yes,No,No,Yes,No,Yes,Medium,High,0.2125,0.323362,No
 1,0.95,0.76,Medium,No,Yes,Yes,Yes,No,No,None,High,0.15,0.138603,No
@@ -4192,7 +4192,7 @@
 0.290323,0.116667,0,High,No,Yes,Yes,No,Yes,Yes,High,Medium,0.25,0.724327,No
 0.5,0.35,0.846667,Medium,Yes,No,No,No,Yes,Yes,Low,Low,0.7125,0.329491,No
 0.129032,0.35,0,Medium,Yes,No,Yes,Yes,Yes,No,Low,High,0.1,0.357705,No
-0.177419,0.416667,0.502837,Low,No,Yes,No,Yes,No,No,Low,High,0.0375,0.43795,No
+0.177419,0.416667,0.506667,Low,No,Yes,No,Yes,No,No,Low,High,0.0375,0.43795,No
 0.16129,0.416667,0.06,Medium,Yes,Yes,Yes,No,Yes,No,High,Low,0.7125,0.508647,No
 0.725806,0.133333,0.946667,Medium,No,No,No,No,Yes,No,Low,High,0.35,0.880288,No
 0.870968,0.333333,0.26,Low,Yes,Yes,No,Yes,No,No,None,High,0.5375,0.23614,No
@@ -4204,7 +4204,7 @@
 0.83871,0.216667,0.326667,Medium,No,Yes,Yes,Yes,Yes,No,Low,High,0.0625,0.441762,No
 0.322581,0.533333,0.4,Medium,Yes,Yes,Yes,No,Yes,No,High,Low,0.825,0.481856,No
 0.467742,0.1,0.08,High,Yes,No,Yes,No,Yes,Yes,None,High,0.475,0.262738,No
-0.193548,0.383333,0.926667,Medium,Yes,No,No,No,No,No,None,High,0.501778,0.304369,No
+0.193548,0.383333,0.926667,Medium,Yes,No,No,No,No,No,None,High,0.5,0.304369,No
 0.532258,0.133333,0.56,Low,No,Yes,No,Yes,No,No,Medium,Low,0.575,0.463293,No
 0.048387,0.166667,0.553333,High,No,Yes,No,Yes,No,Yes,Medium,Medium,0.675,0.35738,No
 0.435484,0.916667,0.126667,Low,Yes,No,No,No,Yes,Yes,High,High,0.125,0.388732,No
@@ -4258,7 +4258,7 @@
 0.322581,0.966667,0.626667,Low,Yes,No,Yes,Yes,Yes,Yes,None,Medium,0.175,0.549653,No
 0.435484,0.616667,0.18,High,No,No,Yes,No,Yes,No,Medium,High,0.7625,0.059017,No
 0.887097,0.716667,0.646667,High,Yes,Yes,No,Yes,No,Yes,High,High,0.75,0.935277,No
-0.403226,0.55,0.226667,High,No,Yes,Yes,Yes,Yes,No,None,Medium,0.95,0.497109,No
+0.403226,0.55,0.226667,High,No,Yes,Yes,Yes,Yes,No,None,Medium,0.95,0.493983,No
 0.983871,0.433333,0.406667,High,No,No,Yes,Yes,Yes,Yes,None,Medium,0.975,0.493675,No
 0.516129,0.316667,0.573333,Medium,Yes,No,No,Yes,No,No,Low,Medium,0.0125,0.887549,No
 0.322581,0.666667,0.713333,Medium,Yes,Yes,No,Yes,No,Yes,High,High,0.05,0.777039,No
@@ -4282,7 +4282,7 @@
 0.467742,0.366667,0.713333,High,No,No,No,No,No,No,None,Medium,0.8375,0.523013,No
 0.225806,1,0.053333,Medium,No,No,No,No,No,No,Medium,High,0.525,0.41766,No
 0.419355,0.15,0.246667,Low,Yes,Yes,Yes,Yes,No,Yes,Medium,High,0.275,0.562577,No
-0.548387,0.066667,0.733333,Medium,No,Yes,No,Yes,Yes,Yes,High,Medium,0.375,0.497109,No
+0.548387,0.066667,0.733333,Medium,No,Yes,No,Yes,Yes,Yes,High,Medium,0.375,0.493983,No
 0.516129,0.366667,0.08,Medium,No,No,Yes,Yes,No,No,Medium,High,0.925,0.492065,No
 0.306452,0.233333,0.04,High,Yes,Yes,No,No,Yes,No,Medium,Low,0.5125,0.566393,No
 0.967742,0.283333,0.92,Low,Yes,Yes,Yes,No,Yes,Yes,Medium,Medium,0.4625,0.395533,No
@@ -4385,7 +4385,7 @@
 0.903226,0.333333,0.72,Low,No,No,No,Yes,No,No,None,High,0.325,0.564655,No
 0.951613,0.05,0.826667,Medium,No,No,Yes,Yes,No,No,None,High,0.2125,0.28601,No
 0.290323,0.8,0.466667,Medium,Yes,Yes,Yes,Yes,No,No,High,Medium,0.9625,0.264196,No
-0.504778,0.783333,0.253333,High,Yes,No,No,Yes,Yes,No,High,High,0.15,0.347833,No
+0.5,0.783333,0.253333,High,Yes,No,No,Yes,Yes,No,High,High,0.15,0.347833,No
 0.822581,0.25,0.6,Low,No,No,No,No,No,Yes,High,Low,0.5,0.467945,No
 0.209677,0.933333,0.24,Low,No,No,Yes,No,No,Yes,High,Low,0.6375,0.270949,No
 0.887097,0.5,0.533333,Medium,Yes,Yes,No,Yes,Yes,Yes,Low,Medium,0.7125,0.60658,No
@@ -4498,7 +4498,7 @@
 0.016129,0.316667,0.726667,Low,Yes,Yes,No,No,Yes,No,Medium,Medium,1,0.204927,No
 0.370968,0.866667,0.22,Medium,No,Yes,No,No,Yes,Yes,None,High,0.45,0.962025,No
 0.532258,0.15,0.933333,Low,No,Yes,No,No,Yes,Yes,None,Low,0.8375,0.440342,No
-0.419355,0.495962,0.926667,Medium,No,Yes,No,No,No,Yes,High,Low,0.0375,0.424444,No
+0.419355,0.5,0.926667,Medium,No,Yes,No,No,No,Yes,High,Low,0.0375,0.424444,No
 0.870968,0.766667,0.233333,Medium,Yes,No,No,Yes,Yes,No,None,Medium,0.975,0.968252,No
 0.645161,0.583333,0.18,High,Yes,Yes,Yes,No,Yes,No,None,High,0.4375,0.947359,No
 0,0.783333,0.253333,Medium,Yes,Yes,Yes,Yes,No,No,Low,Low,0.4125,0.736319,No
@@ -4943,12 +4943,12 @@
 0.435484,0.466667,0.66,Medium,No,No,No,No,No,No,High,Low,0.9625,0.737297,No
 0.806452,0.35,0.693333,Low,No,No,No,Yes,No,No,Medium,Medium,0.2,0.765779,No
 0.741935,0.316667,0.046667,Medium,Yes,No,No,Yes,No,Yes,Medium,Medium,0.175,0.513836,No
-0.504778,0.083333,0.32,Medium,Yes,No,No,Yes,Yes,No,Low,High,0.875,0.541207,No
+0.5,0.083333,0.32,Medium,Yes,No,No,Yes,Yes,No,Low,High,0.875,0.541207,No
 0.741935,1,0.633333,Low,Yes,No,Yes,Yes,No,Yes,High,High,0.4625,0.217689,No
 0.048387,0.7,0.813333,Medium,No,No,No,Yes,Yes,Yes,Low,High,0.3375,0.670958,No
 0.096774,0.8,0.306667,Low,No,Yes,Yes,No,Yes,No,High,Low,0.825,0.66537,No
 0.709677,0.466667,0.16,High,Yes,No,No,Yes,Yes,No,High,Low,0.8,0.544709,No
-0.548387,0.495962,0.866667,Low,Yes,No,Yes,No,No,No,Low,High,0.025,0.664115,No
+0.548387,0.5,0.866667,Low,Yes,No,Yes,No,No,No,Low,High,0.025,0.664115,No
 0.758065,0.916667,0.753333,Medium,No,Yes,Yes,Yes,No,No,Medium,Medium,0.9625,0.974219,No
 1,0.266667,0.653333,Medium,Yes,Yes,No,No,No,Yes,None,Low,0.2625,0.959571,No
 0.129032,0.5,0.633333,High,Yes,No,Yes,No,Yes,No,Medium,Low,0.2625,0.958512,No
@@ -5127,12 +5127,12 @@
 1,0.466667,0.46,Medium,No,No,Yes,No,Yes,No,Low,Low,0.025,0.001893,No
 0.048387,0.583333,0.366667,Low,No,No,Yes,Yes,Yes,No,None,Medium,0.8875,0.488221,No
 0.193548,0.833333,0.353333,Medium,Yes,No,No,Yes,No,Yes,Low,High,0.9,0.64977,No
-0.935484,0.495962,0.92,Medium,Yes,Yes,Yes,Yes,No,Yes,Low,Low,0.7,0.580912,No
+0.935484,0.5,0.92,Medium,Yes,Yes,Yes,Yes,No,Yes,Low,Low,0.7,0.580912,No
 0.354839,0.466667,0.013333,Medium,Yes,No,No,Yes,Yes,Yes,Medium,High,0.275,0.378427,No
 0.112903,0.066667,0.626667,Low,No,No,No,No,Yes,Yes,Medium,Low,0.6125,0.958658,No
 0.274194,0.866667,0.18,Medium,No,No,Yes,Yes,No,Yes,Low,Low,0.1875,0.795225,No
 0.177419,0.516667,0.733333,Medium,Yes,Yes,Yes,No,No,No,Low,High,0.4875,0.846004,No
-0.504778,0.983333,0.706667,High,No,No,No,Yes,Yes,No,None,Low,0.875,0.39305,No
+0.5,0.983333,0.706667,High,No,No,No,Yes,Yes,No,None,Low,0.875,0.39305,No
 0.483871,0.85,0.793333,High,No,No,Yes,Yes,Yes,Yes,High,Medium,0.925,0.122828,No
 0.209677,0.383333,0.88,High,Yes,No,Yes,No,Yes,No,Medium,Medium,0.85,0.19754,No
 0.532258,0.3,0.82,High,No,Yes,Yes,Yes,Yes,No,Low,Medium,0.15,0.437988,No
@@ -5168,11 +5168,11 @@
 0.451613,0.766667,0.753333,Medium,Yes,No,No,No,No,Yes,Low,Low,0.325,0.857618,No
 0.435484,0.333333,0.766667,Low,No,Yes,No,No,Yes,Yes,High,Low,0.1375,0.14468,No
 0.16129,0.316667,0.92,Low,No,Yes,No,Yes,No,No,High,High,0.5,0.92982,No
-0.504778,0.366667,0.513333,Low,No,No,No,No,No,Yes,None,High,0.2875,0.064506,No
+0.5,0.366667,0.513333,Low,No,No,No,No,No,Yes,None,High,0.2875,0.064506,No
 0,0.05,0.226667,Low,Yes,No,Yes,No,No,Yes,High,High,0.3375,0.016403,No
 0.677419,0.333333,0.466667,Low,Yes,Yes,Yes,No,Yes,No,High,Medium,0.5125,0.088868,No
 0.290323,0.333333,0.713333,Medium,No,Yes,Yes,Yes,Yes,Yes,None,Medium,1,0.340379,No
-0.129032,0.495962,0.353333,Medium,No,Yes,No,Yes,No,No,High,Medium,0.1625,0.575978,No
+0.129032,0.5,0.353333,Medium,No,Yes,No,Yes,No,No,High,Medium,0.1625,0.575978,No
 0.419355,0.233333,0.146667,Low,Yes,Yes,No,Yes,Yes,Yes,Low,Low,0.975,0.903029,No
 0.532258,0.266667,0.06,Medium,Yes,No,Yes,Yes,Yes,Yes,Low,Medium,0.7875,0.776214,No
 0.693548,0.833333,0.4,Low,Yes,Yes,Yes,Yes,No,Yes,High,Medium,0.975,0.867378,No
@@ -5283,7 +5283,7 @@
 0.854839,0.8,0.08,High,No,No,Yes,Yes,Yes,No,Low,High,0.225,0.125591,No
 0.854839,0.233333,0.306667,Low,Yes,No,Yes,No,No,Yes,Medium,High,0.15,0.975371,No
 0,0.3,0.18,Low,No,Yes,Yes,Yes,No,No,High,High,0.4,0.942457,No
-0.564516,0.133333,0.346667,Low,Yes,Yes,Yes,No,No,No,Low,High,0.501778,0.89672,No
+0.564516,0.133333,0.346667,Low,Yes,Yes,Yes,No,No,No,Low,High,0.5,0.89672,No
 0.322581,0.05,0.2,Low,No,Yes,No,No,No,No,Low,High,0.5375,0.874821,No
 0.951613,0.233333,0.046667,Low,Yes,No,No,No,No,No,None,Low,0.2125,0.902726,No
 0.677419,0.833333,0.473333,Medium,Yes,Yes,Yes,Yes,No,Yes,Low,Medium,0.75,0.713267,No
@@ -5413,7 +5413,7 @@
 0.16129,0.933333,0.546667,Medium,No,Yes,No,Yes,Yes,No,High,High,0.5375,0.644062,No
 0.225806,0.416667,0.72,Low,No,Yes,Yes,Yes,No,Yes,High,Medium,0.2,0.353539,No
 0.5,0.116667,0.36,High,No,Yes,Yes,No,No,Yes,Low,High,0.7375,0.068381,No
-0.504778,0.35,0.893333,Medium,Yes,No,No,Yes,No,Yes,Low,Medium,0.45,0.419777,No
+0.5,0.35,0.893333,Medium,Yes,No,No,Yes,No,Yes,Low,Medium,0.45,0.419777,No
 0.33871,0.85,0.6,High,No,Yes,Yes,No,Yes,No,None,Low,0.2125,0.516619,No
 0.645161,0.4,0.546667,High,Yes,No,Yes,No,Yes,Yes,None,Medium,0.6375,0.759579,No
 0.258065,0.783333,0.833333,Medium,No,Yes,Yes,Yes,No,No,Low,Medium,0.0875,0.922151,No
@@ -5428,7 +5428,7 @@
 0.145161,0.433333,0.913333,Low,Yes,Yes,No,Yes,Yes,Yes,High,Low,0.45,0.906031,No
 0.935484,0.983333,0.18,High,Yes,Yes,Yes,Yes,Yes,Yes,High,Low,0.8125,0.954221,No
 0.709677,0.5,0.04,High,No,No,Yes,Yes,Yes,Yes,None,High,0.225,0.086555,No
-0.290323,0.3,0.502837,Medium,Yes,Yes,Yes,No,Yes,No,High,High,0.8125,0.104168,No
+0.290323,0.3,0.506667,Medium,Yes,Yes,Yes,No,Yes,No,High,High,0.8125,0.104168,No
 0.16129,0.7,0.506667,Low,Yes,Yes,No,Yes,No,Yes,None,Medium,0.9125,0.250593,No
 0.193548,0.616667,0.4,High,No,No,Yes,Yes,No,No,Medium,Low,0.6125,0.959055,No
 0.83871,0.083333,0.333333,Low,No,Yes,No,Yes,No,No,High,Medium,0.6875,0.190681,No
@@ -5529,7 +5529,7 @@
 0.870968,1,0.72,Medium,No,Yes,No,Yes,Yes,No,None,Medium,0.2125,0.185951,No
 0.596774,0.633333,0.446667,Low,Yes,Yes,No,No,Yes,Yes,Medium,Medium,0.0875,0.931275,No
 0.854839,0.766667,0.873333,High,Yes,Yes,Yes,Yes,No,No,None,Low,0.8625,0.922,No
-0.274194,0.8,0.986667,Medium,Yes,No,Yes,No,Yes,No,Low,High,0.3375,0.497109,No
+0.274194,0.8,0.986667,Medium,Yes,No,Yes,No,Yes,No,Low,High,0.3375,0.493983,No
 0.403226,0,0.433333,Low,No,Yes,Yes,No,Yes,Yes,Low,Medium,0.9,0.256158,No
 0.080645,0.666667,0.953333,Low,Yes,No,No,Yes,No,Yes,Low,High,0.3,0.864039,No
 0.048387,0.35,0.893333,Low,Yes,No,No,Yes,Yes,No,Medium,Medium,0.875,0.830821,No
@@ -5661,7 +5661,7 @@
 0.048387,0.533333,0.473333,Low,No,No,Yes,No,Yes,No,High,High,0.25,0.197088,No
 0.064516,0.05,0.133333,High,No,No,No,No,Yes,Yes,Medium,High,0.525,0.177501,No
 0.16129,0.366667,0.1,High,Yes,No,Yes,No,No,Yes,Low,High,0.1125,0.065191,No
-0.887097,0.166667,0.502837,Low,Yes,No,No,Yes,Yes,No,Low,Medium,0.475,0.475183,No
+0.887097,0.166667,0.506667,Low,Yes,No,No,Yes,Yes,No,Low,Medium,0.475,0.475183,No
 0.806452,0.85,0.966667,High,Yes,No,No,Yes,Yes,No,Medium,High,0.3,0.793341,No
 0.322581,0.133333,0.366667,High,Yes,No,No,Yes,Yes,No,Low,Medium,0.7875,0.142098,No
 0.548387,0.483333,0.54,High,Yes,No,Yes,Yes,No,Yes,High,High,0.075,0.722658,No
@@ -5874,7 +5874,7 @@
 0.403226,0.15,0.78,Low,Yes,No,Yes,No,Yes,Yes,Medium,Medium,0.725,0.648841,No
 0.225806,0.883333,0.366667,High,Yes,Yes,Yes,No,Yes,Yes,Medium,High,0.725,0.139207,No
 0.564516,0.816667,0.306667,High,No,No,Yes,Yes,Yes,No,Low,Low,0.2875,0.800131,No
-0.504778,0.433333,0.586667,Medium,Yes,No,No,No,Yes,No,High,Medium,0.3125,0.952232,No
+0.5,0.433333,0.586667,Medium,Yes,No,No,No,Yes,No,High,Medium,0.3125,0.952232,No
 0.5,0.683333,0.38,Medium,Yes,Yes,No,Yes,Yes,No,Medium,Medium,0.9625,0.718942,No
 0.048387,0.083333,0.06,High,No,No,Yes,No,Yes,Yes,High,Low,0.05,0.768646,No
 0.274194,0.916667,0.14,Medium,No,No,Yes,Yes,No,Yes,Low,High,0.35,0.253112,No
@@ -5935,7 +5935,7 @@
 0.096774,0.35,0.113333,Medium,Yes,Yes,Yes,No,No,Yes,None,High,0.4125,0.160805,No
 0.209677,0.8,0.853333,High,Yes,Yes,No,Yes,Yes,No,None,High,0.225,0.529288,No
 0.887097,0.033333,0.826667,High,No,Yes,No,No,Yes,Yes,Medium,Medium,0.1,0.234719,No
-0.870968,0.45,0.502837,Low,Yes,Yes,Yes,No,Yes,Yes,Medium,High,0.95,0.995697,No
+0.870968,0.45,0.506667,Low,Yes,Yes,Yes,No,Yes,Yes,Medium,High,0.95,0.995697,No
 0.032258,0.616667,0.42,Low,No,No,Yes,Yes,No,Yes,None,Medium,0.8125,0.408924,No
 0.790323,0.216667,0.393333,Low,Yes,No,No,Yes,Yes,No,Low,Low,0.4125,0.623697,No
 0.241935,0.766667,0.986667,Low,Yes,No,No,Yes,No,No,Medium,High,0,0.599223,No
@@ -6120,7 +6120,7 @@
 0.5,0.2,0.213333,High,Yes,No,No,No,No,Yes,None,High,0.9625,0.226448,No
 0.080645,0.933333,0.78,High,Yes,No,Yes,Yes,Yes,Yes,Medium,High,0.0875,0.180374,No
 0.758065,0.416667,0.526667,High,No,Yes,No,Yes,Yes,Yes,High,Medium,0.7625,0.489292,No
-0.596774,0.316667,0.502837,Low,No,Yes,Yes,Yes,No,No,Medium,High,0.8,0.704539,No
+0.596774,0.316667,0.506667,Low,No,Yes,Yes,Yes,No,No,Medium,High,0.8,0.704539,No
 0.258065,0.066667,0.626667,Medium,No,No,No,No,No,No,High,Medium,0.825,0.730464,No
 0.145161,0.316667,0.346667,High,Yes,Yes,Yes,No,Yes,No,None,Low,0.5875,0.534858,No
 0.790323,0.216667,0.08,Medium,No,Yes,No,No,Yes,No,High,Low,0.275,0.630664,No
@@ -6160,7 +6160,7 @@
 0.354839,0.616667,0.54,Low,No,Yes,No,No,No,Yes,Medium,Medium,0.8875,0.469262,No
 0.741935,0.35,0.613333,High,Yes,No,No,Yes,Yes,No,None,Medium,0.85,0.033064,No
 0.5,0.8,0.473333,High,No,Yes,Yes,No,No,No,Medium,High,0.375,0.637042,No
-0.504778,1,0.666667,Low,Yes,Yes,No,Yes,No,Yes,None,Medium,0.1375,0.332291,No
+0.5,1,0.666667,Low,Yes,Yes,No,Yes,No,Yes,None,Medium,0.1375,0.332291,No
 0.741935,0.783333,0.32,Medium,Yes,Yes,Yes,Yes,No,No,High,Medium,0.1375,0.712799,No
 1,0.766667,0.593333,High,No,No,No,Yes,Yes,Yes,Low,Medium,0.55,0.959115,No
 0.516129,0.883333,0.24,High,Yes,No,Yes,Yes,Yes,Yes,Low,High,0.325,0.313967,No
@@ -6202,7 +6202,7 @@
 0.870968,0.583333,0.146667,High,No,Yes,No,No,Yes,No,None,Medium,0.6375,0.5944,No
 0.887097,0.683333,0.3,Low,Yes,No,No,Yes,No,No,High,High,0.2375,0.087775,No
 0.419355,0.566667,0.48,Medium,Yes,No,Yes,No,Yes,Yes,Low,Medium,0.9125,0.65301,No
-0.725806,0.616667,0.502837,High,Yes,No,Yes,Yes,Yes,No,Medium,Medium,0,0.623238,No
+0.725806,0.616667,0.506667,High,Yes,No,Yes,Yes,Yes,No,Medium,Medium,0,0.623238,No
 0.112903,0.033333,0.466667,High,No,Yes,No,Yes,Yes,Yes,None,High,0.3625,0.0248,No
 0.806452,0.966667,0.826667,Medium,No,Yes,Yes,Yes,Yes,Yes,Low,Low,0.875,0.609149,No
 0.725806,0.666667,0.533333,High,Yes,Yes,No,Yes,No,Yes,Medium,Medium,0.975,0.236285,No
@@ -6245,7 +6245,7 @@
 0.532258,0.2,0.2,Low,No,No,No,Yes,Yes,No,None,Medium,0.8625,0.087887,No
 1,0.3,0.36,Low,Yes,No,Yes,Yes,No,Yes,Medium,High,0.375,0.317811,No
 0.33871,0.55,0.193333,Low,Yes,Yes,Yes,Yes,Yes,No,None,Medium,0.625,0.609449,No
-0.16129,0.516667,0.233333,High,No,No,No,Yes,No,Yes,Low,High,0.501778,0.009165,No
+0.16129,0.516667,0.233333,High,No,No,No,Yes,No,Yes,Low,High,0.5,0.009165,No
 0.919355,0.8,0.326667,High,No,No,Yes,No,No,No,None,High,0.275,0.884425,No
 0.903226,0.25,0.94,Medium,Yes,Yes,Yes,No,Yes,Yes,High,Low,0.7125,0.172548,No
 0.193548,0.583333,0.186667,Low,Yes,No,Yes,No,Yes,Yes,Low,Medium,0.275,0.476111,No
@@ -6399,7 +6399,7 @@
 0.225806,0.2,0.353333,High,Yes,No,No,No,Yes,Yes,High,Low,0.05,0.039333,No
 0.983871,0.716667,0.726667,Medium,No,Yes,No,Yes,No,No,None,High,0.6,0.476872,No
 0.435484,0.016667,0.74,High,Yes,No,Yes,No,Yes,No,None,Low,0.5625,0.228174,No
-0.504778,0.416667,0.34,High,No,No,No,No,No,No,None,Low,0.65,0.011867,No
+0.5,0.416667,0.34,High,No,No,No,No,No,No,None,Low,0.65,0.011867,No
 0.112903,0.233333,0.226667,Medium,No,No,Yes,Yes,Yes,No,Low,High,0.525,0.425098,No
 0.677419,0.75,0.24,High,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Medium,0.4875,0.683324,No
 0.967742,0.933333,0.513333,Medium,Yes,No,No,Yes,Yes,No,Low,Medium,0.5375,0.025478,No
@@ -6485,7 +6485,7 @@
 0.209677,0.2,0.253333,Low,Yes,No,Yes,No,Yes,No,Low,Low,0.45,0.412189,No
 0.451613,0.5,0.88,Low,Yes,No,Yes,Yes,No,Yes,None,High,0.8625,0.939972,No
 0.290323,0.983333,0.14,High,No,Yes,Yes,Yes,Yes,No,High,Low,0.575,0.410005,No
-0.290323,0.4,0.993333,High,No,No,No,Yes,Yes,Yes,None,Low,0.501778,0.755849,No
+0.290323,0.4,0.993333,High,No,No,No,Yes,Yes,Yes,None,Low,0.5,0.755849,No
 0.016129,0.633333,0.846667,Medium,No,Yes,No,No,Yes,Yes,Medium,Medium,0.175,0.016887,No
 0.645161,0.15,0.186667,Medium,No,No,Yes,Yes,Yes,No,Medium,Low,0.075,0.148271,No
 0.709677,0.383333,0.273333,High,Yes,Yes,Yes,Yes,Yes,No,Medium,Low,0.2625,0.246731,No
@@ -6494,7 +6494,7 @@
 0.16129,0.866667,0.506667,Medium,No,Yes,Yes,No,No,Yes,Low,High,0.775,0.594568,No
 0.83871,0.4,0.633333,Low,No,No,No,No,No,No,None,High,0,0.439589,No
 0.725806,0.45,0.566667,Medium,Yes,Yes,No,No,Yes,No,None,High,0.0375,0.765344,No
-0.504778,0.583333,0.74,Low,No,No,Yes,Yes,Yes,No,High,Medium,0.875,0.113383,No
+0.5,0.583333,0.74,Low,No,No,Yes,Yes,Yes,No,High,Medium,0.875,0.113383,No
 0.903226,0.283333,0.553333,High,No,No,Yes,No,No,Yes,Medium,Low,0.075,0.452802,No
 0.629032,0.083333,0.033333,High,Yes,No,Yes,No,No,No,Low,High,0.7875,0.726588,No
 0.274194,0.016667,0.48,High,No,No,No,No,Yes,No,Low,High,0.825,0.399404,No
@@ -6592,7 +6592,7 @@
 0.258065,0.3,0.873333,High,No,Yes,Yes,No,No,No,Medium,Medium,0.1375,0.719066,No
 0.241935,0.183333,0.553333,High,Yes,Yes,No,No,No,Yes,None,Medium,0.0125,0.364502,No
 0.354839,0.2,0.793333,Low,No,No,No,No,Yes,Yes,Low,Low,0.9625,0.332959,No
-0.483871,0.4,0.346667,Medium,No,No,Yes,Yes,Yes,No,Low,Medium,0.501778,0.664675,No
+0.483871,0.4,0.346667,Medium,No,No,Yes,Yes,Yes,No,Low,Medium,0.5,0.664675,No
 0.032258,0.583333,0.653333,High,No,Yes,No,No,No,Yes,Medium,High,0.7,0.09907,No
 0.322581,0.4,0.486667,High,Yes,No,No,Yes,Yes,No,Medium,Medium,0.3375,0.180507,No
 0.403226,0.45,0.946667,Medium,Yes,No,No,No,No,No,High,High,0.525,0.409341,No
@@ -6614,7 +6614,7 @@
 0.629032,0.083333,0.386667,High,Yes,Yes,Yes,No,No,Yes,None,Medium,0.6,0.475198,No
 0.935484,0.816667,0.913333,Medium,Yes,No,Yes,No,Yes,No,Low,Medium,0.9,0.50562,No
 0.903226,0.25,0.193333,Low,Yes,Yes,Yes,No,Yes,Yes,Medium,Low,0.6375,0.068133,No
-0.629032,0.016667,0.56,High,No,No,Yes,No,No,Yes,None,High,0.501778,0.487382,No
+0.629032,0.016667,0.56,High,No,No,Yes,No,No,Yes,None,High,0.5,0.487382,No
 0.709677,0.833333,0.133333,Low,Yes,No,No,No,No,Yes,Low,High,0.3375,0.244368,No
 0.935484,0,0.22,Medium,No,No,No,No,Yes,No,High,Medium,0.7125,0.383767,No
 0.016129,0.933333,0.48,Medium,No,No,Yes,Yes,Yes,No,Low,Medium,0.175,0.582341,No
@@ -6625,7 +6625,7 @@
 0.693548,0.6,0.886667,Medium,Yes,No,No,Yes,Yes,Yes,Low,Medium,0.6875,0.703933,No
 0.16129,0.783333,0.72,Medium,No,No,Yes,No,No,Yes,High,High,0.9875,0.947525,No
 0.225806,0.366667,0.413333,Medium,No,Yes,No,No,No,Yes,Medium,Low,0.5625,0.032785,No
-0.241935,0,0.502837,Medium,Yes,No,No,Yes,Yes,Yes,Medium,Medium,0.35,0.252712,No
+0.241935,0,0.506667,Medium,Yes,No,No,Yes,Yes,Yes,Medium,Medium,0.35,0.252712,No
 0.258065,0.3,0.006667,Low,Yes,Yes,Yes,No,Yes,Yes,Medium,Low,0.95,0.863399,No
 0.403226,0.75,0.953333,High,Yes,No,Yes,No,Yes,Yes,High,Medium,0.7875,0.248002,No
 0.016129,0.033333,0.853333,High,Yes,No,No,No,No,Yes,Medium,High,0.0125,0.44625,No
@@ -6800,7 +6800,7 @@
 0.935484,0.15,0.4,Medium,No,No,Yes,No,No,No,High,Low,0.3625,0.391406,No
 0.064516,0.7,0.266667,Medium,No,No,No,Yes,No,No,Medium,High,0.55,0.661852,No
 0.806452,0.416667,0.733333,Low,No,No,No,No,Yes,No,Low,Medium,0.15,0.563709,No
-0.504778,0.466667,0.053333,High,Yes,Yes,Yes,Yes,Yes,Yes,High,Medium,0.075,0.120114,No
+0.5,0.466667,0.053333,High,Yes,Yes,Yes,Yes,Yes,Yes,High,Medium,0.075,0.120114,No
 0.177419,0.066667,0.406667,Medium,Yes,Yes,Yes,Yes,No,Yes,None,Low,0.3625,0.327297,No
 0.790323,0.166667,0.353333,High,No,No,Yes,No,No,No,Low,Medium,0.05,0.439939,No
 0.048387,0.466667,0.686667,Low,Yes,Yes,No,No,Yes,No,High,Medium,0.9375,0.393678,No
@@ -7077,7 +7077,7 @@
 0.241935,0.683333,0.8,High,No,Yes,No,Yes,No,No,High,Medium,0.4875,0.654389,No
 0.870968,0.383333,0.813333,Low,No,Yes,Yes,Yes,No,Yes,Medium,Medium,0.65,0.890809,No
 0.612903,0.883333,0.206667,High,Yes,No,No,Yes,Yes,Yes,None,High,0.35,0.379154,No
-0.048387,0.283333,0.94,Low,No,Yes,No,No,No,No,None,Medium,0.501778,0.112146,No
+0.048387,0.283333,0.94,Low,No,Yes,No,No,No,No,None,Medium,0.5,0.112146,No
 0.935484,0.816667,0.613333,High,No,Yes,No,No,Yes,Yes,Low,Low,0.75,0.170602,No
 0.387097,0.75,0.446667,Medium,Yes,Yes,Yes,No,No,No,Medium,High,0.375,0.339942,No
 0.5,0.783333,0.413333,Medium,No,No,Yes,No,No,No,None,Medium,0.6125,0.950426,No
@@ -7269,7 +7269,7 @@
 0.483871,0.45,0.373333,High,No,No,Yes,No,No,Yes,Medium,High,0.75,0.5152,No
 0.258065,0.5,0.546667,High,Yes,Yes,Yes,No,No,Yes,None,Medium,0.8625,0.038569,No
 0.516129,0.9,0.486667,Medium,No,Yes,Yes,No,Yes,No,Medium,High,0.425,0.281104,No
-0.5,0.116667,0.502837,Low,No,No,No,No,Yes,No,Low,Medium,0.8375,0.546696,No
+0.5,0.116667,0.506667,Low,No,No,No,No,Yes,No,Low,Medium,0.8375,0.546696,No
 0.919355,0.066667,0.566667,Low,No,No,No,No,No,No,High,Medium,0.825,0.644439,No
 0.451613,0.683333,0.64,Medium,No,Yes,Yes,Yes,No,Yes,High,Low,0.7,0.445583,No
 0.322581,0.883333,0.093333,High,No,No,Yes,No,No,No,High,Low,0.3625,0.633141,No
@@ -7318,8 +7318,8 @@
 0.33871,0.65,0.866667,Low,Yes,No,Yes,Yes,No,No,None,Medium,0.8875,0.6978,No
 0.403226,0.016667,0.4,Medium,Yes,No,Yes,No,No,No,High,High,0.1375,0.720834,No
 0.774194,0.3,0.033333,Medium,No,No,Yes,No,No,Yes,High,High,0.3125,0.9814,No
-0.504778,0,0.126667,High,Yes,No,Yes,No,No,Yes,None,Low,0.5125,0.07247,No
-0.564516,0.495962,0.733333,Low,No,Yes,No,No,No,No,None,Medium,0.2125,0.36033,No
+0.5,0,0.126667,High,Yes,No,Yes,No,No,Yes,None,Low,0.5125,0.07247,No
+0.564516,0.5,0.733333,Low,No,Yes,No,No,No,No,None,Medium,0.2125,0.36033,No
 0.919355,0.883333,0.4,Low,Yes,No,No,Yes,Yes,Yes,Medium,Low,0.475,0.266925,No
 0.193548,0.733333,0.933333,Medium,Yes,Yes,No,No,No,Yes,Medium,High,0.8,0.024892,No
 0.822581,0.9,0.146667,Low,No,No,Yes,Yes,Yes,No,None,High,0.0875,0.997318,No
@@ -7339,7 +7339,7 @@
 0.629032,0.783333,0.586667,Low,Yes,No,Yes,Yes,Yes,Yes,None,High,0.4625,0.422363,No
 0.887097,0.35,0.833333,High,No,No,No,Yes,Yes,Yes,None,Medium,0.7125,0.005251,No
 0.935484,0.166667,0.506667,Medium,Yes,No,No,Yes,Yes,No,High,Medium,0.475,0.216786,No
-0.435484,0.55,0.426667,Low,Yes,No,No,Yes,Yes,Yes,High,High,0.4375,0.497109,No
+0.435484,0.55,0.426667,Low,Yes,No,No,Yes,Yes,Yes,High,High,0.4375,0.493983,No
 0,0.8,0.453333,Medium,No,No,No,Yes,No,Yes,None,Low,0.775,0.834423,No
 0.66129,0.233333,0.086667,Low,Yes,No,Yes,No,No,No,None,Low,0.3875,0.777262,No
 0.274194,0.816667,0.493333,High,Yes,No,No,No,No,Yes,High,Low,0.7,0.046703,No
@@ -7347,7 +7347,7 @@
 0.629032,0.15,0.52,High,Yes,No,No,Yes,Yes,No,Medium,High,0.1125,0.593866,No
 0.516129,0.616667,0.62,High,Yes,Yes,No,Yes,No,Yes,Low,Low,0.475,0.729095,No
 1,0.516667,0.433333,High,Yes,Yes,No,Yes,No,No,Low,Medium,0.75,0.070394,No
-0.177419,0.866667,0.502837,High,Yes,Yes,No,Yes,Yes,No,None,Medium,0.675,0.039852,No
+0.177419,0.866667,0.506667,High,Yes,Yes,No,Yes,Yes,No,None,Medium,0.675,0.039852,No
 0.112903,0.783333,0.26,Medium,Yes,No,Yes,Yes,No,Yes,Low,Medium,0.6125,0.121731,No
 0.370968,0.5,0.946667,High,Yes,Yes,No,Yes,Yes,Yes,None,Low,0.6875,0.858182,No
 0.241935,0.6,0.206667,Medium,No,No,No,No,Yes,No,High,Medium,0.45,0.383167,No
@@ -7544,7 +7544,7 @@
 0.983871,0.8,0.693333,Low,Yes,Yes,Yes,No,No,Yes,Medium,Low,0.45,0.926257,No
 0.741935,0.483333,0.453333,Medium,Yes,No,Yes,No,No,No,High,Low,0.0875,0.938997,No
 0.258065,0.033333,0.3,Medium,Yes,No,Yes,Yes,Yes,Yes,None,High,0.575,0.250969,No
-0.504778,0.45,0.16,Medium,Yes,No,No,Yes,Yes,Yes,None,Medium,0.925,0.537131,No
+0.5,0.45,0.16,Medium,Yes,No,No,Yes,Yes,Yes,None,Medium,0.925,0.537131,No
 0.854839,0.533333,0.8,Low,Yes,Yes,Yes,No,Yes,No,Low,Low,0.8875,0.150762,No
 0.403226,0.683333,0.226667,Low,Yes,Yes,No,No,No,No,Low,Low,0.4,0.645009,No
 0.193548,0.033333,0.093333,Medium,No,Yes,No,Yes,No,No,High,High,0.4625,0.29574,No
@@ -7635,7 +7635,7 @@
 0.580645,0.85,0.853333,High,Yes,No,No,No,Yes,Yes,Medium,Low,0.225,0.825275,No
 0.758065,0.133333,0.933333,High,Yes,No,Yes,No,No,No,Low,High,0.125,0.151748,No
 0.225806,0.566667,0.353333,Low,Yes,No,Yes,No,Yes,Yes,Medium,Low,0.1875,0.143687,No
-0.741935,0.316667,0.502837,Low,Yes,Yes,No,No,Yes,No,High,High,0.2125,0.999081,No
+0.741935,0.316667,0.506667,Low,Yes,Yes,No,No,Yes,No,High,High,0.2125,0.999081,No
 0.983871,0.3,0.26,Medium,Yes,Yes,Yes,Yes,No,Yes,Low,High,0.4125,0.29206,No
 0.048387,0.283333,0.84,High,No,Yes,Yes,No,No,No,High,Medium,0.75,0.655016,No
 0.629032,0.316667,0.92,Low,Yes,No,No,No,Yes,No,None,Low,0.9375,0.364553,No
@@ -7676,7 +7676,7 @@
 0.548387,0,0.353333,Low,Yes,Yes,Yes,No,Yes,Yes,Medium,Medium,0.85,0.166545,No
 0.467742,0.133333,0.993333,High,Yes,No,No,No,No,No,High,High,0.2,0.31934,No
 0.145161,0.45,0.513333,Medium,No,Yes,Yes,Yes,No,Yes,None,Medium,0.3875,0.123744,No
-0.596774,0.016667,0.12,Low,No,Yes,Yes,No,No,Yes,Medium,Low,0.9,0.497109,No
+0.596774,0.016667,0.12,Low,No,Yes,Yes,No,No,Yes,Medium,Low,0.9,0.493983,No
 0.274194,0.216667,0.653333,High,No,No,No,Yes,Yes,No,Low,Low,0.65,0.236957,No
 0.790323,0.2,0.446667,Low,No,Yes,Yes,No,Yes,Yes,Low,Low,0.625,0.163915,No
 0.064516,0.783333,0.213333,High,No,No,Yes,Yes,Yes,No,High,Medium,0.95,0.256915,No
@@ -7704,7 +7704,7 @@
 0.5,0.583333,0.266667,Medium,No,No,No,No,No,No,Low,Medium,0.9375,0.010038,No
 0.66129,0.383333,0.76,Low,No,Yes,Yes,No,No,No,None,Low,0.6875,0.62073,No
 0.274194,0.883333,0.88,High,No,Yes,Yes,Yes,Yes,Yes,Medium,Low,0.2625,0.398555,No
-0.225806,0.616667,0.673333,Medium,No,Yes,No,Yes,Yes,No,Medium,High,0.025,0.497109,No
+0.225806,0.616667,0.673333,Medium,No,Yes,No,Yes,Yes,No,Medium,High,0.025,0.493983,No
 0.629032,0.266667,0.54,Low,Yes,Yes,No,Yes,Yes,Yes,High,Low,0.7625,0.178146,No
 0.919355,0.35,0.413333,Low,No,Yes,No,Yes,Yes,No,None,High,0.6625,0.986794,No
 0.5,0.3,0,High,No,No,Yes,No,No,Yes,None,Medium,0.025,0.769481,No
@@ -7745,7 +7745,7 @@
 0.193548,0.266667,0.873333,Low,Yes,No,No,Yes,No,Yes,Medium,High,0.1625,0.535394,No
 0.935484,0.116667,0.673333,High,No,No,No,Yes,Yes,No,None,Medium,0.4125,0.642039,No
 0.66129,0.55,0.66,Medium,Yes,No,Yes,No,No,No,Low,Low,0.3125,0.022099,No
-0.504778,0.416667,0.16,Medium,No,No,No,Yes,Yes,No,High,Low,0.525,0.282282,No
+0.5,0.416667,0.16,Medium,No,No,No,Yes,Yes,No,High,Low,0.525,0.282282,No
 0.129032,0.733333,0.98,Low,No,No,No,No,Yes,No,Low,Medium,0.5,0.401011,No
 0.951613,0.483333,0,High,Yes,No,Yes,Yes,No,No,High,Low,0.1125,0.05389,No
 0.177419,0.35,0.62,Medium,No,Yes,Yes,Yes,Yes,Yes,High,High,0.45,0.825566,No
@@ -7798,7 +7798,7 @@
 0.322581,0.916667,0.946667,High,Yes,No,Yes,Yes,Yes,No,None,Low,0.8375,0.280211,No
 0.322581,0.333333,0.213333,High,No,No,No,Yes,No,Yes,Medium,High,0.15,0.826043,No
 0.33871,0.55,0.66,Low,No,No,No,Yes,Yes,No,None,Low,0.825,0.173262,No
-0.504778,0.833333,0.98,High,Yes,Yes,Yes,No,No,Yes,Medium,Medium,0.9,0.027954,No
+0.5,0.833333,0.98,High,Yes,Yes,Yes,No,No,Yes,Medium,Medium,0.9,0.027954,No
 0.096774,0.266667,0.48,High,Yes,No,No,No,No,No,Medium,Low,0.5625,0.502058,No
 0.870968,0.283333,0.866667,High,No,Yes,Yes,No,Yes,No,Medium,Low,0.4875,0.424523,No
 0.258065,0.266667,0.113333,High,Yes,No,Yes,No,No,No,None,High,0.8375,0.313972,No
@@ -7865,7 +7865,7 @@
 0.064516,0.566667,0.866667,Medium,Yes,No,No,Yes,No,Yes,Low,High,0.0375,0.770205,No
 0.403226,0.183333,0.56,High,Yes,No,Yes,Yes,No,Yes,Low,High,0.0125,0.545442,No
 0.241935,0.533333,0.226667,High,No,Yes,Yes,No,No,Yes,High,High,0.3375,0.690184,No
-0.564516,0.583333,0.502837,Medium,No,Yes,No,Yes,Yes,No,High,Low,0.475,0.682219,No
+0.564516,0.583333,0.506667,Medium,No,Yes,No,Yes,Yes,No,High,Low,0.475,0.682219,No
 0.435484,0.216667,0.126667,Medium,Yes,No,No,Yes,Yes,Yes,Low,Low,0.0625,0.686224,No
 0.854839,0.533333,0.946667,High,No,Yes,Yes,Yes,Yes,No,High,Medium,0.2125,0.781381,No
 0.451613,0.75,0.56,Low,No,Yes,Yes,Yes,No,No,None,Low,0.8625,0.921244,No
@@ -7927,10 +7927,10 @@
 0.822581,0.8,0.766667,High,No,Yes,No,Yes,Yes,No,None,Medium,0.175,0.502533,No
 0.822581,0.666667,0.726667,High,No,Yes,Yes,No,Yes,Yes,Medium,Low,0.775,0.480297,No
 0.741935,0.35,0.526667,Medium,No,No,Yes,No,No,Yes,High,High,0.5875,0.61807,No
-0.564516,0.616667,0.66,Low,Yes,No,Yes,Yes,Yes,Yes,High,Medium,0.9125,0.497109,No
+0.564516,0.616667,0.66,Low,Yes,No,Yes,Yes,Yes,Yes,High,Medium,0.9125,0.493983,No
 0.129032,0.916667,0.106667,High,No,No,No,No,No,No,Low,High,0.4375,0.644933,No
 0.612903,0.433333,0.98,Low,No,No,Yes,Yes,No,No,Low,Medium,0.325,0.966872,No
-0.806452,0.495962,0.753333,Medium,Yes,No,No,Yes,Yes,Yes,Medium,Low,0.125,0.972139,No
+0.806452,0.5,0.753333,Medium,Yes,No,No,Yes,Yes,Yes,Medium,Low,0.125,0.972139,No
 0.290323,0.666667,0.033333,High,Yes,No,Yes,Yes,No,No,High,Medium,0.125,0.20861,No
 0.596774,0.5,0.14,Medium,No,No,Yes,Yes,Yes,Yes,High,Medium,0.15,0.093509,No
 0.080645,0.433333,0.906667,High,No,Yes,Yes,No,Yes,Yes,Medium,High,0.5875,0.500998,No
@@ -7953,7 +7953,7 @@
 0.33871,0.233333,0.18,Low,Yes,Yes,No,No,Yes,Yes,High,Medium,0.1625,0.061587,No
 0.919355,0.183333,0.126667,Medium,Yes,Yes,No,Yes,No,Yes,None,High,0.8125,0.015872,No
 0.048387,0.783333,0.8,High,Yes,Yes,No,No,No,Yes,None,High,0.7625,0.456873,No
-0.451613,0.083333,0.64,Low,No,No,No,No,Yes,Yes,High,High,0.4875,0.497109,No
+0.451613,0.083333,0.64,Low,No,No,No,No,Yes,Yes,High,High,0.4875,0.493983,No
 0.693548,0.983333,0.786667,High,Yes,No,No,No,Yes,No,None,Medium,0.525,0.8282,No
 0.532258,0.133333,0.72,Medium,Yes,Yes,No,No,No,Yes,Low,High,0.7625,0.586302,No
 0.193548,0.566667,0.166667,High,No,Yes,Yes,No,Yes,Yes,High,Low,0.0375,0.245561,No
@@ -8084,7 +8084,7 @@
 0.403226,0.533333,0.766667,Medium,No,Yes,No,Yes,No,Yes,Low,High,0.0875,0.616249,Yes
 0.129032,0.5,0.36,Low,Yes,No,Yes,No,Yes,No,None,Medium,0.625,0.26559,Yes
 0.145161,0.183333,0.233333,High,No,No,Yes,Yes,No,Yes,Low,Medium,0.6125,0.040944,Yes
-0.5,0.495962,0.333333,Medium,Yes,No,No,Yes,No,Yes,Medium,Medium,0.9,0.390243,Yes
+0.5,0.5,0.333333,Medium,Yes,No,No,Yes,No,Yes,Medium,Medium,0.9,0.390243,Yes
 0.903226,0.6,0.486667,High,Yes,Yes,Yes,No,No,No,Low,Medium,0.225,0.891129,Yes
 0.532258,0.133333,0.106667,Medium,No,No,Yes,No,Yes,Yes,High,Low,0.775,0.499838,Yes
 0.758065,0.783333,0.4,Medium,No,No,No,No,Yes,Yes,Medium,Low,0.575,0.001132,Yes
@@ -8113,7 +8113,7 @@
 0.967742,0.833333,0.44,Low,Yes,No,Yes,Yes,Yes,Yes,Low,Low,0.25,0.825356,Yes
 0.612903,0.483333,0.153333,Medium,No,Yes,Yes,No,No,Yes,Medium,High,0.525,0.908031,Yes
 0.370968,0.266667,0.666667,High,Yes,No,Yes,Yes,Yes,Yes,High,Medium,0.95,0.376321,Yes
-0.504778,0.783333,0.7,Low,Yes,No,Yes,Yes,No,Yes,High,Low,0.825,0.104775,Yes
+0.5,0.783333,0.7,Low,Yes,No,Yes,Yes,No,Yes,High,Low,0.825,0.104775,Yes
 0.145161,0.2,0.666667,Low,Yes,Yes,Yes,No,No,Yes,High,Medium,0.9625,0.582633,Yes
 0.725806,0.916667,0.046667,High,No,Yes,No,Yes,No,Yes,None,Medium,0.5625,0.184814,Yes
 0.209677,0.383333,0.633333,High,Yes,No,Yes,Yes,No,No,High,High,0.325,0.839779,Yes
@@ -8285,7 +8285,7 @@
 0.33871,0.833333,0.586667,Medium,No,Yes,Yes,No,Yes,Yes,Low,Low,0.6875,0.298021,Yes
 0.435484,0.783333,0.366667,Medium,Yes,Yes,No,Yes,No,Yes,High,High,0.825,0.159337,Yes
 0.822581,0.666667,0.026667,Low,Yes,Yes,No,Yes,Yes,Yes,High,Medium,0.425,0.66286,Yes
-0.741935,0.733333,0.666667,Medium,Yes,No,Yes,Yes,Yes,No,High,High,0.501778,0.539361,Yes
+0.741935,0.733333,0.666667,Medium,Yes,No,Yes,Yes,Yes,No,High,High,0.5,0.539361,Yes
 0.83871,0.416667,0.573333,Low,No,Yes,No,No,No,No,Low,Medium,0.9125,0.326407,Yes
 0.709677,0.6,0.4,Medium,No,No,No,Yes,Yes,No,High,Low,0.575,0.513645,Yes
 0.33871,0.35,0.453333,High,No,Yes,Yes,Yes,No,Yes,Low,Medium,0.45,0.194405,Yes
@@ -8396,7 +8396,7 @@
 0.564516,0.083333,0.48,Medium,Yes,Yes,Yes,Yes,No,No,Low,High,0.5625,0.045047,Yes
 0.209677,0.983333,0.506667,Medium,Yes,Yes,Yes,Yes,No,No,None,Medium,0.575,0.273846,Yes
 0.209677,0.95,0.486667,High,Yes,No,Yes,Yes,No,No,High,Low,0.925,0.535536,Yes
-0.548387,0.033333,0.84,Medium,Yes,No,No,No,Yes,Yes,Low,High,0.501778,0.402818,Yes
+0.548387,0.033333,0.84,Medium,Yes,No,No,No,Yes,Yes,Low,High,0.5,0.402818,Yes
 0.467742,0.55,0.8,Medium,Yes,Yes,No,No,No,No,Low,Low,0.8125,0.984162,Yes
 0.435484,0.733333,0.56,Low,Yes,Yes,Yes,Yes,Yes,No,Low,High,0.2125,0.374252,Yes
 0.258065,0.816667,0.993333,Low,Yes,Yes,Yes,No,No,Yes,Low,High,0.2375,0.828995,Yes
@@ -8413,7 +8413,7 @@
 0.387097,0.816667,0.1,Medium,No,No,No,Yes,No,Yes,None,Low,0.875,0.556827,Yes
 0.806452,0.766667,0.153333,Low,Yes,No,Yes,No,Yes,Yes,High,Medium,0.15,0.681066,Yes
 0.596774,0.85,0.493333,Medium,No,No,Yes,No,No,No,Low,Medium,0.1625,0.097297,Yes
-0.66129,0.366667,0.502837,Medium,No,No,No,Yes,No,Yes,Low,Low,0.9125,0.857948,Yes
+0.66129,0.366667,0.506667,Medium,No,No,No,Yes,No,Yes,Low,Low,0.9125,0.857948,Yes
 0.935484,0.566667,0.68,High,No,Yes,Yes,Yes,Yes,No,Low,Low,0.0625,0.342556,Yes
 0.741935,0.6,0.566667,Medium,No,No,No,Yes,Yes,Yes,None,High,0.25,0.557477,Yes
 0.83871,0.7,0.693333,Low,Yes,Yes,No,No,No,No,Low,Low,0.9125,0.899048,Yes
@@ -8450,7 +8450,7 @@
 0.258065,0.916667,0.12,Low,No,No,No,No,Yes,Yes,Low,Medium,0.85,0.094044,Yes
 0.048387,0.333333,0.94,Medium,Yes,Yes,Yes,Yes,No,No,Medium,High,0.575,0.478446,Yes
 0.677419,0.5,0.546667,Medium,Yes,Yes,No,Yes,Yes,No,High,Medium,0.35,0.294124,Yes
-0.854839,0,0.502837,High,Yes,No,Yes,No,Yes,No,High,Low,0.0375,0.516882,Yes
+0.854839,0,0.506667,High,Yes,No,Yes,No,Yes,No,High,Low,0.0375,0.516882,Yes
 0.403226,0.033333,0.166667,High,No,No,No,Yes,No,Yes,Low,Medium,0.2625,0.743221,Yes
 0.048387,0.5,0.913333,Low,Yes,Yes,Yes,No,Yes,No,None,High,0.975,0.497301,Yes
 0,0.4,0.653333,High,Yes,Yes,No,No,No,Yes,Low,High,0.3375,0.133286,Yes
@@ -8470,7 +8470,7 @@
 0.935484,0.616667,0.8,Medium,Yes,Yes,No,Yes,Yes,Yes,None,Low,0.675,0.42579,Yes
 0.677419,0.666667,0.893333,High,No,Yes,No,No,Yes,Yes,Low,High,0.1625,0.059319,Yes
 0.419355,0.816667,0.346667,High,No,Yes,Yes,No,No,Yes,Medium,High,0.4375,0.153143,Yes
-0.5,0.495962,0.753333,Medium,No,No,Yes,No,Yes,No,Low,Medium,0.6125,0.285109,Yes
+0.5,0.5,0.753333,Medium,No,No,Yes,No,Yes,No,Low,Medium,0.6125,0.285109,Yes
 0.209677,0.016667,0.033333,Low,No,Yes,No,Yes,Yes,Yes,Low,High,0.9125,0.248377,Yes
 0.903226,0.05,0.893333,High,Yes,Yes,No,No,Yes,Yes,None,Low,0.7875,0.305382,Yes
 0.274194,0.816667,0.113333,Low,Yes,No,No,Yes,No,No,None,Low,0.1625,0.31546,Yes
@@ -8518,7 +8518,7 @@
 0.709677,0.6,0.653333,Low,No,No,No,No,No,Yes,Low,Low,0.8875,0.953086,Yes
 0.080645,0.483333,0.98,Medium,Yes,No,No,No,No,No,Low,High,0.7,0.904162,Yes
 0.080645,0.666667,0.38,Low,No,Yes,No,Yes,No,Yes,Low,Medium,0,0.701818,Yes
-0.693548,0.733333,0.393333,Low,No,No,Yes,Yes,No,Yes,Low,Low,0.501778,0.90908,Yes
+0.693548,0.733333,0.393333,Low,No,No,Yes,Yes,No,Yes,Low,Low,0.5,0.90908,Yes
 0.112903,0.6,0.226667,Medium,Yes,Yes,No,Yes,No,Yes,Medium,High,0.575,0.64429,Yes
 0.370968,0.766667,0.306667,High,Yes,Yes,No,No,No,No,High,Medium,0.4125,0.771779,Yes
 0.33871,0.1,0.3,Low,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Low,0.075,0.822077,Yes
@@ -8534,7 +8534,7 @@
 0.516129,0.966667,0.26,High,Yes,Yes,Yes,Yes,Yes,No,High,Medium,0.3375,0.981163,Yes
 0.145161,0.083333,0.633333,Low,No,No,Yes,No,No,No,High,Medium,0.375,0.631567,Yes
 0.580645,0.116667,0.146667,Low,Yes,Yes,No,No,Yes,Yes,Low,Medium,0.6625,0.865153,Yes
-0.177419,0.383333,0.946667,Low,Yes,No,Yes,No,Yes,No,High,High,0.501778,0.516004,Yes
+0.177419,0.383333,0.946667,Low,Yes,No,Yes,No,Yes,No,High,High,0.5,0.516004,Yes
 0.854839,0.033333,0.76,Low,No,No,Yes,No,Yes,No,High,Medium,0.7875,0.431544,Yes
 0.467742,0.05,0.766667,Medium,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Low,0.3875,0.279637,Yes
 0.419355,0.516667,0.88,High,No,No,Yes,No,Yes,Yes,None,Low,0.925,0.978518,Yes
@@ -8677,7 +8677,7 @@
 0.241935,1,0.773333,Medium,Yes,No,Yes,No,Yes,Yes,High,Medium,0.9875,0.411164,Yes
 0.725806,0.016667,0.826667,High,Yes,Yes,Yes,Yes,Yes,Yes,None,Low,0.925,0.26209,Yes
 0.112903,0.533333,0.68,High,No,Yes,No,Yes,No,Yes,None,Low,0.825,0.828928,Yes
-0.887097,0.495962,0.793333,High,No,Yes,No,No,No,Yes,Medium,High,0,0.36764,Yes
+0.887097,0.5,0.793333,High,No,Yes,No,No,No,Yes,Medium,High,0,0.36764,Yes
 0.774194,0.666667,0.226667,Low,Yes,No,Yes,No,Yes,Yes,High,Low,0,0.892133,Yes
 0.387097,0.933333,0.833333,High,No,No,No,Yes,Yes,Yes,Low,High,0.9125,0.934688,Yes
 0.790323,0.966667,0.493333,High,No,No,Yes,No,No,No,Low,Medium,0.575,0.240181,Yes
@@ -8826,7 +8826,7 @@
 0.322581,0.133333,0.573333,Low,Yes,Yes,Yes,Yes,No,No,None,Low,0.85,0.393645,Yes
 0.403226,0.616667,0.793333,High,Yes,Yes,Yes,Yes,No,Yes,Medium,High,0.9375,0.470993,Yes
 0.629032,0.483333,0.946667,Low,Yes,Yes,No,No,Yes,No,None,High,0.1375,0.598441,Yes
-0.322581,0.066667,0.52,High,Yes,Yes,Yes,No,No,No,High,Medium,0.501778,0.542899,Yes
+0.322581,0.066667,0.52,High,Yes,Yes,Yes,No,No,No,High,Medium,0.5,0.542899,Yes
 0.387097,0,0.233333,High,Yes,No,No,Yes,No,No,High,Medium,0.9625,0.591733,Yes
 0.645161,0,0.353333,Medium,Yes,Yes,No,Yes,Yes,No,Low,Low,0.9375,0.06831,Yes
 0,0.933333,0.96,Low,Yes,No,No,Yes,Yes,No,Low,Medium,0.7875,0.629976,Yes
@@ -8875,7 +8875,7 @@
 0.403226,0.033333,0.226667,High,Yes,Yes,Yes,No,Yes,Yes,Low,High,0.35,0.495531,Yes
 0.629032,0.483333,0.36,Medium,No,Yes,Yes,Yes,No,Yes,None,Medium,0.1375,0.524597,Yes
 0.758065,0.816667,0.846667,Medium,Yes,Yes,No,No,Yes,No,High,Low,0.2125,0.722584,Yes
-0.709677,0.866667,0.126667,Medium,No,Yes,Yes,No,No,No,Low,Medium,0.501778,0.18034,Yes
+0.709677,0.866667,0.126667,Medium,No,Yes,Yes,No,No,No,Low,Medium,0.5,0.18034,Yes
 0.193548,0.55,0.026667,Medium,Yes,No,No,No,No,Yes,Medium,Low,0.8875,0.49692,Yes
 0.774194,0.516667,0.413333,Medium,No,Yes,No,Yes,Yes,Yes,Medium,Low,0.4375,0.150164,Yes
 0.354839,0.866667,0.206667,Low,No,Yes,Yes,Yes,No,No,Medium,Medium,0.625,0.185614,Yes
@@ -8951,7 +8951,7 @@
 0.274194,0.75,0.42,Medium,No,Yes,Yes,Yes,No,Yes,None,High,0.0125,0.507948,Yes
 0.532258,0.85,0.84,High,No,No,Yes,No,No,No,High,Low,0.65,0.522281,Yes
 0.387097,0.633333,0.8,Medium,Yes,Yes,Yes,Yes,No,Yes,High,Medium,0.1875,0.966933,Yes
-0.967742,0.6,0.586667,Medium,Yes,No,Yes,No,No,No,None,High,0.501778,0.169273,Yes
+0.967742,0.6,0.586667,Medium,Yes,No,Yes,No,No,No,None,High,0.5,0.169273,Yes
 0.709677,0.216667,0.106667,Medium,No,No,No,No,Yes,No,Low,Low,0.275,0.219852,Yes
 0.080645,0.133333,0.64,Low,Yes,Yes,Yes,Yes,Yes,No,Low,High,0.9875,0.577166,Yes
 0.322581,0.15,0.36,Medium,Yes,Yes,Yes,No,No,Yes,Low,Medium,0.8,0.510177,Yes
@@ -9087,7 +9087,7 @@
 0.645161,0.233333,0.926667,Medium,Yes,No,No,Yes,Yes,Yes,Low,Low,0.7875,0.355318,Yes
 0.048387,0.266667,0.42,Medium,Yes,No,No,No,Yes,No,Low,Low,0.3375,0.083079,Yes
 0.225806,0.783333,0.52,High,No,No,No,No,Yes,No,High,High,0.325,0.261944,Yes
-0.387097,0.85,0.502837,Low,No,Yes,Yes,No,Yes,Yes,Low,Low,0.25,0.831388,Yes
+0.387097,0.85,0.506667,Low,No,Yes,Yes,No,Yes,Yes,Low,Low,0.25,0.831388,Yes
 0.693548,0.1,0.166667,High,No,No,Yes,No,No,Yes,None,Medium,0.425,0.931084,Yes
 0.870968,0.783333,0.913333,High,Yes,No,Yes,No,Yes,Yes,None,Low,0.4875,0.433943,Yes
 0.548387,0.066667,0.926667,Low,No,Yes,No,No,Yes,No,Low,Medium,0.975,0.820824,Yes
@@ -9169,7 +9169,7 @@
 0.709677,0.133333,0.633333,High,No,Yes,Yes,Yes,No,No,Medium,Low,0.125,0.769008,Yes
 0,0.233333,0.5,High,No,No,No,No,No,No,None,Medium,0.025,0.024106,Yes
 0.451613,0.916667,0.3,High,No,No,No,No,Yes,No,Medium,Medium,0.1625,0.350778,Yes
-1,0.416667,0.502837,High,No,No,No,Yes,Yes,No,High,Medium,0.725,0.99394,Yes
+1,0.416667,0.506667,High,No,No,No,Yes,Yes,No,High,Medium,0.725,0.99394,Yes
 0.112903,0.233333,0.246667,Low,No,No,Yes,Yes,Yes,Yes,None,Low,0.1625,0.583638,Yes
 0.887097,0.416667,0.606667,High,No,Yes,No,Yes,No,No,High,High,0.575,0.852537,Yes
 0.854839,0.45,0.933333,High,Yes,No,Yes,Yes,No,No,Low,Low,0.9125,0.363244,Yes
@@ -9209,7 +9209,7 @@
 0.758065,0.9,0.613333,Low,No,Yes,No,Yes,No,No,Low,High,0.8875,0.134981,Yes
 0.5,0.65,0.773333,High,Yes,Yes,Yes,Yes,Yes,No,None,High,0.9,0.953087,Yes
 0.032258,0.55,0.02,Low,Yes,Yes,No,Yes,No,No,Low,Low,0.1625,0.837424,Yes
-0.504778,0.55,0.56,High,Yes,Yes,No,Yes,No,No,Low,Low,0.525,0.873417,Yes
+0.5,0.55,0.56,High,Yes,Yes,No,Yes,No,No,Low,Low,0.525,0.873417,Yes
 0.741935,0.783333,0.04,Medium,Yes,No,No,Yes,Yes,No,None,High,0.0375,0.560724,Yes
 0.983871,0.533333,0.826667,Low,No,No,No,Yes,No,No,Medium,Medium,0.25,0.762843,Yes
 0.548387,0.05,1,Medium,Yes,No,Yes,Yes,No,Yes,Medium,High,0.2375,0.869748,Yes
@@ -9245,7 +9245,7 @@
 0.983871,0.1,0.946667,Medium,Yes,Yes,No,Yes,No,Yes,None,High,0.325,0.483754,Yes
 0.741935,0.116667,0.193333,High,Yes,Yes,Yes,No,Yes,Yes,Medium,Medium,0.875,0.779714,Yes
 0.193548,0.366667,0.313333,High,No,No,Yes,No,No,Yes,None,High,0.225,0.322366,Yes
-0.645161,0.216667,0.6,High,Yes,Yes,Yes,No,Yes,Yes,None,Low,0.4625,0.497109,Yes
+0.645161,0.216667,0.6,High,Yes,Yes,Yes,No,Yes,Yes,None,Low,0.4625,0.493983,Yes
 0.532258,0.05,0.6,Medium,Yes,Yes,No,Yes,Yes,No,Low,High,0.4875,0.159161,Yes
 0.370968,0.333333,0.486667,High,Yes,Yes,Yes,No,Yes,Yes,Low,Medium,0.8,0.544075,Yes
 0.629032,1,0.286667,Medium,No,No,No,Yes,No,Yes,Low,High,0.075,0.042892,Yes
@@ -9285,7 +9285,7 @@
 0.387097,0.766667,0.093333,Medium,Yes,Yes,Yes,Yes,Yes,Yes,High,High,0.2125,0.291551,Yes
 0.887097,0.25,0.32,Medium,Yes,No,No,Yes,No,Yes,High,Medium,0.65,0.574763,Yes
 0.467742,0.883333,0.74,High,No,Yes,No,No,No,Yes,None,Low,0.5,0.37849,Yes
-0.504778,0.316667,0.226667,High,No,No,Yes,No,No,No,None,Low,0.65,0.313603,Yes
+0.5,0.316667,0.226667,High,No,No,Yes,No,No,No,None,Low,0.65,0.313603,Yes
 0.306452,0.533333,0.766667,Medium,No,Yes,No,No,Yes,No,Low,Medium,0.525,0.104354,Yes
 0.322581,0.266667,0.62,Low,Yes,No,Yes,Yes,Yes,Yes,Low,Low,0.45,0.859576,Yes
 0.967742,0.066667,0.153333,Low,Yes,Yes,Yes,Yes,No,Yes,Medium,Medium,0.375,0.576156,Yes
@@ -9377,7 +9377,7 @@
 0.193548,0,0.28,Low,No,No,No,Yes,No,Yes,None,Medium,0.9875,0.624069,Yes
 0.774194,0.616667,0.966667,Medium,No,Yes,No,No,No,No,None,High,0.15,0.824132,Yes
 0.580645,0.866667,0.486667,Low,No,Yes,No,Yes,No,No,Low,Medium,0.9125,0.845414,Yes
-0.677419,0.495962,0.346667,Medium,Yes,No,No,No,Yes,Yes,High,High,0.825,0.27399,Yes
+0.677419,0.5,0.346667,Medium,Yes,No,No,No,Yes,Yes,High,High,0.825,0.27399,Yes
 0.612903,0.616667,0.253333,High,Yes,No,Yes,Yes,No,Yes,Low,Low,0.95,0.580266,Yes
 0.967742,0.566667,0.706667,Low,No,No,No,No,No,Yes,High,Medium,0.3625,0.763938,Yes
 0.66129,0.15,0.24,Medium,Yes,No,Yes,No,Yes,Yes,High,Medium,0.85,0.820115,Yes
@@ -9507,7 +9507,7 @@
 0.258065,0,0.62,Low,No,Yes,No,Yes,Yes,No,Low,Low,0.0375,0.956326,Yes
 0.903226,0.616667,0.766667,Medium,Yes,No,Yes,No,No,No,Medium,High,0.0625,0.511066,Yes
 0.935484,0.833333,0.693333,High,No,No,No,No,Yes,Yes,Low,Medium,0.3875,0.868842,Yes
-0.354839,0.1,0.653333,Medium,Yes,Yes,Yes,Yes,No,Yes,Medium,Low,0.7375,0.497109,Yes
+0.354839,0.1,0.653333,Medium,Yes,Yes,Yes,Yes,No,Yes,Medium,Low,0.7375,0.493983,Yes
 0.096774,0.383333,0.5,High,No,Yes,Yes,No,No,No,None,High,0.475,0.879264,Yes
 0.693548,0.066667,0.533333,Medium,Yes,Yes,No,Yes,Yes,No,Low,High,0.5,0.082501,Yes
 0.83871,0.333333,0.473333,High,No,Yes,Yes,No,No,No,None,Medium,0.6875,0.124594,Yes
@@ -9658,7 +9658,7 @@
 0.596774,0.716667,0.086667,Low,No,Yes,No,No,Yes,Yes,None,Medium,0.825,0.794634,Yes
 0.645161,0.766667,0.526667,High,No,No,Yes,Yes,No,No,High,Low,0.3625,0.435933,Yes
 0.709677,0.266667,0.793333,Medium,No,Yes,No,No,No,Yes,High,Medium,0.4625,0.095491,Yes
-0.370968,0.216667,0.502837,High,No,Yes,No,No,Yes,No,High,High,0.9375,0.845499,Yes
+0.370968,0.216667,0.506667,High,No,Yes,No,No,Yes,No,High,High,0.9375,0.845499,Yes
 0.629032,0.4,0.013333,Medium,Yes,Yes,No,No,Yes,No,High,Medium,0.3375,0.97145,Yes
 0.725806,0.783333,0.02,Low,Yes,No,Yes,Yes,No,No,Medium,Medium,0.6875,0.853441,Yes
 0.887097,0.433333,0.893333,High,No,No,Yes,No,No,No,None,High,0.625,0.006021,Yes
@@ -9852,7 +9852,7 @@
 0.290323,0.633333,0.44,High,Yes,Yes,No,No,No,No,Low,Medium,0.725,0.039081,Yes
 0.532258,0.066667,0.246667,High,No,No,No,No,No,No,High,Medium,0.9375,0.400558,Yes
 0.693548,0.85,0.153333,Low,Yes,Yes,Yes,No,Yes,Yes,Low,Low,0.8,0.306061,Yes
-0.504778,0.933333,0.533333,Low,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.975,0.606498,Yes
+0.5,0.933333,0.533333,Low,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.975,0.606498,Yes
 0.725806,0.416667,0.473333,High,No,Yes,Yes,Yes,Yes,Yes,Medium,Low,0.6375,0.107796,Yes
 0.080645,0.783333,0.52,High,No,No,No,No,No,Yes,None,High,0.35,0.452872,Yes
 0.193548,0.266667,0.753333,Medium,Yes,Yes,Yes,Yes,Yes,No,High,Low,0.5,0.600483,Yes
@@ -10084,7 +10084,7 @@
 0.476665,0.529321,0.770186,High,No,Yes,No,Yes,Yes,No,Medium,High,0.06632,0.614226,Yes
 0.129032,0.534918,0.486025,Low,No,Yes,Yes,No,Yes,No,None,Medium,0.500531,0.273717,Yes
 0.264228,0.19878,0.233333,High,No,Yes,Yes,No,No,Yes,Low,Medium,0.544864,0.226312,Yes
-0.544415,0.495962,0.333445,Medium,Yes,No,No,Yes,No,Yes,High,Medium,0.863218,0.297796,Yes
+0.544415,0.5,0.333445,Medium,Yes,No,No,Yes,No,Yes,High,Medium,0.863218,0.297796,Yes
 0.744001,0.591954,0.501161,High,Yes,No,No,No,Yes,No,High,Medium,0.338532,0.840977,Yes
 0.532258,0.101727,0.1237,High,Yes,Yes,Yes,Yes,Yes,No,High,Low,0.739719,0.519932,Yes
 0.758055,0.862779,0.415164,High,No,Yes,No,No,Yes,Yes,Medium,Low,0.59817,0.103752,Yes
@@ -10113,7 +10113,7 @@
 0.949337,0.806989,0.441021,Medium,Yes,Yes,No,Yes,Yes,No,Low,Medium,0.293453,0.822865,Yes
 0.616698,0.479244,0.171427,Medium,No,Yes,No,No,Yes,Yes,Medium,Medium,0.565412,0.882978,Yes
 0.370968,0.232219,0.698092,Low,Yes,Yes,Yes,No,Yes,Yes,Medium,Low,0.804146,0.376999,Yes
-0.515353,0.794461,0.817621,Low,No,No,Yes,No,No,No,High,Low,0.720926,0.315016,Yes
+0.512413,0.794461,0.817621,Low,No,No,Yes,No,No,No,High,Low,0.720926,0.315016,Yes
 0.184061,0.235222,0.720987,Low,Yes,Yes,Yes,No,No,Yes,High,Medium,0.922922,0.283697,Yes
 0.725806,0.903026,0.128714,High,No,Yes,Yes,Yes,No,Yes,Low,Medium,0.770571,0.185773,Yes
 0.257833,0.458264,0.812594,Medium,Yes,Yes,No,Yes,Yes,No,High,Medium,0.282928,0.926015,Yes
@@ -10285,8 +10285,8 @@
 0.225193,0.69115,0.45445,Medium,Yes,Yes,No,No,Yes,No,Low,Low,0.682132,0.403321,Yes
 0.550256,0.752786,0.370137,Low,No,No,No,Yes,Yes,Yes,High,Medium,0.813812,0.084552,Yes
 0.806728,0.806798,0.123719,High,Yes,Yes,No,Yes,No,Yes,High,Medium,0.714229,0.647224,Yes
-0.780381,0.856154,0.685316,Medium,Yes,No,Yes,Yes,Yes,No,High,High,0.394585,0.308503,Yes
-0.651094,0.462091,0.358151,High,No,Yes,No,Yes,No,Yes,Medium,Medium,0.909913,0.341161,Yes
+0.780381,0.856154,0.685316,Medium,Yes,No,Yes,Yes,Yes,No,High,High,0.394311,0.308503,Yes
+0.651094,0.464404,0.358151,High,No,Yes,No,Yes,No,Yes,Medium,Medium,0.909913,0.341161,Yes
 0.723265,0.688526,0.40281,Low,Yes,Yes,No,Yes,Yes,No,High,Low,0.582194,0.479183,Yes
 0.339474,0.589202,0.475061,High,Yes,Yes,No,No,Yes,No,Low,Medium,0.433903,0.195424,Yes
 0.864337,0.794077,0.43392,High,No,Yes,No,Yes,Yes,Yes,Low,Medium,0.93903,0.55368,Yes
@@ -10384,7 +10384,7 @@
 0.435794,0.496539,0.228657,Low,Yes,No,Yes,No,Yes,No,None,Medium,0.241733,0.069427,Yes
 0.730028,0.735355,0.217613,Low,No,Yes,No,No,Yes,No,None,Medium,0.713368,0.582283,Yes
 0.433798,0.819981,0.57086,Medium,Yes,Yes,No,No,Yes,No,Low,Low,0.671676,0.29785,Yes
-0.737333,0.638041,0.693288,Medium,No,Yes,No,No,Yes,No,Medium,High,0,0.388712,Yes
+0.737333,0.639267,0.693288,Medium,No,Yes,No,No,Yes,No,Medium,High,0,0.388712,Yes
 0.741269,0.36943,0.479506,High,No,Yes,Yes,Yes,Yes,No,Medium,High,0.504459,0.115119,Yes
 0.737913,0.216667,0.780016,High,Yes,Yes,Yes,Yes,No,No,Low,Medium,0.69646,0.721678,Yes
 0.42625,0.638713,0.384314,Low,Yes,Yes,No,Yes,Yes,Yes,Low,Medium,0.96038,0.732143,Yes
@@ -10396,7 +10396,7 @@
 0.64491,0.056568,0.432195,High,Yes,Yes,Yes,Yes,No,No,Medium,Low,0.737407,0.078091,Yes
 0.159847,0.897984,0.500704,High,Yes,No,Yes,Yes,Yes,No,Low,Medium,0.518191,0.289168,Yes
 0.195718,0.71887,0.500012,High,Yes,Yes,No,Yes,No,No,High,High,0.920548,0.716675,Yes
-0.561456,0.060624,0.826087,Medium,Yes,No,No,No,Yes,No,Medium,Medium,0.286246,0.628956,Yes
+0.561456,0.060624,0.826087,Medium,Yes,No,No,No,Yes,No,Medium,Medium,0.28599,0.628956,Yes
 0.497431,0.585907,0.776121,High,No,Yes,No,No,No,No,None,Low,0.627991,0.816478,Yes
 0.456269,0.733333,0.469255,Low,Yes,Yes,No,Yes,Yes,Yes,Low,High,0.198839,0.395642,Yes
 0.317171,0.895817,0.98059,Low,Yes,Yes,Yes,No,Yes,Yes,Low,High,0.284719,0.779568,Yes
@@ -10404,7 +10404,7 @@
 0.129417,0.206906,0.17813,Low,Yes,Yes,No,Yes,Yes,No,None,High,0.18664,0.459155,Yes
 0.73231,0.52112,0.798626,Low,Yes,Yes,No,Yes,Yes,No,High,High,0.835211,0.405105,Yes
 0.470173,0.218532,0.388693,Low,No,Yes,No,Yes,No,Yes,Low,Medium,0.390933,0.967082,Yes
-0.729588,0.911595,0.090401,Low,Yes,Yes,No,No,Yes,No,Low,Medium,0.488563,0.258312,Yes
+0.729588,0.911595,0.090401,Low,Yes,Yes,No,No,Yes,No,Low,Medium,0.486879,0.258312,Yes
 0.553562,0.398999,0.965076,Low,No,Yes,Yes,Yes,Yes,No,Medium,High,0.278369,0.462215,Yes
 0.855982,0.348412,0.129646,High,Yes,No,Yes,Yes,No,No,Medium,High,0.941719,0.649242,Yes
 0.225806,0.300064,0.156819,Low,Yes,No,No,Yes,No,No,Medium,Medium,0.221853,0.717108,Yes
@@ -10413,7 +10413,7 @@
 0.356517,0.895143,0.201808,High,No,No,No,No,Yes,Yes,Low,High,0.843588,0.475135,Yes
 0.818242,0.709284,0.122595,Medium,Yes,Yes,No,Yes,Yes,Yes,High,Medium,0.045417,0.785663,Yes
 0.429788,0.801188,0.384202,High,Yes,Yes,No,No,No,No,Low,High,0.167123,0.075474,Yes
-0.703215,0.467729,0.428137,Low,Yes,No,No,Yes,No,No,Medium,Low,0.87215,0.903648,Yes
+0.703215,0.467729,0.429758,Low,Yes,No,No,Yes,No,No,Medium,Low,0.87215,0.903648,Yes
 0.965294,0.716722,0.787294,High,Yes,Yes,No,No,Yes,Yes,Low,Medium,0.05567,0.512506,Yes
 0.672096,0.605663,0.479147,High,Yes,No,No,Yes,Yes,No,None,High,0.297212,0.268236,Yes
 0.642306,0.750787,0.738578,Low,Yes,No,No,No,No,No,Medium,Low,0.656854,0.90989,Yes
@@ -10448,9 +10448,9 @@
 0.532258,0.10514,0.173138,High,Yes,No,No,Yes,No,No,High,Low,0.763682,0.711585,Yes
 0.102135,0.242629,0.761769,Medium,Yes,Yes,Yes,No,Yes,No,High,Medium,0.516712,0.384978,Yes
 0.269382,0.811032,0.139174,Medium,No,No,Yes,No,Yes,No,Low,High,0.710182,0.211671,Yes
-0.027131,0.384577,0.776777,High,Yes,Yes,Yes,No,No,No,Low,High,0.349107,0.361488,Yes
+0.105071,0.371766,0.943796,High,Yes,Yes,Yes,No,No,No,Low,High,0.503665,0.491173,Yes
 0.754486,0.826439,0.565025,High,Yes,Yes,No,Yes,Yes,No,None,Medium,0.348701,0.264676,Yes
-0.80988,0.045217,0.486024,High,Yes,Yes,Yes,No,Yes,Yes,High,Low,0.094616,0.354087,Yes
+0.80988,0.045217,0.489299,High,Yes,Yes,Yes,No,Yes,Yes,High,Low,0.094616,0.354087,Yes
 0.371116,0.037576,0.167187,High,Yes,Yes,Yes,No,No,Yes,None,Medium,0.206438,0.720827,Yes
 0.327836,0.573251,0.900755,High,Yes,Yes,Yes,Yes,Yes,No,Low,High,0.973344,0.475977,Yes
 0.218002,0.377347,0.915096,High,No,Yes,No,Yes,Yes,Yes,Low,Medium,0.378322,0.208144,Yes
@@ -10470,7 +10470,7 @@
 0.793139,0.577431,0.821703,Low,Yes,Yes,No,Yes,Yes,Yes,None,Low,0.657127,0.513524,Yes
 0.536372,0.464935,0.8499,High,Yes,Yes,No,No,Yes,Yes,Medium,High,0.142574,0.17612,Yes
 0.474257,0.804989,0.507057,High,Yes,Yes,No,Yes,No,Yes,Medium,Low,0.428295,0.235498,Yes
-0.47922,0.499346,0.760755,High,No,No,No,Yes,Yes,No,None,Low,0.70543,0.319522,Yes
+0.47922,0.503131,0.760755,High,No,No,No,Yes,Yes,No,None,Low,0.70543,0.319522,Yes
 0.312972,0.062131,0.168134,Low,No,No,No,Yes,Yes,No,High,Medium,0.920787,0.258247,Yes
 0.913757,0.063679,0.83727,High,No,Yes,No,No,Yes,Yes,None,Low,0.712756,0.470184,Yes
 0.2864,0.649691,0.152433,Low,Yes,Yes,No,No,No,No,None,Low,0.135805,0.459328,Yes
@@ -10518,7 +10518,7 @@
 0.677003,0.643532,0.647033,Low,Yes,No,No,No,Yes,Yes,Medium,Low,0.86621,0.741342,Yes
 0.122222,0.599858,0.728588,Medium,Yes,Yes,No,Yes,No,No,High,Medium,0.77215,0.849504,Yes
 0.010147,0.678527,0.38,Low,Yes,No,No,Yes,No,Yes,Medium,Medium,0.256805,0.65077,Yes
-0.680189,0.533443,0.415523,High,Yes,No,Yes,Yes,Yes,Yes,Low,High,0.892441,0.885531,Yes
+0.680189,0.533443,0.415523,High,Yes,No,Yes,Yes,Yes,Yes,Low,High,0.892407,0.885531,Yes
 0.193142,0.611201,0.24646,Medium,Yes,Yes,No,Yes,Yes,Yes,Medium,Low,0.905129,0.65779,Yes
 0.379256,0.802171,0.271615,High,No,Yes,Yes,No,Yes,Yes,High,Medium,0.4125,0.705956,Yes
 0.31438,0.163832,0.295065,Low,Yes,Yes,No,Yes,Yes,Yes,Medium,Low,0.155821,0.606412,Yes
@@ -10534,7 +10534,7 @@
 0.511038,0.759664,0.130039,High,Yes,Yes,Yes,Yes,No,No,High,Medium,0.491243,0.804579,Yes
 0.160674,0.113449,0.805912,Low,No,No,Yes,No,Yes,Yes,High,Medium,0.278,0.5464,Yes
 0.565268,0.116728,0.17903,Low,Yes,No,No,No,Yes,Yes,None,Medium,0.588276,0.679981,Yes
-0.273616,0.370388,0.961415,Medium,Yes,Yes,Yes,No,Yes,No,High,Medium,0.515243,0.427175,Yes
+0.273616,0.370388,0.961415,Medium,Yes,Yes,Yes,No,Yes,No,High,Medium,0.513962,0.427175,Yes
 0.854452,0.044755,0.781191,Low,Yes,No,No,Yes,Yes,No,High,Low,0.694772,0.555744,Yes
 0.466052,0.051331,0.844466,Medium,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.396084,0.217854,Yes
 0.443765,0.646024,0.784099,High,Yes,Yes,Yes,Yes,Yes,No,None,High,0.919072,0.95443,Yes
@@ -10575,7 +10575,7 @@
 0.958435,0.016174,0.46621,High,Yes,Yes,Yes,Yes,Yes,Yes,High,High,0.808608,0.503849,Yes
 0.30114,0.75797,0.68,High,Yes,Yes,No,Yes,No,Yes,Low,Medium,0.474106,0.783768,Yes
 0.266638,0.277761,0.173838,High,Yes,Yes,Yes,No,No,No,High,Medium,0.636797,0.163623,Yes
-0.758379,0.815149,0.670512,Medium,Yes,No,Yes,Yes,Yes,No,High,High,0.389451,0.794338,Yes
+0.758379,0.815149,0.670512,Medium,Yes,No,Yes,Yes,Yes,No,High,High,0.388467,0.794338,Yes
 0.344428,0.684763,0.90308,Medium,Yes,Yes,Yes,No,Yes,No,High,High,0.538164,0.818694,Yes
 0.476618,0.057081,0.382925,Low,Yes,Yes,No,Yes,No,No,Low,High,0.726631,0.143973,Yes
 0.338706,0.477827,0.949054,Medium,No,No,No,Yes,Yes,Yes,Medium,High,0.444081,0.111261,Yes
@@ -10612,7 +10612,7 @@
 0.726302,0.028809,0.652722,Medium,No,No,No,Yes,Yes,No,Medium,Medium,0.135331,0.714593,Yes
 0.921386,0.191394,0.030346,High,Yes,Yes,Yes,No,Yes,No,Medium,Low,0.256073,0.230354,Yes
 0.503601,0.720389,0.84197,Low,No,No,Yes,Yes,Yes,Yes,Medium,Medium,0.710573,0.241581,Yes
-0.966791,0.632567,0.572921,High,Yes,No,No,Yes,No,No,Medium,Medium,0.420235,0.167136,Yes
+0.966791,0.632567,0.572921,High,Yes,No,No,Yes,No,No,Medium,Medium,0.419063,0.167136,Yes
 0.298531,0.11679,0.207963,Medium,Yes,Yes,No,No,Yes,Yes,Medium,High,0.185909,0.709098,Yes
 0.882523,0.963667,0.622563,Medium,No,No,No,Yes,Yes,No,High,High,0.670732,0.390309,Yes
 0.628078,0.499172,0.543539,High,Yes,Yes,No,Yes,Yes,Yes,None,High,0.354327,0.316347,Yes
@@ -10634,7 +10634,7 @@
 0.817244,0.295481,0.787934,Low,Yes,Yes,No,Yes,Yes,No,Medium,Low,0.932421,0.194701,Yes
 0.557656,0.933333,0.167627,High,No,Yes,Yes,Yes,No,No,Medium,Medium,0.194259,0.329531,Yes
 0.261497,0.256363,0.733333,High,Yes,Yes,Yes,Yes,No,Yes,High,Medium,0.83822,0.235353,Yes
-0.400742,0.125972,0.692731,Medium,Yes,Yes,No,No,Yes,Yes,Low,Medium,0.770245,0.430388,Yes
+0.400742,0.125972,0.692731,Medium,Yes,Yes,No,No,Yes,Yes,Low,Medium,0.770245,0.427812,Yes
 0.281939,0.515238,0.110908,Medium,No,Yes,Yes,Yes,Yes,Yes,Medium,Medium,0.480627,0.776511,Yes
 0.041342,0.232855,0.668398,Low,Yes,No,No,Yes,Yes,No,High,High,0.051124,0.343174,Yes
 0.063879,0.844186,0.692788,Medium,Yes,Yes,Yes,Yes,Yes,No,Medium,High,0.125,0.358627,Yes
@@ -10677,7 +10677,7 @@
 0.167128,0.987823,0.783804,Low,Yes,Yes,No,Yes,No,Yes,High,Medium,0.819596,0.809781,Yes
 0.694318,0.016667,0.829577,High,Yes,No,No,No,Yes,No,High,Low,0.903682,0.167057,Yes
 0.135517,0.501526,0.689251,High,No,Yes,No,Yes,No,No,None,Low,0.641812,0.791682,Yes
-0.711124,0.619117,0.830694,High,No,Yes,No,No,Yes,No,Medium,High,0.004223,0.334461,Yes
+0.711124,0.620242,0.830694,High,No,Yes,No,No,Yes,No,Medium,High,0.004223,0.334461,Yes
 0.802343,0.624261,0.151892,High,Yes,No,No,Yes,Yes,No,High,Low,0.392069,0.792599,Yes
 0.368713,0.803318,0.815894,Medium,Yes,Yes,Yes,Yes,No,No,Low,High,0.911614,0.93164,Yes
 0.794896,0.940171,0.505285,High,Yes,Yes,No,Yes,No,No,Low,Medium,0.565252,0.182543,Yes
@@ -10691,7 +10691,7 @@
 0.17973,0.295364,0.689499,High,Yes,Yes,No,No,Yes,No,None,Medium,0.892396,0.558248,Yes
 0.675027,0.403752,0.740062,Low,Yes,Yes,No,Yes,Yes,No,Low,High,0.09176,0.423481,Yes
 0.460201,0.403187,0.417087,Medium,Yes,Yes,No,Yes,Yes,No,None,Low,0.136901,0.962428,Yes
-0.653487,0.20075,0.6973,Low,Yes,Yes,No,Yes,Yes,No,None,Medium,0.669635,0.32201,Yes
+0.653487,0.20075,0.6973,Low,Yes,Yes,No,Yes,Yes,No,None,Medium,0.669635,0.320383,Yes
 0.367726,0.390395,0.602214,Low,No,Yes,No,Yes,Yes,No,High,High,0.280187,0.781137,Yes
 0.677419,0.850595,0.932527,Medium,Yes,No,Yes,Yes,No,No,None,High,0.361982,0.828487,Yes
 0.24392,0.215757,0.231135,Medium,Yes,Yes,Yes,Yes,Yes,Yes,High,Medium,0.224888,0.549893,Yes
@@ -10721,7 +10721,7 @@
 0.649877,0.203746,0.827753,High,No,No,No,No,Yes,No,None,Medium,0.767644,0.238078,Yes
 0.38579,0.257024,0.400713,High,Yes,Yes,No,Yes,Yes,Yes,High,Medium,0.791304,0.861011,Yes
 0.51318,0.473666,0.44767,High,Yes,No,No,Yes,Yes,No,High,Low,0.922254,0.621372,Yes
-0.515312,0.499019,0.647169,High,No,No,No,Yes,Yes,No,Low,Medium,0.606564,0.142196,Yes
+0.515312,0.5,0.647169,High,No,No,No,Yes,Yes,No,Low,Medium,0.606564,0.142196,Yes
 0.092948,0.074707,0.71836,Low,No,Yes,No,Yes,No,Yes,High,Medium,0.283542,0.451726,Yes
 0.778942,0.531042,0.288778,Medium,No,No,Yes,Yes,No,Yes,High,Medium,0.704141,0.246176,Yes
 0.89094,0.25,0.974886,Low,No,No,No,No,Yes,No,High,Low,0.338429,0.468008,Yes
@@ -10750,12 +10750,12 @@
 0.876733,0.675683,0.972096,High,Yes,No,No,No,No,No,Medium,Low,0.31694,0.889428,Yes
 0.723734,0.870427,0.349234,Low,Yes,Yes,No,Yes,No,Yes,High,Medium,0.751836,0.878452,Yes
 0.790323,0.08291,0.213161,Low,No,Yes,No,Yes,No,No,High,Medium,0.318993,0.223891,Yes
-0.741935,0.726562,0.077784,Medium,Yes,Yes,No,Yes,Yes,No,High,Low,0.042784,0.622126,Yes
+0.689091,0.769791,0.088127,Medium,Yes,Yes,No,Yes,Yes,No,High,Low,0.255184,0.783677,Yes
 0.890705,0.147795,0.20068,Low,Yes,Yes,No,Yes,Yes,No,Medium,High,0.589664,0.143518,Yes
 0.181569,0.759801,0.648644,Low,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.120413,0.671892,Yes
 0.722589,0.912215,0.915767,High,Yes,Yes,Yes,Yes,Yes,No,Medium,Medium,0.863456,0.359119,Yes
 0.242246,0.422796,0.762943,High,No,No,Yes,Yes,No,No,High,High,0.921858,0.315955,Yes
-0.776428,0.279934,0.487408,High,Yes,No,No,Yes,No,Yes,Low,Low,0.815758,0.853205,Yes
+0.776428,0.279934,0.490623,High,Yes,No,No,Yes,No,Yes,Low,Low,0.815758,0.853205,Yes
 0.68985,0.740588,0.799403,High,Yes,Yes,Yes,Yes,No,No,High,High,0.245957,0.759851,Yes
 0.961379,0.088342,0.375096,High,Yes,No,Yes,Yes,Yes,Yes,High,Medium,0.371582,0.692818,Yes
 0.870968,0.287967,0.831343,Medium,Yes,Yes,No,Yes,Yes,Yes,None,High,0.927163,0.66406,Yes
@@ -10826,13 +10826,13 @@
 0.252898,0.123116,0.47866,Low,Yes,Yes,No,Yes,No,No,Low,Low,0.946377,0.228572,Yes
 0.403226,0.617606,0.723806,Medium,No,Yes,Yes,Yes,Yes,Yes,Low,High,0.923131,0.390307,Yes
 0.617322,0.490818,0.900275,Low,Yes,Yes,No,Yes,Yes,No,High,High,0.10136,0.57977,Yes
-0.362104,0.0465,0.514465,High,Yes,Yes,Yes,No,No,No,High,Medium,0.497367,0.563919,Yes
+0.362104,0.0465,0.514465,High,Yes,Yes,Yes,No,No,No,High,Medium,0.495741,0.563919,Yes
 0.44534,0.01454,0.208856,High,No,No,No,Yes,No,Yes,High,Medium,0.721803,0.608517,Yes
 0.601102,0.026668,0.355949,Low,Yes,Yes,No,Yes,Yes,No,Low,High,0.894231,0.08087,Yes
 0.027115,0.642885,0.925807,High,Yes,No,No,Yes,Yes,No,Medium,Medium,0.7875,0.694703,Yes
 0.097878,0.24306,0.740299,Low,Yes,Yes,Yes,Yes,Yes,No,High,High,0.872501,0.612349,Yes
 0.364164,0.701154,0.514928,High,Yes,Yes,No,No,Yes,No,Low,Medium,0.730573,0.809026,Yes
-0.894984,0.148631,0.153481,High,Yes,Yes,Yes,Yes,No,No,Medium,High,0.902113,0.389376,Yes
+0.591443,0.184703,0.128278,High,Yes,Yes,Yes,Yes,No,No,Medium,High,0.920188,0.790864,Yes
 0.369536,0.509637,0.421489,High,Yes,No,No,Yes,Yes,No,None,Medium,0.743095,0.290885,Yes
 0.688745,0.722708,0.292436,High,No,Yes,No,No,Yes,No,Medium,High,0.30058,0.337627,Yes
 0.723676,0.043926,0.190387,Low,Yes,No,No,Yes,No,Yes,Medium,Medium,0.863197,0.665217,Yes
@@ -10841,7 +10841,7 @@
 0.407289,0.90304,0.233133,High,No,Yes,Yes,Yes,Yes,Yes,Medium,Medium,0.403324,0.534359,Yes
 0.193548,0.711422,0.717027,Low,Yes,Yes,No,No,Yes,Yes,Low,High,0.673528,0.535634,Yes
 0.671246,0.182839,0.22272,High,Yes,Yes,No,Yes,Yes,No,Medium,Medium,0.253577,0.954634,Yes
-0.401553,0.110948,0.821264,Low,Yes,Yes,No,No,No,No,Medium,High,0.462061,0.498903,Yes
+0.401553,0.110948,0.821264,Low,Yes,Yes,No,No,No,No,Medium,High,0.461647,0.498903,Yes
 0.257837,0.512096,0.47632,High,Yes,No,No,No,Yes,Yes,High,Medium,0.414649,0.658914,Yes
 0.216831,0.19451,0.853898,Medium,Yes,No,No,Yes,No,No,Medium,Medium,0.466798,0.694013,Yes
 0.4926,0.649896,0.543732,Low,Yes,Yes,No,No,No,No,Low,Low,0.351786,0.483265,Yes
@@ -10875,7 +10875,7 @@
 0.403226,0.033333,0.204195,High,Yes,Yes,No,Yes,No,Yes,Low,Medium,0.285573,0.527368,Yes
 0.758549,0.725487,0.424987,Medium,Yes,Yes,No,Yes,Yes,Yes,High,Medium,0.07482,0.477338,Yes
 0.816011,0.945016,0.688179,High,Yes,No,No,No,Yes,No,High,Medium,0.146212,0.588659,Yes
-0.667593,0.873654,0.113852,High,No,Yes,Yes,Yes,No,No,High,Medium,0.799267,0.118278,Yes
+0.667593,0.873654,0.113852,High,No,Yes,Yes,Yes,No,No,High,Medium,0.799192,0.118278,Yes
 0.116235,0.582925,0.2171,Medium,Yes,Yes,No,Yes,No,Yes,Medium,High,0.665918,0.509459,Yes
 0.718159,0.694065,0.504362,High,No,No,No,Yes,No,No,Medium,Low,0.324158,0.214479,Yes
 0.366987,0.755059,0.206667,High,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Low,0.56536,0.108718,Yes
@@ -10884,7 +10884,7 @@
 0.948642,0.081412,0.723586,High,Yes,Yes,No,Yes,No,No,Low,High,0.45637,0.889152,Yes
 0.842563,0.95127,0.419367,High,Yes,Yes,No,Yes,No,No,Low,Medium,0.59465,0.248464,Yes
 0.521629,0.643719,0.126045,Medium,Yes,Yes,Yes,No,No,Yes,Medium,Medium,0.210759,0.851932,Yes
-0.299573,0.073993,0.519517,High,Yes,Yes,No,No,No,No,High,Medium,0.494312,0.576367,Yes
+0.299573,0.073993,0.519517,High,Yes,Yes,No,No,No,No,High,Medium,0.492621,0.576367,Yes
 0.525216,0.842219,0.875365,Medium,Yes,Yes,No,Yes,No,Yes,High,Low,0.026457,0.842519,Yes
 0.824572,0.065996,0.707699,Medium,No,No,No,Yes,No,No,Medium,Medium,0.286222,0.51112,Yes
 0.041147,0.054218,0.409604,High,Yes,Yes,Yes,Yes,Yes,Yes,Low,Medium,0.963626,0.480234,Yes
@@ -10951,7 +10951,7 @@
 0.282504,0.856806,0.3856,Medium,No,No,Yes,Yes,Yes,No,Low,Low,0.272854,0.431025,Yes
 0.588798,0.800898,0.881112,Low,No,No,Yes,Yes,No,No,High,Low,0.762282,0.546617,Yes
 0.285333,0.440128,0.787616,High,Yes,No,Yes,Yes,Yes,No,High,High,0.2616,0.96328,Yes
-0.769563,0.535206,0.542719,High,Yes,No,No,Yes,No,No,Low,Medium,0.390447,0.212584,Yes
+0.769563,0.535206,0.542719,High,Yes,No,No,Yes,No,No,Low,Medium,0.389542,0.212584,Yes
 0.77674,0.259475,0.115886,Medium,No,No,Yes,Yes,Yes,No,None,High,0.236722,0.21875,Yes
 0.080645,0.165625,0.643782,High,No,Yes,No,Yes,Yes,No,High,Medium,0.966396,0.64143,Yes
 0.255452,0.122079,0.391897,High,Yes,Yes,Yes,Yes,No,No,Low,Medium,0.897762,0.508906,Yes
@@ -11087,7 +11087,7 @@
 0.647896,0.305657,0.932356,Medium,Yes,No,No,Yes,Yes,No,Medium,Low,0.924249,0.372305,Yes
 0.097129,0.255004,0.517881,Low,Yes,No,No,Yes,Yes,No,Low,Medium,0.474675,0.133408,Yes
 0.247316,0.888525,0.497861,High,No,No,No,No,Yes,No,Low,High,0.329272,0.383466,Yes
-0.487308,0.834717,0.537294,High,Yes,Yes,No,Yes,Yes,Yes,Medium,Low,0.326089,0.746191,Yes
+0.487308,0.834717,0.53955,High,Yes,Yes,No,Yes,Yes,Yes,Medium,Low,0.326089,0.746191,Yes
 0.611087,0.110899,0.028098,High,No,No,No,Yes,No,Yes,None,Medium,0.372867,0.939545,Yes
 0.870968,0.859202,0.886415,High,Yes,Yes,Yes,Yes,Yes,Yes,Low,Low,0.550772,0.533355,Yes
 0.537302,0.068204,0.850606,Low,Yes,Yes,Yes,Yes,Yes,Yes,High,Medium,0.862108,0.672492,Yes
@@ -11132,7 +11132,7 @@
 0.457869,0.077455,0.94113,Medium,Yes,Yes,No,No,Yes,Yes,Medium,High,0.391382,0.195025,Yes
 0.975178,0.193886,0.373333,High,Yes,No,Yes,Yes,Yes,Yes,High,Medium,0.281208,0.398909,Yes
 0.446732,0.724305,0.496605,High,Yes,Yes,Yes,No,No,Yes,None,Medium,0.506059,0.778504,Yes
-0.964315,0.629303,0.638763,Low,Yes,Yes,No,Yes,Yes,No,Medium,Medium,0.760097,0.116727,Yes
+0.804291,0.716667,0.926506,Low,No,Yes,No,Yes,Yes,No,High,Medium,0.85,0.101998,Yes
 0.251567,0.269566,0.189163,Low,Yes,No,No,Yes,Yes,Yes,High,Low,0.082266,0.171717,Yes
 0.785104,0.835412,0.72844,High,No,No,Yes,Yes,Yes,No,High,High,0.312398,0.369079,Yes
 0.199577,0.775736,0.887253,Medium,No,No,Yes,Yes,Yes,Yes,Medium,Medium,0.348162,0.126072,Yes
@@ -11160,7 +11160,7 @@
 0.41693,0.233894,0.036094,High,Yes,Yes,No,No,Yes,No,High,High,0.861905,0.87802,Yes
 0.798061,0.958767,0.874816,Medium,No,No,No,Yes,No,Yes,High,Medium,0.933056,0.689372,Yes
 0.273864,0.607315,0.532446,Low,Yes,No,No,Yes,Yes,Yes,Medium,Medium,0.298818,0.78144,Yes
-0.702575,0.945614,0.840608,High,No,Yes,No,No,Yes,No,Medium,Medium,0.742629,0.0517,Yes
+0.702575,0.945614,0.840608,Medium,No,Yes,No,Yes,Yes,No,Medium,Medium,0.742629,0.0517,Yes
 0.449962,0.511252,0.763479,Low,No,Yes,No,Yes,No,No,None,High,0.084988,0.519489,Yes
 0.37789,0.46565,0.048473,Low,No,No,No,Yes,Yes,Yes,Low,Medium,0.200261,0.859051,Yes
 0.817919,0.855108,0.313333,Low,Yes,Yes,No,No,Yes,Yes,Low,Medium,0.025,0.078787,Yes
@@ -11169,7 +11169,7 @@
 0.56915,0.133712,0.644671,High,No,No,No,Yes,Yes,No,Medium,Low,0.181898,0.768602,Yes
 0.239832,0.227492,0.528718,High,No,No,Yes,No,Yes,No,Low,Medium,0.265569,0.060362,Yes
 0.722107,0.958802,0.309058,Medium,No,Yes,No,No,Yes,No,Medium,Medium,0.246267,0.341246,Yes
-0.983672,0.444553,0.431184,High,Yes,No,No,Yes,No,No,None,Low,0.819348,0.961456,Yes
+0.983672,0.444553,0.432895,High,Yes,No,No,Yes,No,No,None,Low,0.819348,0.961456,Yes
 0.12334,0.265334,0.21792,High,No,No,No,No,Yes,Yes,None,Low,0.14916,0.600091,Yes
 0.918527,0.523211,0.676518,High,Yes,No,No,Yes,No,Yes,High,Medium,0.527304,0.845391,Yes
 0.868118,0.481628,0.911536,High,Yes,No,No,Yes,Yes,No,Low,Medium,0.506733,0.352671,Yes
@@ -11204,12 +11204,12 @@
 0.933646,0.453088,0.92818,High,Yes,No,Yes,Yes,Yes,No,Low,High,0.941613,0.060504,Yes
 0.252062,0.709397,0.177444,Medium,Yes,Yes,Yes,Yes,No,No,None,High,0.251006,0.61902,Yes
 0.605437,0.578904,0.382038,Low,Yes,No,Yes,Yes,No,No,High,Medium,0.551008,0.122286,Yes
-0.648515,0.006699,0.959635,Medium,Yes,No,No,No,Yes,No,High,High,0.544963,0.179178,Yes
+0.648515,0.006699,0.959635,Medium,Yes,No,No,No,Yes,No,High,High,0.544449,0.179178,Yes
 0.145574,0.720794,0.874303,High,Yes,Yes,No,No,Yes,No,High,Low,0.245918,0.580329,Yes
 0.797012,0.836635,0.676208,Medium,Yes,No,No,Yes,No,No,Low,High,0.68887,0.288752,Yes
 0.624925,0.528332,0.752118,Low,Yes,Yes,No,Yes,Yes,No,Low,Medium,0.854397,0.957812,Yes
 0.021695,0.858682,0.063663,Low,Yes,Yes,No,Yes,No,No,High,Medium,0.076271,0.766957,Yes
-0.371873,0.55,0.508242,High,Yes,Yes,No,Yes,Yes,No,High,Medium,0.366637,0.895637,Yes
+0.369849,0.55,0.508242,High,Yes,Yes,No,Yes,Yes,No,High,Medium,0.366637,0.895637,Yes
 0.765214,0.782534,0.052507,Medium,Yes,No,No,Yes,Yes,No,Low,High,0.121141,0.52432,Yes
 0.93579,0.408173,0.829112,High,Yes,No,No,Yes,Yes,No,Medium,Medium,0.098562,0.808527,Yes
 0.558648,0.068262,0.912796,Medium,Yes,No,No,No,Yes,Yes,High,High,0.238976,0.832781,Yes
@@ -11245,7 +11245,7 @@
 0.919779,0.033739,0.760033,Medium,No,Yes,No,Yes,No,No,None,Medium,0.301951,0.490937,Yes
 0.586383,0.110331,0.192383,High,Yes,No,No,Yes,No,Yes,None,Medium,0.88905,0.712169,Yes
 0.077145,0.4585,0.11481,High,No,Yes,Yes,Yes,No,No,None,High,0.249468,0.200251,Yes
-0.519958,0.220665,0.686364,Medium,Yes,Yes,Yes,No,Yes,No,Medium,Low,0.45263,0.388923,Yes
+0.519958,0.220665,0.686364,Medium,Yes,Yes,Yes,No,Yes,No,Medium,Low,0.45263,0.387211,Yes
 0.536867,0.053825,0.630602,High,Yes,No,No,Yes,Yes,Yes,Low,Medium,0.618755,0.230271,Yes
 0.276274,0.333333,0.503947,Medium,No,Yes,Yes,Yes,Yes,No,High,Medium,0.796907,0.538798,Yes
 0.637742,0.980821,0.30396,Low,No,No,No,Yes,No,No,Medium,High,0.170388,0.203068,Yes
@@ -11285,7 +11285,7 @@
 0.430933,0.808458,0.084494,Low,No,Yes,Yes,Yes,Yes,Yes,Medium,Medium,0.226317,0.201017,Yes
 0.90278,0.280919,0.263056,Low,Yes,No,Yes,Yes,No,No,Medium,Medium,0.307658,0.486423,Yes
 0.495496,0.850689,0.662407,Medium,No,Yes,Yes,No,No,Yes,Low,Low,0.429268,0.514161,Yes
-0.327897,0.316667,0.218245,Medium,Yes,Yes,No,No,No,Yes,None,Low,0.654549,0.317833,Yes
+0.32738,0.316667,0.218245,Medium,Yes,Yes,No,No,No,Yes,None,Low,0.654549,0.317833,Yes
 0.278706,0.559956,0.840559,Medium,Yes,No,No,No,Yes,No,Low,Medium,0.685351,0.107086,Yes
 0.258373,0.282792,0.656791,Medium,Yes,No,Yes,Yes,Yes,Yes,Low,Low,0.485442,0.836522,Yes
 0.821535,0.106202,0.154104,High,Yes,Yes,No,Yes,No,Yes,Medium,Medium,0.360077,0.678042,Yes
@@ -11377,7 +11377,7 @@
 0.200333,0,0.273979,High,No,No,No,Yes,Yes,No,Low,Medium,0.978019,0.622859,Yes
 0.66916,0.62325,0.967745,High,No,Yes,No,Yes,Yes,No,None,High,0.057135,0.810467,Yes
 0.605719,0.522091,0.405772,Low,Yes,Yes,No,Yes,No,No,Medium,Medium,0.85227,0.906882,Yes
-0.705315,0.43023,0.365111,Medium,No,No,No,Yes,Yes,Yes,Medium,High,0.699878,0.197677,Yes
+0.705315,0.430921,0.365111,Medium,No,No,No,Yes,Yes,Yes,Medium,High,0.699878,0.197677,Yes
 0.644849,0.590144,0.227641,Medium,Yes,No,No,Yes,No,Yes,High,Medium,0.932583,0.787681,Yes
 0.945784,0.647932,0.697252,High,No,Yes,No,Yes,No,No,High,Medium,0.445385,0.76717,Yes
 0.73563,0.146573,0.237456,High,No,Yes,Yes,Yes,Yes,Yes,High,Medium,0.870127,0.80531,Yes
@@ -11436,7 +11436,7 @@
 0.127177,0.076696,0.724027,Low,Yes,Yes,Yes,Yes,Yes,No,High,Low,0.622763,0.12697,Yes
 0.293936,0.84031,0.460645,Low,Yes,Yes,Yes,Yes,No,No,Low,High,0.703738,0.836349,Yes
 0.318972,0.520813,0.69636,High,Yes,Yes,Yes,Yes,Yes,No,None,Low,0.904879,0.208146,Yes
-0.870961,0.018465,0.2114,Low,No,No,No,Yes,No,Yes,Low,Low,0.390624,0.391622,Yes
+0.962047,0.013189,0.189894,Low,No,No,No,Yes,Yes,No,Low,High,0.598951,0.406051,Yes
 0.912473,0.797643,0.057535,Medium,Yes,Yes,No,No,No,Yes,High,Medium,0.63239,0.959305,Yes
 0.93279,0.664797,0.713291,High,Yes,Yes,Yes,Yes,Yes,No,Low,High,0.552483,0.841234,Yes
 0.907562,0.489639,0.491196,High,Yes,No,Yes,Yes,No,No,Low,Medium,0.233805,0.496923,Yes
@@ -11507,7 +11507,7 @@
 0.29011,0.007718,0.744466,Low,Yes,No,No,No,Yes,No,Medium,Medium,0.119535,0.960234,Yes
 0.947929,0.557475,0.770741,High,Yes,No,Yes,Yes,No,No,High,High,0.067669,0.576124,Yes
 0.912875,0.853099,0.720039,High,Yes,Yes,No,Yes,Yes,Yes,Low,High,0.461736,0.740965,Yes
-0.416271,0.040919,0.776545,Medium,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.688723,0.477676,Yes
+0.416271,0.040919,0.776545,Medium,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.688355,0.475195,Yes
 0.105215,0.468899,0.452289,Medium,No,Yes,No,Yes,Yes,No,Medium,High,0.520738,0.889996,Yes
 0.71293,0.095647,0.480378,High,Yes,Yes,No,Yes,Yes,No,High,High,0.412544,0.134131,Yes
 0.718686,0.490779,0.516242,High,Yes,Yes,No,No,No,No,High,Medium,0.625131,0.169527,Yes
@@ -11628,7 +11628,7 @@
 0.223821,0.543422,0.513072,Medium,No,Yes,No,Yes,Yes,No,Low,High,0.623959,0.695436,Yes
 0.988574,0.577332,0.203334,Medium,No,No,No,No,Yes,Yes,None,Medium,0.703694,0.166169,Yes
 0.499271,0.35026,0.852311,Low,Yes,Yes,No,Yes,Yes,No,High,Low,0.134082,0.293991,Yes
-0.481755,0.584596,0.403998,Medium,Yes,No,No,Yes,Yes,Yes,Medium,Medium,0.95656,0.457409,Yes
+0.481755,0.586028,0.403998,Medium,Yes,No,No,Yes,Yes,Yes,Medium,Medium,0.95656,0.457409,Yes
 0.255057,0.435547,0.422399,High,Yes,Yes,Yes,Yes,No,No,Low,High,0.935145,0.012129,Yes
 0.745009,0.534822,0.215173,Medium,Yes,Yes,No,Yes,No,Yes,High,Medium,0.888699,0.78382,Yes
 0.932819,0.024911,0.232963,Low,No,Yes,No,Yes,Yes,No,Low,Low,0.188761,0.577475,Yes
@@ -11658,7 +11658,7 @@
 0.380452,0.751286,0.118877,Low,No,No,No,Yes,Yes,Yes,Low,Medium,0.675727,0.836387,Yes
 0.786584,0.766667,0.548982,Medium,No,Yes,No,Yes,No,No,Low,Medium,0.404562,0.34591,Yes
 0.709677,0.256506,0.803745,High,Yes,Yes,No,No,Yes,No,High,Medium,0.879949,0.14929,Yes
-0.483497,0.170852,0.496932,High,No,Yes,Yes,No,No,No,High,Low,0.65864,0.780312,Yes
+0.483497,0.170852,0.499995,High,No,Yes,Yes,No,No,No,High,Low,0.65864,0.780312,Yes
 0.663116,0.511293,0.12794,Medium,Yes,Yes,Yes,No,Yes,No,Medium,Medium,0.215309,0.938593,Yes
 0.855849,0.767282,0.04236,Medium,Yes,Yes,No,Yes,Yes,No,High,Medium,0.757549,0.938598,Yes
 0.897629,0.438812,0.784875,Medium,Yes,No,Yes,No,Yes,No,Low,High,0.607188,0.014123,Yes
@@ -11708,7 +11708,7 @@
 0.581068,0.059719,0.851389,Low,Yes,Yes,No,Yes,Yes,Yes,Medium,Medium,0.31136,0.116183,Yes
 0.15015,0.330393,0.560617,Low,Yes,Yes,No,No,Yes,No,High,Medium,0.652212,0.4282,Yes
 0.078111,0.816667,0.812756,High,No,No,No,Yes,No,No,High,Medium,0.05177,0.326545,Yes
-0.949028,0.485797,0.797058,High,Yes,No,No,No,Yes,Yes,High,High,0.500738,0.279661,Yes
+0.664597,0.557295,0.796438,Medium,Yes,No,No,Yes,Yes,Yes,Low,High,0.500738,0.056578,Yes
 0.356086,0.658858,0.209592,High,Yes,Yes,No,Yes,Yes,Yes,Medium,High,0.884184,0.972279,Yes
 0.878914,0.833333,0.414033,Medium,No,Yes,No,Yes,Yes,No,High,High,0.640234,0.240785,Yes
 0.679188,0.897712,0.410759,Low,Yes,Yes,No,Yes,Yes,Yes,Low,Medium,0.118374,0.450765,Yes
@@ -11826,7 +11826,7 @@
 0.546229,0.935534,0.760777,Low,No,Yes,No,Yes,No,No,Medium,Medium,0.769468,0.770133,Yes
 0.704708,0.819138,0.91939,Medium,Yes,No,No,No,Yes,No,High,Low,0.353141,0.13048,Yes
 0.106744,0.325773,0.530924,High,Yes,Yes,No,Yes,Yes,No,Medium,Medium,0.637919,0.156154,Yes
-0.662429,0.773191,0.674058,Medium,No,No,No,Yes,Yes,No,Medium,Medium,0.719688,0.647741,Yes
+0.662429,0.773191,0.674058,Medium,No,No,No,Yes,Yes,No,Medium,Medium,0.719064,0.647741,Yes
 0.134559,0.556016,0.195104,High,No,Yes,No,Yes,No,Yes,Medium,Medium,0.749284,0.088901,Yes
 0.497969,0.315246,0.50893,Medium,No,Yes,Yes,Yes,No,Yes,None,Low,0.43831,0.464726,Yes
 0.207158,0.126973,0.182414,High,Yes,No,Yes,Yes,Yes,No,None,Medium,0.289122,0.378344,Yes
@@ -11852,7 +11852,7 @@
 0.233063,0.633333,0.520666,High,Yes,Yes,No,No,No,No,None,Medium,0.779758,0.178721,Yes
 0.429233,0.009291,0.236051,High,Yes,No,No,No,No,No,High,Medium,0.719831,0.31338,Yes
 0.703962,0.79931,0.175764,Low,Yes,Yes,No,Yes,No,Yes,High,Low,0.795617,0.239365,Yes
-0.508664,0.925434,0.415863,High,Yes,Yes,No,Yes,No,No,Medium,Medium,0.961343,0.655816,Yes
+0.505521,0.925434,0.415863,High,Yes,Yes,No,Yes,No,No,Medium,Medium,0.961343,0.655816,Yes
 0.732224,0.416667,0.455098,Medium,No,Yes,Yes,Yes,Yes,Yes,Medium,High,0.394889,0.108429,Yes
 0.114142,0.764056,0.538335,High,Yes,Yes,No,Yes,Yes,No,Low,Medium,0.232695,0.436303,Yes
 0.144289,0.302393,0.943946,Medium,Yes,No,No,Yes,No,No,Low,High,0.426518,0.671449,Yes
@@ -11869,7 +11869,7 @@
 0.620676,0.384553,0.684246,Medium,No,No,Yes,Yes,Yes,No,Medium,Medium,0.522081,0.68795,Yes
 0.26247,0.88732,0.25576,Medium,Yes,Yes,No,Yes,Yes,No,High,Medium,0.724002,0.472882,Yes
 0.471743,0.757144,0.160704,High,No,Yes,No,Yes,Yes,No,Medium,High,0.325411,0.057201,Yes
-0.723861,0.844122,0.086289,High,Yes,Yes,Yes,No,No,No,Medium,Medium,0.534123,0.220602,Yes
+0.723861,0.844122,0.086289,High,Yes,Yes,Yes,No,No,No,Medium,Medium,0.533538,0.220602,Yes
 0.300894,0.468066,0.517253,Medium,Yes,Yes,No,No,Yes,No,Medium,Low,0.936215,0.54152,Yes
 0.128382,0.519963,0.046387,High,Yes,No,No,No,No,No,High,Low,0.9125,0.342384,Yes
 0.273304,0.233333,0.68694,High,No,No,No,No,Yes,No,Low,High,0.057457,0.568859,Yes
@@ -11903,7 +11903,7 @@
 0.173873,0.42499,0.441361,High,No,Yes,Yes,No,No,No,None,High,0.30111,0.635309,Yes
 0.5787,0.187493,0.601682,High,No,No,Yes,Yes,Yes,No,High,Low,0.577756,0.703363,Yes
 0.11327,0.205922,0.748376,Medium,Yes,Yes,Yes,Yes,No,Yes,None,Medium,0.266433,0.147901,Yes
-0.666982,0.881891,0.096325,High,No,Yes,Yes,Yes,No,Yes,Medium,Medium,0.503682,0.123529,Yes
+0.666982,0.881891,0.096325,High,No,Yes,Yes,Yes,No,Yes,Medium,Medium,0.501915,0.123529,Yes
 0.392429,0.499084,0.83774,High,No,No,Yes,No,Yes,No,High,Low,0.814583,0.288962,Yes
 0.857888,0.911287,0.459032,Low,Yes,Yes,Yes,Yes,Yes,Yes,Medium,Medium,0.837651,0.422349,Yes
 0.495412,0.494784,0.061127,High,No,No,No,Yes,Yes,Yes,High,Medium,0.616271,0.166404,Yes
@@ -12006,7 +12006,7 @@
 0.159157,0.455516,0.720315,High,No,Yes,No,Yes,Yes,Yes,Low,High,0.435478,0.057152,Yes
 0.516099,0.053058,0.033874,High,Yes,Yes,No,No,Yes,Yes,Medium,High,0.487446,0.649571,Yes
 0.803432,0.639293,0.994298,Low,Yes,No,No,No,Yes,No,Low,Low,0.975712,0.815192,Yes
-0.733523,0.900923,0.064759,High,Yes,Yes,Yes,Yes,No,Yes,Low,Medium,0.866354,0.127478,Yes
+0.733523,0.900923,0.064759,High,Yes,Yes,Yes,Yes,No,Yes,Low,Medium,0.866312,0.127478,Yes
 0.580538,0.191073,0.050221,High,Yes,No,Yes,No,No,No,None,Medium,0.922629,0.532365,Yes
 0.371859,0.686251,0.758398,High,No,Yes,Yes,Yes,Yes,No,None,Low,0.260166,0.621155,Yes
 0.724475,0.755897,0.943792,Medium,Yes,No,No,No,No,Yes,Low,Low,0.807924,0.463832,Yes

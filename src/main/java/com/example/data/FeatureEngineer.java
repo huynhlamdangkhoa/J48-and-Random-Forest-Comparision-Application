@@ -212,7 +212,7 @@ public class FeatureEngineer {
             System.out.println("Feature Engineer Test\n");
             //Load sample data (cần có file test)
             weka.core.converters.ConverterUtils.DataSource source = 
-                new weka.core.converters.ConverterUtils.DataSource("src/resources/heart_disease.csv");
+                new weka.core.converters.ConverterUtils.DataSource("src/main/resources/heart_disease.csv");
             Instances data = source.getDataSet();
             data.setClassIndex(data.numAttributes() - 1);
             System.out.println("Original attributes: " + data.numAttributes());

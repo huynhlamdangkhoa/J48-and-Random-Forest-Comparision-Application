@@ -1,0 +1,88 @@
+======================================================================
+Model: J48
+======================================================================
+
+--- Overall Performance ---
+Accuracy:           68,52%
+Precision (Weighted): 0,660
+Recall (Weighted):    0,685
+F1-Score (Weighted):  0,630
+Runtime:             0,56 seconds
+
+--- Disease Class Metrics (Class 1) ---
+Precision:  0,582
+Recall:     0,197 (Sensitivity)
+F1-Score:   0,294
+AUC:        0,608
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7434  566 |    a = No
+ 3212  788 |    b = Yes
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,929    0,803    0,698      0,929    0,797      0,188    0,608     0,727     No
+                 0,197    0,071    0,582      0,197    0,294      0,188    0,608     0,464     Yes
+Weighted Avg.    0,685    0,559    0,660      0,685    0,630      0,188    0,608     0,639     
+
+--- Additional Metrics ---
+Kappa statistic:      0,151
+Mean absolute error:  0,4142
+RMSE:                 0,4627
+
+======================================================================
+
+======================================================================
+Model: RandomForest
+======================================================================
+
+--- Overall Performance ---
+Accuracy:           80,00%
+Precision (Weighted): NaN
+Recall (Weighted):    0,800
+F1-Score (Weighted):  NaN
+Runtime:             31,71 seconds
+
+--- Disease Class Metrics (Class 1) ---
+Precision:  NaN
+Recall:     0,000 (Sensitivity)
+F1-Score:   NaN
+AUC:        0,507
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 8000    0 |    a = No
+ 2000    0 |    b = Yes
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,800      1,000    0,889      ?        0,507     0,806     No
+                 0,000    0,000    ?          0,000    ?          ?        0,507     0,204     Yes
+Weighted Avg.    0,800    0,800    ?          0,800    ?          ?        0,507     0,686     
+
+--- Additional Metrics ---
+Kappa statistic:      0,000
+Mean absolute error:  0,3281
+RMSE:                 0,4037
+
+======================================================================
+
+
+
+======================================================================
+MODEL COMPARISON SUMMARY
+======================================================================
+
+Performance Comparison:
+----------------------------------------------------------------------
+Model                  Accuracy     Recall   F1-Score        AUC
+----------------------------------------------------------------------
+J48                      68,52%      0,197      0,294      0,608
+RandomForest             80,00%      0,000        NaN      0,507
+
+======================================================================

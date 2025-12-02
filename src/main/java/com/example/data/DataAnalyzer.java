@@ -258,7 +258,7 @@ public class DataAnalyzer {
             // Load sample data
             weka.core.converters.ConverterUtils.DataSource source = 
                 new weka.core.converters.ConverterUtils.DataSource(
-                    "src/resources/heart_disease.csv");
+                    "src/main/resources/heart_disease.csv");
             Instances data = source.getDataSet();
             data.setClassIndex(data.numAttributes() - 1);
             

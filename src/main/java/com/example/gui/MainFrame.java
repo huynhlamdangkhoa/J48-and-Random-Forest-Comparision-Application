@@ -20,8 +20,8 @@ public class MainFrame extends JFrame {
             
             // ✅ ĐÚNG - Chỉ 2 parameters
             controller.runPipeline(
-                "src/resources/heart_disease.csv",    // rawPath: Input dataset
-                "src/resources/evaluation_report.txt" // reportPath: Output report
+                "src/main/resources/heart_disease.csv",    // rawPath: Input dataset
+                "src/main/resources/evaluation_report.txt" // reportPath: Output report
             );
             
             System.out.println("\n╔════════════════════════════════════════════════════════╗");
