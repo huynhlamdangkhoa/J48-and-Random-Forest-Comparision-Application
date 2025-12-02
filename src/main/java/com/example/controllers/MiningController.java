@@ -7,6 +7,8 @@ import com.example.data.DataLoader;
 import com.example.data.FeatureEngineer;
 import com.example.evaluation.ModelEvaluator;
 
+
+
 import weka.classifiers.trees.RandomForest;
 import weka.core.Instances;
 
@@ -24,7 +26,7 @@ public class MiningController {
     Chạy toàn bộ pipeline: Preprocessing → Training → Evaluation 
     @param rawPath Đường dẫn file dataset gốc (.csv hoặc .arff)
     @param reportPath Đường dẫn file báo cáo kết quả
-     @throws Exception Lỗi trong quá trình xử lý
+    @throws Exception Lỗi trong quá trình xử lý
      */
     public void runPipeline(String rawPath, String reportPath) throws Exception {
         printHeader("HEART DISEASE RISK PREDICTOR - DATA MINING PIPELINE");
@@ -64,23 +66,32 @@ public class MiningController {
         Instances j48ReadyData = customJ48.getTrainingData();
         evaluator.evaluateModel(customJ48.getClassifier(), j48ReadyData, reportPath);
         System.out.println("\nSTEP 2 COMPLETED: Custom J48 pipeline evaluated!");
+        
         printSectionHeader("STEP 3: RANDOM FOREST - IMPROVED MODEL");
+
         System.out.println("\nApplying SMOTE for class balancing...");
         Instances balancedData = cleaner.applySMOTE(data);
-        //Feature Selection
+
+        // Feature Selection
         System.out.println("\nPerforming feature selection...");
         Instances selectedData = cleaner.selectFeatures(balancedData);
-        //Save improved dataset
+
+        // (optional safety) make sure class attribute is set
+        if (selectedData.classIndex() < 0) {
+            selectedData.setClassIndex(selectedData.numAttributes() - 1);
+        }
+
+        // Save improved dataset
         String improvedPath = "output/heart_data_improved.arff";
         loader.saveARFF(selectedData, improvedPath);
         System.out.println("   Improved data saved to: " + improvedPath);
-        
-        // Train Random Forest
+
+        // Train Random Forest on the *improved* data
         RandomForest rf = new RandomForest();
-        rf.setNumIterations(100);
+        rf.setNumIterations(200);
         rf.setSeed(1);
-        evaluator.evaluateModel(rf, data, reportPath);
-        
+        evaluator.evaluateModel(rf, selectedData, reportPath);
+
         System.out.println("\n✅ STEP 3 COMPLETED: Random Forest improved model evaluated!");
         
         // ========================================
