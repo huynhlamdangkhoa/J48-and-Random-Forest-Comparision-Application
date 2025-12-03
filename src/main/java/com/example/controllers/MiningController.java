@@ -1,9 +1,9 @@
 package com.example.controllers;
 
 import com.example.algorithms.J48Classifier;
-import com.example.data.DataAnalyzer;
-import com.example.data.DataCleaner;
-import com.example.data.DataLoader;
+import com.example.data.Analyzer;
+import com.example.data.Cleaner;
+import com.example.data.Loader;
 import com.example.data.FeatureEngineer;
 import com.example.evaluation.ModelEvaluator;
 
@@ -16,9 +16,9 @@ import weka.core.Instances;
 //Quản lý toàn bộ quy trình từ preprocessing đến model evaluation
 
 public class MiningController {
-    private final DataCleaner cleaner = new DataCleaner();
-    private final DataAnalyzer analyzer = new DataAnalyzer();
-    private final DataLoader loader = new DataLoader();
+    private final Cleaner cleaner = new Cleaner();
+    private final Analyzer analyzer = new Analyzer();
+    private final Loader loader = new Loader();
     private final FeatureEngineer engineer = new FeatureEngineer();
     private final ModelEvaluator evaluator = new ModelEvaluator();
 

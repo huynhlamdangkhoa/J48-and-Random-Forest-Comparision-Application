@@ -1,4 +1,4 @@
-package com.example.gui;
+package com.example.main;
 
 import javax.swing.JFrame;
 import com.example.controllers.MiningController;

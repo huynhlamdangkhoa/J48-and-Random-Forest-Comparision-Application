@@ -15,7 +15,7 @@ import weka.filters.unsupervised.attribute.Normalize;
 import weka.filters.unsupervised.instance.RemoveDuplicates;
 
 
-public class DataCleaner {
+public class Cleaner {
     
     /*
     Clean data: Handle missing values + Remove duplicates
@@ -34,12 +34,12 @@ public class DataCleaner {
     }
 
     private Instances handleMissingValues(Instances data) throws Exception {
-        System.out.println("\n[1/2] Handling missing values...");
+        System.out.println("\nHandling missing values...");
         // Count missing values trước khi xử lý
         int totalMissing = countMissingValues(data);
         
         if (totalMissing > 0) {
-            System.out.println("  Found " + totalMissing + " missing values");
+            System.out.println("Found " + totalMissing + " missing values");
             
             // Xử lý từng attribute
             for (int i = 0; i < data.numAttributes(); i++) {
@@ -68,7 +68,7 @@ public class DataCleaner {
                         }
                     }
                     
-                    // Tìm mode (giá trị xuất hiện nhiều nhất)
+                    // Tìm mode
                     int modeIndex = 0;
                     for (int k = 1; k < counts.length; k++) {
                         if (counts[k] > counts[modeIndex]) {
@@ -86,9 +86,9 @@ public class DataCleaner {
                 }
             }
             
-            System.out.println("  Completed: Replaced with median (numeric) / mode (nominal)");
+            System.out.println("Completed: Replaced with median (numeric) / mode (nominal)");
         } else {
-            System.out.println("  No missing values found");
+            System.out.println("No missing values found");
         }
         
         return data;
@@ -129,9 +129,9 @@ public class DataCleaner {
         if (removed > 0) {
             System.out.println("  Removed: " + removed + " duplicates");
         } else {
-            System.out.println("  ✓ No duplicates found");
+            System.out.println("No duplicates found");
         } 
-        System.out.println("  Remaining instances: " + data.numInstances());
+        System.out.println("Remaining instances: " + data.numInstances());
         
         return data;
     }
@@ -143,7 +143,7 @@ public class DataCleaner {
     @throws Exception
      */
     public Instances removeOutliers(Instances data) throws Exception {
-        System.out.println("\n=== Removing Outliers (IQR Method) ===");
+        System.out.println("\nRemoving Outliers");
         int beforeCount = data.numInstances();
         //Manual outlier removal using IQR
         data = removeOutliersIQR(data);
@@ -205,7 +205,7 @@ public class DataCleaner {
     @throws Exception
      */
     public Instances applySMOTE(Instances data) throws Exception {
-        System.out.println("\n=== Applying SMOTE ===");
+        System.out.println("\nApplying SMOTE");
         //Check class distribution trước SMOTE
         int[] beforeCounts = getClassCounts(data);
         System.out.println("  Before SMOTE:");
@@ -229,8 +229,8 @@ public class DataCleaner {
             " → " + balancedData.numInstances());
         double newRatio = Math.max(afterCounts[0], afterCounts[1]) / 
         (double) Math.min(afterCounts[0], afterCounts[1]);
-        System.out.println("    New ratio: " + String.format("%.2f", newRatio));
-        System.out.println("  ✓ Class distribution balanced");
+        System.out.println("New ratio: " + String.format("%.2f", newRatio));
+        System.out.println("Class distribution balanced");
         return balancedData;
     }
     
@@ -241,7 +241,7 @@ public class DataCleaner {
     @throws Exception
      */
     public Instances selectFeatures(Instances data) throws Exception {
-        System.out.println("\n=== Feature Selection (CFS) ===");
+        System.out.println("\nFeature Selection (CFS)");
         int originalFeatures = data.numAttributes() - 1; // Exclude class
         //CfsSubsetEval - Correlation-based Feature Selection
         CfsSubsetEval eval = new CfsSubsetEval();
@@ -294,7 +294,7 @@ public class DataCleaner {
     
 
     public void printCleaningSummary(Instances before, Instances after) {
-        System.out.println("\n=== Cleaning Summary ===");
+        System.out.println("\nCleaning Summary");
         System.out.println("Instances: " + before.numInstances() + " → " + after.numInstances());
         System.out.println("Attributes: " + before.numAttributes() + " → " + after.numAttributes());
         System.out.println("Missing values: " + countMissingValues(before) + " → " + 

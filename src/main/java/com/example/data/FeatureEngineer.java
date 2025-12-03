@@ -31,8 +31,8 @@ public class FeatureEngineer {
         data = createRiskScore(data);
         
         int newFeatures = data.numAttributes() - originalFeatures;
-        System.out.println("✓ Created " + newFeatures + " new features");
-        System.out.println("  Total attributes: " + originalFeatures + " → " + data.numAttributes());
+        System.out.println("Created " + newFeatures + " new features");
+        System.out.println("Total attributes: " + originalFeatures + " → " + data.numAttributes());
         return data;
     }
     
@@ -45,11 +45,11 @@ public class FeatureEngineer {
     -Very high risk (>70)
      */
     private Instances createAgeRiskGroup(Instances data) throws Exception {
-        System.out.println("\n[1/4] Creating age_risk_group...");
+        System.out.println("\n1. Creating age_risk_group...");
         //Tìm index của age attribute
         Attribute ageAttr = findAttribute(data, "age", "Age");
         if (ageAttr == null) {
-            System.err.println("⚠️  Warning: 'age' attribute not found, skipping...");
+            System.err.println("Warning: 'age' attribute not found, skipping...");
             return data;
         }
 
@@ -65,8 +65,8 @@ public class FeatureEngineer {
         filter.setInputFormat(data);
         data = Filter.useFilter(data, filter);
 
-        System.out.println("  ✓ age_risk_group created");
-        System.out.println("    1=Low(<40), 2=Medium(40-55), 3=High(56-70), 4=VeryHigh(>70)");
+        System.out.println("age_risk_group created");
+        System.out.println("1=Low(<40), 2=Medium(40-55), 3=High(56-70), 4=VeryHigh(>70)");
         return data;
     }
     
@@ -78,7 +78,7 @@ public class FeatureEngineer {
     -High (≥240 mg/dL)
      */
     private Instances createCholesterolCategory(Instances data) throws Exception {
-        System.out.println("\nCreating chol_category...");
+        System.out.println("\n2. Creating chol_category...");
         //Tìm cholesterol attribute
         Attribute cholAttr = findAttribute(data, 
             "chol", "cholesterol", "cholesterol_level", "Cholesterol Level", "cholesterol level");
@@ -96,8 +96,8 @@ public class FeatureEngineer {
         filter.setInputFormat(data);
         data = Filter.useFilter(data, filter);
         
-        System.out.println("  ✓ chol_category created");
-        System.out.println("    1=Normal(<200), 2=Borderline(200-239), 3=High(≥240)");
+        System.out.println("chol_category created");
+        System.out.println("1=Normal(<200), 2=Borderline(200-239), 3=High(≥240)");
         
         return data;
     }
@@ -111,7 +111,7 @@ public class FeatureEngineer {
     -Stage 2 Hypertension (≥140 mmHg)
      */
     private Instances createBPCategory(Instances data) throws Exception {
-        System.out.println("\n[3/4] Creating bp_category...");
+        System.out.println("\n3. Creating bp_category...");
 
         //Tìm blood pressure attribute
         Attribute bpAttr = findAttribute(data, 
@@ -146,7 +146,7 @@ public class FeatureEngineer {
     Score càng cao = nguy cơ càng lớn
      */
     private Instances createRiskScore(Instances data) throws Exception {
-        System.out.println("\nCreating composite risk_score...");
+        System.out.println("\n4. Creating composite risk_score...");
         
         //Tìm các features đã tạo
         Attribute ageRiskAttr = data.attribute("age_risk_group");

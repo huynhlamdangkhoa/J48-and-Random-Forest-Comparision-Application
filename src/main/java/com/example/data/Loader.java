@@ -15,7 +15,7 @@ import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.NumericToNominal;
 
 
-public class DataLoader {
+public class Loader {
 
     /*
     Load dataset từ file path (CSV hoặc ARFF)
@@ -236,7 +236,7 @@ public class DataLoader {
     public static void main(String[] args) {
         try {
             System.out.println("=== DataLoader Test ===\n");
-            DataLoader loader = new DataLoader();
+            Loader loader = new Loader();
 
             // sửa duy nhất: dùng resolvePath để tránh lỗi IntelliJ
             Instances data = loader.loadDataset("src/main/resources/heart_disease.csv");

@@ -9,7 +9,7 @@ import weka.core.Instances;
 /*Data Analyzer cho Heart Disease Dataset
  Phân tích: class distribution, attributes, correlations, feature importance
  */
-public class DataAnalyzer {
+public class Analyzer {
     /*
      Phân tích tổng quan dataset
      @param data Dataset cần phân tích
@@ -59,14 +59,14 @@ public class DataAnalyzer {
         double ratio = Math.max(class0, classDisease) / (double) Math.min(class0, classDisease);
         System.out.printf("\nImbalance Ratio: %.2f%n", ratio);
         if (ratio > 1.5) {
-            System.out.println(" IMBALANCED dataset detected!");
-            System.out.println("     Recommendation: Apply SMOTE or class weights");
+            System.out.println("IMBALANCED dataset detected!");
+            System.out.println("Recommendation: Apply SMOTE or class weights");
         } else {
-            System.out.println(" Relatively balanced dataset");
+            System.out.println("Relatively balanced dataset");
         }
         //Detailed class breakdown (if multi-class)
         if (counts.length > 2) {
-            System.out.println("\n  Detailed Class Breakdown:");
+            System.out.println("\nDetailed Class Breakdown:");
             for (int i = 0; i < counts.length; i++) {
                 System.out.printf("    Class %d: %d (%.1f%%)%n", 
                     i, counts[i], counts[i] * 100.0 / total);
@@ -191,7 +191,7 @@ public class DataAnalyzer {
     
 
     private void analyzeGainRatio(Instances data) throws Exception {
-        System.out.println("\n--- Gain Ratio Ranking (Top 5) ---");
+        System.out.println("\nGain Ratio Ranking (Top 5):");
         GainRatioAttributeEval eval = new GainRatioAttributeEval();
         eval.buildEvaluator(data); 
         //Calculate scores
@@ -212,31 +212,7 @@ public class DataAnalyzer {
                 scores[i][1]);
         }
     }
-    
-    public void analyzeCorrelations(Instances data) {
-        System.out.println("\n--- Correlation with Target ---");
-        System.out.println("(Higher correlation = stronger relationship with disease)");
-        System.out.println("\n💡 For detailed correlation matrix, use:");
-        System.out.println("   • Weka GUI: Visualize > Plot Matrix");
-        System.out.println("   • Or implement Pearson correlation manually");
-    }
-    
-    public void printSummary(Instances data) {
-        System.out.println("DATASET SUMMARY");
-        System.out.println("Instances: " + data.numInstances());
-        System.out.println("Attributes: " + data.numAttributes());
-        System.out.println("Class: " + data.classAttribute().name());
-        
-        // Count attribute types
-        int numeric = 0, nominal = 0;
-        for (int i = 0; i < data.numAttributes() - 1; i++) {
-            if (data.attribute(i).isNumeric()) numeric++;
-            else nominal++;
-        }
-        System.out.println("Numeric attributes: " + numeric);
-        System.out.println("Nominal attributes: " + nominal);
-        System.out.println("n");
-    }
+
     
     /**
      * Helper: Truncate string to max length
@@ -263,7 +239,7 @@ public class DataAnalyzer {
             data.setClassIndex(data.numAttributes() - 1);
             
             // Analyze
-            DataAnalyzer analyzer = new DataAnalyzer();
+            Analyzer analyzer = new Analyzer();
             analyzer.analyzeData(data);
             analyzer.featureImportance(data);
             
