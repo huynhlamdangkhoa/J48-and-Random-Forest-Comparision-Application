@@ -175,8 +175,6 @@ public class ModelEvaluator {
         analyzeWinner();
         //Save detailed comparison to file
         saveComparisonReport(reportPath);
-        //ROC comparison
-        compareROC();
         System.out.println("\nModel comparison completed!");
     }
 
@@ -341,33 +339,6 @@ public class ModelEvaluator {
     /**
      * Compare ROC curves
      */
-    private void compareROC() {
-        System.out.println("\nROC Curve Comparison");
-
-        for (EvaluationResult result : results) {
-            try {
-                ThresholdCurve tc = new ThresholdCurve();
-                Instances rocData = tc.getCurve(result.evaluation.predictions(), 1);
-                double auc = ThresholdCurve.getROCArea(rocData);
-
-                System.out.printf("%-20s: AUC = %.3f", result.modelName, auc);
-
-                // Interpretation
-                if (auc >= 0.9) {
-                    System.out.println(" (Excellent)");
-                } else if (auc >= 0.8) {
-                    System.out.println(" (Good)");
-                } else if (auc >= 0.7) {
-                    System.out.println(" (Fair)");
-                } else {
-                    System.out.println(" (Poor)");
-                }
-
-            } catch (Exception e) {
-                System.out.println(result.modelName + ": ROC not available");
-            }
-        }
-    }
 
     /**
      * Compare J48 Before vs After Preprocessing
