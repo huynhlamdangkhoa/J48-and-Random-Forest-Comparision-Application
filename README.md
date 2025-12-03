@@ -17,9 +17,9 @@ A modular Java + Weka project comparing classification models to predict adverti
 
 | Name                    | Role         |
 | ----------------------- | ------------ |
-| **Trần Ngọc Đăng Khôi** | Project Lead |
-| Huỳnh Lâm Đăng Khoa     | Team Member  |
-| Nguyễn Xuân Trâm Anh    | Team Member  |
+| **Huỳnh Lâm Đăng Khoa** | Project Lead |
+| Nguyễn Thành Tài        | Team Member  |
+| Phạm Viết Khang         | Team Member  |
 
 ---
 
@@ -29,7 +29,7 @@ A modular Java + Weka project comparing classification models to predict adverti
 
 * **Language**: Java
 * **Library**: Weka
-* **Dataset**: 1,573 product listings, 43 attributes
+* **Dataset**: 
 * **Target Feature**: `uses_ad_boosts`
 
 ---
@@ -40,7 +40,7 @@ A modular Java + Weka project comparing classification models to predict adverti
 * ⚖️ SMOTE: for balancing the imbalanced class
 * 🔤 Text Vectorization: StringToWordVector with TF-IDF & n-grams
 * 🧪 Feature Selection: CfsSubsetEval, WrapperSubsetEval
-* 🤖 Models: J48, Naive Bayes, Random Forest
+* 🤖 Models: J48, Random Forest
 
 ---
 
@@ -61,8 +61,7 @@ A modular Java + Weka project comparing classification models to predict adverti
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/koitran14/Data-Mining-Proj.git
-cd Data-Mining-Proj
+
 ```
 
 2. **Set Up Java and Weka**
