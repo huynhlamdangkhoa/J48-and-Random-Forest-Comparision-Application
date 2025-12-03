@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import weka.core.Utils;
+import weka.gui.visualize.*;
+import javax.swing.*;
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.evaluation.ThresholdCurve;
@@ -50,6 +53,7 @@ public class ModelEvaluator {
         //10-fold cross-validation
         Evaluation eval = new Evaluation(data);
         eval.crossValidateModel(classifier, data, 10, new Random(1));
+        showROCCurve(classifier.getClass().getSimpleName(), eval);
         long endTime = System.nanoTime();
         double runtime = (endTime - startTime) / 1_000_000_000.0;
         //Print results to console
@@ -538,6 +542,28 @@ public class ModelEvaluator {
 
         System.out.println("Random Forest comparison report saved to: " + reportPath);
     }
+
+    public void showROCCurve(String modelName, Evaluation eval) throws Exception {
+        ThresholdCurve tc = new ThresholdCurve();
+        Instances curve = tc.getCurve(eval.predictions(), 1); // class 1
+
+        ThresholdVisualizePanel vmc = new ThresholdVisualizePanel();
+        vmc.setROCString("(Area Under ROC = " +
+                Utils.doubleToString(tc.getROCArea(curve), 4) + ")");
+        vmc.setName(modelName + " ROC Curve");
+
+        PlotData2D tempd = new PlotData2D(curve);
+        tempd.setPlotName(modelName);
+        tempd.addInstanceNumberAttribute();
+
+        vmc.addPlot(tempd);
+
+        JFrame jf = new JFrame("ROC Curve - " + modelName);
+        jf.setSize(800, 600);
+        jf.getContentPane().add(vmc);
+        jf.setVisible(true);
+    }
+
 
     /**
      * Helper: Truncate string
