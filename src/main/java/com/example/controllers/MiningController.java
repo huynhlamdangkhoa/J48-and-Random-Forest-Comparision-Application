@@ -1,14 +1,11 @@
 package com.example.controllers;
 
 import com.example.algorithms.J48Classifier;
-import com.example.algorithms.RandomForestClassifier;
 import com.example.data.Analyzer;
 import com.example.data.Cleaner;
-import com.example.data.Loader;
 import com.example.data.FeatureEngineer;
+import com.example.data.Loader;
 import com.example.evaluation.ModelEvaluator;
-
-
 
 import weka.classifiers.trees.RandomForest;
 import weka.core.Instances;
@@ -30,23 +27,11 @@ public class MiningController {
     @throws Exception Lỗi trong quá trình xử lý
      */
     public void runPipeline(String rawPath, String reportPath) throws Exception {
-        printHeader("\nEVALUATE MODELS WITH RAW DATA FOR COMPARE LATER WITH THE MODELS THAT ARE EVALUATED WITH PREPROCESSED DATA");
-        Instances data = loader.loadDataset(rawPath);
-        J48Classifier j48Raw = new J48Classifier();
-        j48Raw.train(data);
-        Instances j48RawData = j48Raw.getTrainingData();
-        evaluator.evaluateModel(j48Raw.getClassifier(), j48RawData, reportPath);
-
-//        RandomForestClassifier rfRaw = new RandomForestClassifier();
-//        rfRaw.train(data);
-//        Instances rfRawData = rfRaw.getTrainingData();
-//        evaluator.evaluateModel(rfRaw.getClassifier(), rfRawData, reportPath);
-
         printHeader("HEART DISEASE RISK PREDICTOR - DATA MINING PIPELINE");
         printSectionHeader("STEP 1: DATA PREPROCESSING");
         //Load Dataset
         System.out.println("\nLoading dataset...");
-//        Instances data = loader.loadDataset(rawPath);
+        Instances data = loader.loadDataset(rawPath);
         exploreDataset(data);
         //Handle Missing Values & Remove Duplicates
         System.out.println("\nCleaning data...");
@@ -57,15 +42,15 @@ public class MiningController {
         //Feature Engineering
         System.out.println("\nEngineering features...");
         data = engineer.createFeatures(data);
-//        //Normalize Data
-//        System.out.println("\nNormalizing data...");
-//        data = cleaner.normalize(data);
+        //Normalize Data
+        // System.out.println("\nNormalizing data...");
+        // data = cleaner.normalize(data);
         //Data Analysis
         System.out.println("\nAnalyzing dataset...");
         analyzer.analyzeData(data);
         //Feature Importance Analysis
-//        System.out.println("\nCalculating feature importance...");
-//        analyzer.featureImportance(data);
+        // System.out.println("\nCalculating feature importance...");
+        // analyzer.featureImportance(data);
         //Save Preprocessed Data
         System.out.println("\nSaving preprocessed data...");
         String cleanedPath = "output/heart_data_cleaned.arff";
@@ -73,19 +58,14 @@ public class MiningController {
 
         System.out.println("\nSTEP 1 COMPLETED: Data preprocessing finished!");
         System.out.println("   Preprocessed data saved to: " + cleanedPath);
-
-        printSectionHeader("STEP 2: J48 CLASSIFIER");
-
+        printSectionHeader("STEP 2: J48 DECISION TREE - BASELINE MODEL");
         J48Classifier customJ48 = new J48Classifier();
-        customJ48.train(data); // data ở đây đã qua tất cả bước preprocess
+        customJ48.train(data);
         Instances j48ReadyData = customJ48.getTrainingData();
-        evaluator.evaluateModel(customJ48.getClassifier(), j48ReadyData, reportPath); // true = preprocessed
-
-        evaluator.compareJ48BeforeAfterPreprocessingComparision(reportPath);
-
+        evaluator.evaluateModel(customJ48.getClassifier(), j48ReadyData, reportPath);
         System.out.println("\nSTEP 2 COMPLETED: Custom J48 pipeline evaluated!");
         
-        printSectionHeader("STEP 3: RANDOM FOREST CLASSIFIER");
+        printSectionHeader("STEP 3: RANDOM FOREST - IMPROVED MODEL");
 
         System.out.println("\nApplying SMOTE for class balancing...");
         Instances balancedData = cleaner.applySMOTE(data);
@@ -110,15 +90,15 @@ public class MiningController {
         rf.setSeed(1);
         evaluator.evaluateModel(rf, selectedData, reportPath);
 
-        evaluator.compareRFBeforeAfterPreprocessingComparision(reportPath);
-
-        System.out.println("\nSTEP 3 COMPLETED: Random Forest improved model evaluated!");
-
-        printSectionHeader("STEP 4: MODEL COMPARISON");
+        System.out.println("\n✅ STEP 3 COMPLETED: Random Forest improved model evaluated!");
         
-        System.out.println("\nGenerating comparison report...");
+        // ========================================
+        // STEP 4: MODEL COMPARISON
+        // ========================================
+        printSectionHeader("STEP 4: MODEL COMPARISON & FINAL REPORT");
+        
+        System.out.println("\n📈 Generating comparison report...");
         evaluator.compareModels(reportPath);
-
         
         // Final Summary
         printFinalSummary(reportPath);
@@ -129,10 +109,10 @@ public class MiningController {
      */
     private void exploreDataset(Instances data) {
         System.out.println("\n--- Dataset Overview ---");
-        System.out.println("Total instances: " + data.numInstances());
-        System.out.println("Total attributes: " + data.numAttributes());
-        System.out.println("Class attribute: " + data.classAttribute().name());
-        System.out.println("Class values: " + data.classAttribute().numValues());
+        System.out.println("📁 Total instances: " + data.numInstances());
+        System.out.println("📊 Total attributes: " + data.numAttributes());
+        System.out.println("🎯 Class attribute: " + data.classAttribute().name());
+        System.out.println("📋 Class values: " + data.classAttribute().numValues());
         
         System.out.println("\n--- Attributes List ---");
         for (int i = 0; i < Math.min(10, data.numAttributes()); i++) {
@@ -168,13 +148,21 @@ public class MiningController {
      */
     private void printFinalSummary(String reportPath) {
         System.out.println("\n" + "=".repeat(60));
-        System.out.println("PIPELINE COMPLETED SUCCESSFULLY!");
+        System.out.println("  🎉 PIPELINE COMPLETED SUCCESSFULLY!");
         System.out.println("=".repeat(60));
-        System.out.println("\nReports generated:");
+        System.out.println("\n📄 Reports generated:");
         System.out.println("   • Evaluation report: " + reportPath);
+        System.out.println("   • Preprocessed data: output/heart_data_cleaned.arff");
+        System.out.println("   • Improved data: output/heart_data_improved.arff");
+        System.out.println("\n📊 Models trained:");
+        System.out.println("   • J48 Decision Tree (Baseline)");
+        System.out.println("   • Random Forest + SMOTE + Feature Selection (Improved)");
+        System.out.println("\n💡 Next steps:");
+        System.out.println("   1. Review evaluation_report.txt for detailed metrics");
+        System.out.println("   2. Analyze confusion matrices and ROC curves");
+        System.out.println("   3. Compare model performance for clinical deployment");
+        System.out.println("\n" + "=".repeat(60) + "\n");
     }
-
-
     
     /**
      * Main method để chạy pipeline
@@ -191,7 +179,7 @@ public class MiningController {
             controller.runPipeline(rawDataPath, reportPath);
             
         } catch (Exception e) {
-            System.err.println("\nERROR: Pipeline failed!");
+            System.err.println("\n❌ ERROR: Pipeline failed!");
             System.err.println("Error message: " + e.getMessage());
             e.printStackTrace();
         }
