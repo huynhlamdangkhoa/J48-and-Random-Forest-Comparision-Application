@@ -188,14 +188,14 @@ public class Cleaner {
     @return Normalized dataset
     @throws Exception
      */
-    public Instances normalize(Instances data) throws Exception {
-        System.out.println("\nNormalizing Data");
-        Normalize filter = new Normalize();
-        filter.setInputFormat(data);
-        data = Filter.useFilter(data, filter);
-        System.out.println(" All numeric attributes normalized to [0, 1]");
-        return data;
-    }
+//    public Instances normalize(Instances data) throws Exception {
+//        System.out.println("\nNormalizing Data");
+//        Normalize filter = new Normalize();
+//        filter.setInputFormat(data);
+//        data = Filter.useFilter(data, filter);
+//        System.out.println(" All numeric attributes normalized to [0, 1]");
+//        return data;
+//    }
     
     /*
     Apply SMOTE (Synthetic Minority Over-sampling Technique)

@@ -4,16 +4,17 @@ import javax.swing.JFrame;
 
 import com.example.controllers.MiningController;
 
+import java.util.Locale;
+
 /**
  * Main entry point cho Heart Disease Prediction System
  */
-public class Main {   // ← Không extends JFrame nữa
+public class Main {
 
     public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
         try {
-            System.out.println("╔════════════════════════════════════════════════════════╗");
-            System.out.println("║    HEART DISEASE RISK PREDICTOR - DATA MINING SYSTEM   ║");
-            System.out.println("╚════════════════════════════════════════════════════════╝");
+            System.out.println("HEART DISEASE RISK PREDICTOR");
 
             MiningController controller = new MiningController();
 
@@ -22,9 +23,8 @@ public class Main {   // ← Không extends JFrame nữa
                     "src/main/resources/evaluation_report.txt"
             );
 
-            System.out.println("\n╔════════════════════════════════════════════════════════╗");
-            System.out.println("║          PIPELINE COMPLETED SUCCESSFULLY!          ║");
-            System.out.println("╚════════════════════════════════════════════════════════╝");
+            System.out.println("PIPELINE COMPLETED SUCCESSFULLY!");
+
 
         } catch (Exception e) {
             System.err.println("\nERROR: Pipeline execution failed!");

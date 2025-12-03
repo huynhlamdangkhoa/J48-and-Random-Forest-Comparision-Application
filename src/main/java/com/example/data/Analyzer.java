@@ -141,79 +141,79 @@ public class Analyzer {
      @param data Dataset
      @throws Exception
      */
-    public void featureImportance(Instances data) throws Exception {
-        System.out.println("FEATURE IMPORTANCE ANALYSIS");
-        //Information Gain
-        analyzeInfoGain(data);
-        //Gain Ratio
-        analyzeGainRatio(data);
-        System.out.println("\n Interpretation:");
-        System.out.println("   -Higher score = More important for prediction");
-        System.out.println("   -Focus on top 5-10 features for model training");
-        System.out.println("   -Consider removing features with score < 0.01");
-    }
+//    public void featureImportance(Instances data) throws Exception {
+//        System.out.println("FEATURE IMPORTANCE ANALYSIS");
+//        //Information Gain
+//        analyzeInfoGain(data);
+//        //Gain Ratio
+//        analyzeGainRatio(data);
+//        System.out.println("\n Interpretation:");
+//        System.out.println("   -Higher score = More important for prediction");
+//        System.out.println("   -Focus on top 5-10 features for model training");
+//        System.out.println("   -Consider removing features with score < 0.01");
+//    }
     
-    private void analyzeInfoGain(Instances data) throws Exception {
-        System.out.println("\nInformation Gain Ranking");
-        InfoGainAttributeEval eval = new InfoGainAttributeEval();
-        eval.buildEvaluator(data);    
-        //Calculate scores
-        double[][] scores = new double[data.numAttributes() - 1][2];
-        for (int i = 0; i < data.numAttributes() - 1; i++) {
-            scores[i][0] = i; // attribute index
-            scores[i][1] = eval.evaluateAttribute(i);
-        } 
-        //Sort by score (descending)
-        java.util.Arrays.sort(scores, (a, b) -> Double.compare(b[1], a[1]));
-        //Print top features
-        System.out.println("\nTop 10 Most Important Features:");
-        System.out.println(String.format("%-4s %-25s %12s", "Rank", "Attribute", "InfoGain"));
-        System.out.println("-".repeat(45));
-        for (int i = 0; i < Math.min(10, scores.length); i++) {
-            int attrIndex = (int) scores[i][0];
-            System.out.printf("%-4d %-25s %12.4f%n",
-                i + 1,
-                truncate(data.attribute(attrIndex).name(), 25),
-                scores[i][1]);
-        }
-        //Print least important (bottom 5)
-        if (scores.length > 10) {
-            System.out.println("\nLeast Important Features (Bottom 5):");
-            for (int i = Math.max(0, scores.length - 5); i < scores.length; i++) {
-                int attrIndex = (int) scores[i][0];
-                System.out.printf("%-4d %-25s %12.4f%n",
-                    i + 1,
-                    truncate(data.attribute(attrIndex).name(), 25),
-                    scores[i][1]);
-            }
-        }
-    }
-    
+//    private void analyzeInfoGain(Instances data) throws Exception {
+//        System.out.println("\nInformation Gain Ranking");
+//        InfoGainAttributeEval eval = new InfoGainAttributeEval();
+//        eval.buildEvaluator(data);
+//        //Calculate scores
+//        double[][] scores = new double[data.numAttributes() - 1][2];
+//        for (int i = 0; i < data.numAttributes() - 1; i++) {
+//            scores[i][0] = i; // attribute index
+//            scores[i][1] = eval.evaluateAttribute(i);
+//        }
+//        //Sort by score (descending)
+//        java.util.Arrays.sort(scores, (a, b) -> Double.compare(b[1], a[1]));
+//        //Print top features
+//        System.out.println("\nTop 10 Most Important Features:");
+//        System.out.println(String.format("%-4s %-25s %12s", "Rank", "Attribute", "InfoGain"));
+//        System.out.println("-".repeat(45));
+//        for (int i = 0; i < Math.min(10, scores.length); i++) {
+//            int attrIndex = (int) scores[i][0];
+//            System.out.printf("%-4d %-25s %12.4f%n",
+//                i + 1,
+//                truncate(data.attribute(attrIndex).name(), 25),
+//                scores[i][1]);
+//        }
+//        //Print least important (bottom 5)
+//        if (scores.length > 10) {
+//            System.out.println("\nLeast Important Features (Bottom 5):");
+//            for (int i = Math.max(0, scores.length - 5); i < scores.length; i++) {
+//                int attrIndex = (int) scores[i][0];
+//                System.out.printf("%-4d %-25s %12.4f%n",
+//                    i + 1,
+//                    truncate(data.attribute(attrIndex).name(), 25),
+//                    scores[i][1]);
+//            }
+//        }
+//    }
+//
+//
+//    private void analyzeGainRatio(Instances data) throws Exception {
+//        System.out.println("\nGain Ratio Ranking (Top 5):");
+//        GainRatioAttributeEval eval = new GainRatioAttributeEval();
+//        eval.buildEvaluator(data);
+//        //Calculate scores
+//        double[][] scores = new double[data.numAttributes() - 1][2];
+//        for (int i = 0; i < data.numAttributes() - 1; i++) {
+//            scores[i][0] = i;
+//            scores[i][1] = eval.evaluateAttribute(i);
+//        }
+//        //Sort
+//        java.util.Arrays.sort(scores, (a, b) -> Double.compare(b[1], a[1]));
+//        System.out.println(String.format("%-4s %-25s %12s", "Rank", "Attribute", "GainRatio"));
+//        System.out.println("-".repeat(45));
+//        for (int i = 0; i < Math.min(5, scores.length); i++) {
+//            int attrIndex = (int) scores[i][0];
+//            System.out.printf("%-4d %-25s %12.4f%n",
+//                i + 1,
+//                truncate(data.attribute(attrIndex).name(), 25),
+//                scores[i][1]);
+//        }
+//    }
+//
 
-    private void analyzeGainRatio(Instances data) throws Exception {
-        System.out.println("\nGain Ratio Ranking (Top 5):");
-        GainRatioAttributeEval eval = new GainRatioAttributeEval();
-        eval.buildEvaluator(data); 
-        //Calculate scores
-        double[][] scores = new double[data.numAttributes() - 1][2];
-        for (int i = 0; i < data.numAttributes() - 1; i++) {
-            scores[i][0] = i;
-            scores[i][1] = eval.evaluateAttribute(i);
-        }
-        //Sort
-        java.util.Arrays.sort(scores, (a, b) -> Double.compare(b[1], a[1]));       
-        System.out.println(String.format("%-4s %-25s %12s", "Rank", "Attribute", "GainRatio"));
-        System.out.println("-".repeat(45));      
-        for (int i = 0; i < Math.min(5, scores.length); i++) {
-            int attrIndex = (int) scores[i][0];
-            System.out.printf("%-4d %-25s %12.4f%n",
-                i + 1,
-                truncate(data.attribute(attrIndex).name(), 25),
-                scores[i][1]);
-        }
-    }
-
-    
     /**
      * Helper: Truncate string to max length
      */
@@ -241,7 +241,7 @@ public class Analyzer {
             // Analyze
             Analyzer analyzer = new Analyzer();
             analyzer.analyzeData(data);
-            analyzer.featureImportance(data);
+//            analyzer.featureImportance(data);
             
             System.out.println("\nAnalysis completed!");
             
