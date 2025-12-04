@@ -1,6 +1,7 @@
 package com.example.controllers;
 
 import com.example.algorithms.J48Classifier;
+import com.example.algorithms.RandomForestClassifier;
 import com.example.data.Analyzer;
 import com.example.data.Cleaner;
 import com.example.data.FeatureEngineer;
@@ -27,30 +28,36 @@ public class MiningController {
     @throws Exception Lỗi trong quá trình xử lý
      */
     public void runPipeline(String rawPath, String reportPath) throws Exception {
-        printHeader("\nEVALUATE MODELS WITH RAW DATA FOR COMPARE LATER WITH THE MODELS THAT ARE EVALUATED WITH PREPROCESSED DATA");
+        printHeader("EVALUATE MODELS WITH RAW DATA FOR COMPARE LATER WITH \n  THE MODELS THAT ARE EVALUATED WITH PREPROCESSED DATA");
         Instances data = loader.loadDataset(rawPath);
+
+//        RandomForest rf = new RandomForest();
+//        rf.setNumIterations(200);
+//        rf.setSeed(1);
+//        rf.buildClassifier(data);
+//        evaluator.evaluateModel(rf, data, reportPath);
+        RandomForestClassifier rfClassifier = new RandomForestClassifier();
+        rfClassifier.train(data);
+
+        // Evaluate kết quả
+        evaluator.evaluateModel(rfClassifier.getClassifier(), rfClassifier.getTrainingData(), reportPath);
+
+        evaluator.compareRFBeforeAfterPreprocessingComparision(reportPath);
+
+
         J48Classifier j48Raw = new J48Classifier();
         j48Raw.train(data);
         Instances j48RawData = j48Raw.getTrainingData();
         evaluator.evaluateModel(j48Raw.getClassifier(), j48RawData, reportPath);
 
-        // RandomForestClassifier rfRaw = new RandomForestClassifier();
-        // rfRaw.train(data);
-        // Instances rfRawData = rfRaw.getTrainingData();
-        // evaluator.evaluateModel(rfRaw.getClassifier(), rfRawData, reportPath);
-
         printHeader("HEART DISEASE RISK PREDICTOR");
         printSectionHeader("STEP 1: DATA PREPROCESSING");
-        //Load Dataset
-        System.out.println("\nLoading dataset...");
+
         exploreDataset(data);
-        //Handle Missing Values & Remove Duplicates
         System.out.println("\nCleaning data...");
         data = cleaner.cleanData(data);
-        //Remove Outliers
         System.out.println("\nRemoving outliers...");
         data = cleaner.removeOutliers(data);
-        //Feature Engineering
         System.out.println("\nEngineering features...");
         data = engineer.createFeatures(data);
         //Normalize Data
@@ -69,16 +76,7 @@ public class MiningController {
 
         System.out.println("\nSTEP 1 COMPLETED: Data preprocessing finished!");
         System.out.println("   Preprocessed data saved to: " + cleanedPath);
-        printSectionHeader("STEP 2: J48 DECISION TREE");
-        J48Classifier customJ48 = new J48Classifier();
-        customJ48.train(data);
-        Instances j48ReadyData = customJ48.getTrainingData();
-        evaluator.evaluateModel(customJ48.getClassifier(), j48ReadyData, reportPath);
-        evaluator.compareJ48BeforeAfterPreprocessingComparision(reportPath);
-        System.out.println("\nSTEP 2 COMPLETED: Custom J48 pipeline evaluated!");
-        
-        printSectionHeader("STEP 3: RANDOM FOREST");
-
+        printSectionHeader("STEP 2: RANDOM FOREST CLASSIFIER");
         System.out.println("\nApplying SMOTE for class balancing...");
         Instances balancedData = cleaner.applySMOTE(data);
 
@@ -96,11 +94,23 @@ public class MiningController {
         loader.saveARFF(selectedData, improvedPath);
         System.out.println("   Improved data saved to: " + improvedPath);
 
-        // Train Random Forest on the *improved* data
-        RandomForest rf = new RandomForest();
-        rf.setNumIterations(200);
-        rf.setSeed(1);
-        evaluator.evaluateModel(rf, selectedData, reportPath);
+        // Train RandomForestClassifier (custom class) trên improved data
+        rfClassifier.train(selectedData);   // gọi train() sẽ tự xử lý preprocess + build model
+
+        // Evaluate kết quả
+        evaluator.evaluateModel(rfClassifier.getClassifier(), rfClassifier.getTrainingData(), reportPath);
+
+        evaluator.compareRFBeforeAfterPreprocessingComparision(reportPath);
+
+        System.out.println("\nSTEP 2 COMPLETED: Custom J48 pipeline evaluated!");
+        
+        printSectionHeader("STEP 3: J48 CLASSIFIER");
+        // Train J48 trên improved data (selectedData đã qua SMOTE + feature selection)
+        J48Classifier customJ48 = new J48Classifier();
+        customJ48.train(selectedData);   // dùng cùng dữ liệu improved như RandomForest
+        Instances j48ReadyData = customJ48.getTrainingData();
+        evaluator.evaluateModel(customJ48.getClassifier(), j48ReadyData, reportPath);
+        evaluator.compareJ48BeforeAfterPreprocessingComparision(reportPath);
 
         System.out.println("\nSTEP 3 COMPLETED!");
 

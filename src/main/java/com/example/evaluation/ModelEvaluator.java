@@ -352,7 +352,7 @@ public class ModelEvaluator {
 
         // Assume first two results are J48 (raw) and J48 (preprocessed)
         EvaluationResult j48Raw = results.get(0);
-        EvaluationResult j48Prep = results.get(1);
+        EvaluationResult j48Prep = results.get(2);
 
         System.out.println("\n" + "=".repeat(60));
         System.out.println("J48: BEFORE vs AFTER PREPROCESSING");
@@ -439,7 +439,6 @@ public class ModelEvaluator {
             return;
         }
 
-        // Lấy đúng theo thứ tự trong pipeline của mày
         EvaluationResult rfRaw = results.get(1);      // RandomForest trên dữ liệu thô
         EvaluationResult rfImproved = results.get(3); // RandomForest sau SMOTE + Feature Selection
 

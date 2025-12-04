@@ -1,4 +1,41 @@
 ======================================================================
+Model: RandomForest
+======================================================================
+
+Overall Performance:
+-Accuracy:           71.84%
+-Precision (Weighted): 0.724
+-Recall (Weighted):    0.718
+-F1-Score (Weighted):  0.667
+-Runtime:             83.58 seconds
+
+Disease Class Metrics (Class 1):
+-Precision:  0.739
+-Recall:     0.240 (Sensitivity)
+-F1-Score:   0.362
+-AUC:        0.701
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7662  338 |    a = No
+ 3041  959 |    b = Yes
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.958    0.760    0.716      0.958    0.819      0.300    0.701     0.791     No
+                 0.240    0.042    0.739      0.240    0.362      0.300    0.701     0.586     Yes
+Weighted Avg.    0.718    0.521    0.724      0.718    0.667      0.300    0.701     0.723     
+
+Additional Metrics:
+-Kappa statistic:      0.238
+-Mean absolute error:  0.4060
+-RMSE:                 0.4420
+
+======================================================================
+
+======================================================================
 Model: J48
 ======================================================================
 
@@ -7,7 +44,7 @@ Overall Performance:
 -Precision (Weighted): 0.661
 -Recall (Weighted):    0.686
 -F1-Score (Weighted):  0.654
--Runtime:             1.28 seconds
+-Runtime:             0.96 seconds
 
 Disease Class Metrics (Class 1):
 -Precision:  0.557
@@ -36,39 +73,76 @@ Additional Metrics:
 ======================================================================
 
 ======================================================================
-Model: J48
+Model: RandomForest
 ======================================================================
 
 Overall Performance:
--Accuracy:           76.30%
--Precision (Weighted): 0.800
--Recall (Weighted):    0.763
--F1-Score (Weighted):  0.723
--Runtime:             0.50 seconds
+-Accuracy:           77.79%
+-Precision (Weighted): 0.784
+-Recall (Weighted):    0.778
+-F1-Score (Weighted):  0.777
+-Runtime:             124.09 seconds
 
 Disease Class Metrics (Class 1):
--Precision:  0.912
--Recall:     0.320 (Sensitivity)
--F1-Score:   0.474
--AUC:        0.668
+-Precision:  0.824
+-Recall:     0.706 (Sensitivity)
+-F1-Score:   0.761
+-AUC:        0.837
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 7877  123 |    a = No
- 2721 1279 |    b = Yes
+ 6795 1205 |    a = No
+ 2349 5651 |    b = Yes
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.985    0.680    0.743      0.985    0.847      0.447    0.668     0.752     No
-                 0.320    0.015    0.912      0.320    0.474      0.447    0.668     0.621     Yes
-Weighted Avg.    0.763    0.459    0.800      0.763    0.723      0.447    0.668     0.708     
+                 0.849    0.294    0.743      0.849    0.793      0.562    0.837     0.781     No
+                 0.706    0.151    0.824      0.706    0.761      0.562    0.837     0.869     Yes
+Weighted Avg.    0.778    0.222    0.784      0.778    0.777      0.562    0.837     0.825     
 
 Additional Metrics:
--Kappa statistic:      0.363
--Mean absolute error:  0.3441
--RMSE:                 0.4196
+-Kappa statistic:      0.556
+-Mean absolute error:  0.3499
+-RMSE:                 0.4026
+
+======================================================================
+
+======================================================================
+Model: J48
+======================================================================
+
+Overall Performance:
+-Accuracy:           81.58%
+-Precision (Weighted): 0.839
+-Recall (Weighted):    0.816
+-F1-Score (Weighted):  0.813
+-Runtime:             0.61 seconds
+
+Disease Class Metrics (Class 1):
+-Precision:  0.928
+-Recall:     0.685 (Sensitivity)
+-F1-Score:   0.788
+-AUC:        0.846
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7576  424 |    a = No
+ 2523 5477 |    b = Yes
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.947    0.315    0.750      0.947    0.837      0.655    0.846     0.778     No
+                 0.685    0.053    0.928      0.685    0.788      0.655    0.846     0.879     Yes
+Weighted Avg.    0.816    0.184    0.839      0.816    0.813      0.655    0.846     0.829     
+
+Additional Metrics:
+-Kappa statistic:      0.632
+-Mean absolute error:  0.2492
+-RMSE:                 0.3719
 
 ======================================================================
 
@@ -80,50 +154,13 @@ J48 before and after preprocessing
 
 Metric                Non-preprocess    Preprocessed
 ----------------------------------------------------------------------
-Accuracy                      68.63%          76.30%
-Precision                      0.557           0.912
-Recall                         0.290           0.320
-F1-Score                       0.381           0.474
-Runtime                      1.28 sec         0.50 sec
+Accuracy                      71.84%          77.79%
+Precision                      0.739           0.824
+Recall                         0.240           0.706
+F1-Score                       0.362           0.761
+Runtime                     83.58 sec       124.09 sec
 
 ======================================================================
-======================================================================
-Model: RandomForest
-======================================================================
-
-Overall Performance:
--Accuracy:           72.93%
--Precision (Weighted): 0.736
--Recall (Weighted):    0.729
--F1-Score (Weighted):  0.685
--Runtime:             63.76 seconds
-
-Disease Class Metrics (Class 1):
--Precision:  0.758
--Recall:     0.276 (Sensitivity)
--F1-Score:   0.404
--AUC:        0.709
-
-=== Confusion Matrix ===
-
-    a    b   <-- classified as
- 7648  352 |    a = No
- 2897 1103 |    b = Yes
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.956    0.724    0.725      0.956    0.825      0.335    0.709     0.794     No
-                 0.276    0.044    0.758      0.276    0.404      0.335    0.709     0.607     Yes
-Weighted Avg.    0.729    0.498    0.736      0.729    0.685      0.335    0.709     0.732     
-
-Additional Metrics:
--Kappa statistic:      0.276
--Mean absolute error:  0.3977
--RMSE:                 0.4375
-
-======================================================================
-
 
 
 ======================================================================
@@ -134,8 +171,9 @@ Performance Comparison:
 ----------------------------------------------------------------------
 Model                  Accuracy     Recall   F1-Score        AUC
 ----------------------------------------------------------------------
+RandomForest             71.84%      0.240      0.362      0.701
 J48                      68.63%      0.290      0.381      0.616
-J48                      76.30%      0.320      0.474      0.668
-RandomForest             72.93%      0.276      0.404      0.709
+RandomForest             77.79%      0.706      0.761      0.837
+J48                      81.58%      0.685      0.788      0.846
 
 ======================================================================
