@@ -110,9 +110,6 @@ public class RandomForestClassifier implements Algorithm {
      * - ensure class attribute is set
      * - apply SMOTE
      * - feature selection
-     * @param data Dataset
-     * @return Pre-processed dataset
-     * @throws Exception
      */
     @Override
     public Instances specificPreprocess(Instances data) throws Exception {
@@ -135,11 +132,11 @@ public class RandomForestClassifier implements Algorithm {
      * Uses 5-fold cross-validation and weighted F1-score for evaluation.
      */
     private void optimizeRandomForest(Instances data) throws Exception {
-        int numAttrs = data.numAttributes() - 1; // trừ class
+        int numAttrs = data.numAttributes() - 1; // minus class
         int defaultNumFeatures = (int) Math.round(Math.sqrt(Math.max(1, numAttrs)));
 
         int[] numTreesOptions = {100, 200, 300};
-        int[] maxDepthOptions = {0, 10, 15};        // 0 = unlimited
+        int[] maxDepthOptions = {0, 10};        // 0 = unlimited
         int[] numFeaturesOptions = {0, defaultNumFeatures}; // 0 = default
 
         bestF1Score = 0.0;
@@ -275,11 +272,6 @@ public class RandomForestClassifier implements Algorithm {
             return;
         }
         System.out.printf("%s → Class counts: %s%n", stage, Arrays.toString(counts));
-    }
-
-    // (Optional): get training data for further analysis
-    public Instances getTrainingData() {
-        return trainingData;
     }
 }
 
